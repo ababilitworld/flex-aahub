@@ -22,7 +22,7 @@ class Asset extends BaseManager
     {
         $this->set_items([
             ThemeAsset::class,
-            // Add more shortcode classes here...
+            // Add more classes here...
         ]);
     }
 
@@ -30,11 +30,11 @@ class Asset extends BaseManager
     {
         foreach ($this->get_items() as $itemClass) 
         {
-            $shortcode = AssetFactory::get($itemClass);
+            $itemInstasnce = AssetFactory::get($itemClass);
 
-            if ($shortcode instanceof AssetContract) 
+            if ($itemInstasnce instanceof AssetContract) 
             {
-                $shortcode->register();
+                $itemInstasnce->register();
             }
         }
     }

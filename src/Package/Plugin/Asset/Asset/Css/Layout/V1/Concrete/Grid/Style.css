@@ -254,3 +254,31 @@ Grid Layout : Zigzag
 .layout.zigzag .layout-item:nth-child(4n+3) {
     transform: translateY(20px);
 }
+
+/*/////////////////////////////////////////////////////////////////////////////
+
+Grid Layout : Premium Card 
+
+/////////////////////////////////////////////////////////////////////////////*/
+
+.faih-premium-card 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.faih-premium-card-item 
+{
+    background: var(--fa-white);
+    border-radius: var(--fa-border-radius);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: var(--fa-transition);
+}
+
+.faih-premium-card-item:hover 
+{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}

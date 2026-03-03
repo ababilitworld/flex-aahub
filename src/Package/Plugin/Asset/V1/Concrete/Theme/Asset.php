@@ -21,6 +21,9 @@ use const Ababilithub\{
 
 class Asset extends BaseAsset
 {
+    public $asset_base_prefix;
+    public $asset_base_url;
+
     use  StandardWpMixin;
     
     public function init($data = []): static
@@ -34,6 +37,8 @@ class Asset extends BaseAsset
     {
         $this->asset_base_url = $this->get_url('../../../../Asset/');
         $this->asset_base_prefix = 'ababilithub-flex-aahub-theme-asset';
+
+        echo "<pre>";print_r($this->asset_base_prefix);echo "</pre>";exit;
 
         add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));        
@@ -282,9 +287,14 @@ class Asset extends BaseAsset
             time()
         );
 
-        $this->add_js_module()
+        $this->add_js_module();
 
         
+    }
+
+    public function add_js_module()
+    {
+
     }
 
     public function localize_script():void
