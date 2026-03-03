@@ -1,6 +1,6 @@
 {
-    "name": "ababilitworld/flex-aahub-by-ababilitworld",
-    "description": "The Ababilithub Plugins's Aahub Funtionalities, Exclusively by Ababil IT World.",
+    "name": "ababilitworld/flex-aahub",
+    "description": "The Ababilithub Plugins's Aahub Funtionalities, Exclusively by Ababil IT Hub.",
     "type": "wordpress-plugin",
     "keywords": ["wordpress", "plugin", "ababilithub", "hub"],
     "homepage": "https://ababilithub.com/wp-plugin/flex-aahub-by-ababilithub",
@@ -8,7 +8,7 @@
     "license_uri": "https://www.gnu.org/licenses/gpl-3.0.html",
     "authors": [
         {
-            "name": "Ababil IT World",
+            "name": "Ababil IT Hub",
             "email": "ababilithub@gmail.com",
             "homepage": "https://ababilithub.com/"
         },
@@ -34,23 +34,22 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/ababilitworld/flex-aahub-by-ababilitworld"
+            "url": "https://github.com/ababilitworld/flex-aahub"
         }
     ],
     "extra": { 
         "wordpress-plugin": {
-            "name": "Flex Aahub By Ababil IT World",
+            "name": "Flex Aahub By Ababil IT Hub",
             "uri": "https://ababilithub.com/wp-plugin/flex-aahub-by-ababilithub",
-            "description": "The Ababilithub Plugins's Aahub Funtionalities, Exclusively by Ababil IT World.",
+            "description": "The Ababilithub Plugins's Aahub Funtionalities, Exclusively by Ababil IT Hub.",
             "version": "1.0.0",
             "requires": {
                 "firebase/php-jwt": "^6.0",
-                "ababilithub/flex-trait-by-ababilithub": "dev-main",
-                "ababilithub/flex-pagination-by-ababilithub": "dev-main",
-                "ababilithub/flex-theme-info-by-ababilithub": "dev-main"
+                "ababilitworld/flex-php": "dev-main",
+                "ababilitworld/flex-wordpress": "dev-main"
             },
             "tested": "6.5",
-            "author": "Ababil IT World",
+            "author": "Ababil IT Hub",
             "author_uri": "https://ababilithub.com/",
             "author_email": "ababilithub@gmail.com",
             "license": "GPL-3.0-or-later",

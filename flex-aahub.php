@@ -1,20 +1,20 @@
 <?php
 
 	/**
-	 * Flex Aahub By Ababil IT World
+	 * Flex Aahub 
 	 *
-	 * @package ababilitworld/flex-aahub-by-ababilitworld
+	 * @package ababilitworld/flex-aahub
 	 *
 	 * @wordpress-plugin
-	 * Plugin Name:       Flex Aahub By Ababil IT World
-	 * Plugin URI:        https://ababilithub.com/wp-plugin/flex-aahub-by-ababilithub
-	 * Description:       The Ababilithub Plugins's Aahub Funtionalities, Exclusively by Ababil IT World.
+	 * Plugin Name:       Flex Aahub 
+	 * Plugin URI:        https://ababilithub.com/wp-plugin/flex-aahub
+	 * Description:       The Ababilithub Plugins's Aahub Funtionalities, Exclusively By Ababil IT Hub.
 	 * Version:           1.0.0
 	 * Requires at least: 5.2
 	 * Requires PHP:      7.4
 	 * WC requires at least: 3.0.9
 	 * WC tested up to:   6.5
-	 * Author:            Ababil IT World
+	 * Author:            Ababil IT Hub
 	 * Author URI:        https://ababilithub.com/
 	 * Author Email:      ababilithub@gmail.com
 	 * License:           GPL v3 or later
