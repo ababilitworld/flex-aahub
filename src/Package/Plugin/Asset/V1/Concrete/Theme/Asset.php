@@ -35,13 +35,15 @@ class Asset extends BaseAsset
 
     public function init_hook(): void
     {
-        $this->asset_base_url = $this->get_url('../../../../Asset/');
-        $this->asset_base_prefix = 'ababilithub-flex-aahub-theme-asset';
+         // Compute the absolute URL to the Asset folder (4 levels up from this file)
+    $this->asset_base_url = plugin_dir_url(dirname(__FILE__, 3));
+    $this->asset_base_prefix = 'ababilithub-flex-aahub-asset-';
 
-        echo "<pre>";print_r($this->asset_base_prefix);echo "</pre>";exit;
+    // (Optional) Remove debug echo when done testing
+    // echo "<pre>"; print_r(array($this->asset_base_prefix, $this->asset_base_url, $this->asset_base_url.'Asset/Css/Theme/V1/Manager/Style.css')); echo "</pre>"; //exit;
 
-        add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
-        add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));        
+    add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
+    add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));       
     }
 
     public function init_service(): void
@@ -64,11 +66,18 @@ class Asset extends BaseAsset
         // );
 
         wp_enqueue_style(
-            $this->asset_base_prefix.'app-theme-style', 
-            $this->asset_base_url.'Css/Theme/Style.css',
+            $this->asset_base_prefix.'app-framework-style', 
+            $this->asset_base_url.'Asset/Css/Framework/V1/Concrete/Ababilithub/Style.css',
             array(), 
             time()
         );
+
+        // wp_enqueue_style(
+        //     $this->asset_base_prefix.'app-theme-style', 
+        //     $this->asset_base_url.'Asset/Css/Layo/V1/Manager/Style.css',
+        //     array(), 
+        //     time()
+        // );
 
         wp_enqueue_style(
             $this->asset_base_prefix.'app-animation-base-style', 
