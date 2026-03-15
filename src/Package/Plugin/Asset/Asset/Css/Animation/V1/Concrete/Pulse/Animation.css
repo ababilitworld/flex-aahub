@@ -1,0 +1,694 @@
+@-webkit-keyframes faih-pulse {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes faih-pulse {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes faih-pulseOpacity {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-pulse-opacity);
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes faih-pulseOpacity {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-pulse-opacity);
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes faih-pulseColor {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        background-color: transparent;
+        color: inherit;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        background-color: var(--faih-pulse-color, rgba(255, 255, 255, 0.3));
+        color: var(--faih-pulse-text-color, inherit);
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        background-color: transparent;
+        color: inherit;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes faih-pulseColor {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        background-color: transparent;
+        color: inherit;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        background-color: var(--faih-pulse-color, rgba(255, 255, 255, 0.3));
+        color: var(--faih-pulse-text-color, inherit);
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        background-color: transparent;
+        color: inherit;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes faih-pulseGlow {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        box-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        box-shadow: 0 0 var(--faih-pulse-glow-size) var(--faih-pulse-glow-spread) var(--faih-pulse-color, rgba(255, 255, 255, 0.5));
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        box-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes faih-pulseGlow {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        box-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        box-shadow: 0 0 var(--faih-pulse-glow-size) var(--faih-pulse-glow-spread) var(--faih-pulse-color, rgba(255, 255, 255, 0.5));
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        box-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes faih-pulseBorder {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        border-color: transparent;
+        box-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        border-color: var(--faih-pulse-color, #ffffff);
+        box-shadow: 0 0 0 var(--faih-pulse-border-width) var(--faih-pulse-color, #ffffff);
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        border-color: transparent;
+        box-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes faih-pulseBorder {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        border-color: transparent;
+        box-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        border-color: var(--faih-pulse-color, #ffffff);
+        box-shadow: 0 0 0 var(--faih-pulse-border-width) var(--faih-pulse-color, #ffffff);
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        border-color: transparent;
+        box-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes faih-pulseText {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        color: inherit;
+        text-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        color: var(--faih-pulse-color, #ffffff);
+        text-shadow: 0 0 var(--faih-pulse-glow-size) var(--faih-pulse-color, rgba(255, 255, 255, 0.5));
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        color: inherit;
+        text-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes faih-pulseText {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        color: inherit;
+        text-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        color: var(--faih-pulse-color, #ffffff);
+        text-shadow: 0 0 var(--faih-pulse-glow-size) var(--faih-pulse-color, rgba(255, 255, 255, 0.5));
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        color: inherit;
+        text-shadow: none;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes faih-pulseDouble {
+    0%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+}
+
+@keyframes faih-pulseDouble {
+    0%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+}
+
+@-webkit-keyframes faih-pulseHeartbeat {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    14% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    28% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    42% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    70% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes faih-pulseHeartbeat {
+    0% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    14% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    28% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+    
+    42% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+    }
+    
+    70% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes faih-pulseBreath {
+    0%, to {
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        transform: scale3d(1, 1, 1);
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+        opacity: var(--faih-pulse-opacity);
+    }
+}
+
+@keyframes faih-pulseBreath {
+    0%, to {
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        transform: scale3d(1, 1, 1);
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        transform: scale3d(var(--faih-pulse-scale), var(--faih-pulse-scale), var(--faih-pulse-scale));
+        opacity: var(--faih-pulse-opacity);
+    }
+}
+
+/* Pulse animation classes */
+.faih-pulse {
+    -webkit-animation-name: faih-pulse;
+    animation-name: faih-pulse;
+}
+
+.faih-pulseOpacity {
+    -webkit-animation-name: faih-pulseOpacity;
+    animation-name: faih-pulseOpacity;
+}
+
+.faih-pulseColor {
+    -webkit-animation-name: faih-pulseColor;
+    animation-name: faih-pulseColor;
+}
+
+.faih-pulseGlow {
+    -webkit-animation-name: faih-pulseGlow;
+    animation-name: faih-pulseGlow;
+}
+
+.faih-pulseBorder {
+    -webkit-animation-name: faih-pulseBorder;
+    animation-name: faih-pulseBorder;
+}
+
+.faih-pulseText {
+    -webkit-animation-name: faih-pulseText;
+    animation-name: faih-pulseText;
+}
+
+.faih-pulseDouble {
+    -webkit-animation-name: faih-pulseDouble;
+    animation-name: faih-pulseDouble;
+}
+
+.faih-pulseHeartbeat {
+    -webkit-animation-name: faih-pulseHeartbeat;
+    animation-name: faih-pulseHeartbeat;
+}
+
+.faih-pulseBreath {
+    -webkit-animation-name: faih-pulseBreath;
+    animation-name: faih-pulseBreath;
+}
+
+/* Pulse intensity variations */
+.faih-pulse-subtle {
+    --faih-pulse-scale: 1.02;
+    --faih-pulse-opacity: 0.9;
+    --faih-pulse-border-width: 1px;
+    --faih-pulse-glow-size: 5px;
+    --faih-pulse-glow-spread: 2px;
+}
+
+.faih-pulse-normal {
+    --faih-pulse-scale: 1.05;
+    --faih-pulse-opacity: 0.8;
+    --faih-pulse-border-width: 2px;
+    --faih-pulse-glow-size: 10px;
+    --faih-pulse-glow-spread: 3px;
+}
+
+.faih-pulse-strong {
+    --faih-pulse-scale: 1.1;
+    --faih-pulse-opacity: 0.7;
+    --faih-pulse-border-width: 3px;
+    --faih-pulse-glow-size: 20px;
+    --faih-pulse-glow-spread: 5px;
+}
+
+.faih-pulse-intense {
+    --faih-pulse-scale: 1.2;
+    --faih-pulse-opacity: 0.6;
+    --faih-pulse-border-width: 4px;
+    --faih-pulse-glow-size: 30px;
+    --faih-pulse-glow-spread: 8px;
+}
+
+/* Pulse speed variations */
+.faih-pulse-fast {
+    --faih-animation-duration: 0.5s;
+}
+
+.faih-pulse-slow {
+    --faih-animation-duration: 2s;
+}
+
+.faih-pulse-very-slow {
+    --faih-animation-duration: 3s;
+}
+
+/* Pulse color variations */
+.faih-pulse-red {
+    --faih-pulse-color: rgba(255, 0, 0, 0.5);
+    --faih-pulse-text-color: #ff0000;
+}
+
+.faih-pulse-blue {
+    --faih-pulse-color: rgba(0, 100, 255, 0.5);
+    --faih-pulse-text-color: #0064ff;
+}
+
+.faih-pulse-green {
+    --faih-pulse-color: rgba(0, 255, 0, 0.5);
+    --faih-pulse-text-color: #00ff00;
+}
+
+.faih-pulse-yellow {
+    --faih-pulse-color: rgba(255, 255, 0, 0.5);
+    --faih-pulse-text-color: #ffff00;
+}
+
+.faih-pulse-orange {
+    --faih-pulse-color: rgba(255, 165, 0, 0.5);
+    --faih-pulse-text-color: #ffa500;
+}
+
+.faih-pulse-purple {
+    --faih-pulse-color: rgba(128, 0, 128, 0.5);
+    --faih-pulse-text-color: #800080;
+}
+
+.faih-pulse-gold {
+    --faih-pulse-color: rgba(255, 215, 0, 0.5);
+    --faih-pulse-text-color: #ffd700;
+}
+
+.faih-pulse-silver {
+    --faih-pulse-color: rgba(192, 192, 192, 0.5);
+    --faih-pulse-text-color: #c0c0c0;
+}
+
+/* Pulse timing variations */
+.faih-pulse-ease {
+    animation-timing-function: ease-in-out;
+}
+
+.faih-pulse-bounce {
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.faih-pulse-elastic {
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.faih-pulse-linear {
+    animation-timing-function: linear;
+}
+
+/* Infinite pulse variations */
+.faih-pulse-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.faih-pulse-slow-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    --faih-animation-duration: 2s;
+}
+
+.faih-pulse-fast-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    --faih-animation-duration: 0.5s;
+}
+
+/* Special pulse effects */
+.faih-pulse-notification {
+    --faih-pulse-scale: 1.08;
+    --faih-pulse-color: rgba(64, 156, 255, 0.4);
+    --faih-animation-duration: 1s;
+}
+
+.faih-pulse-alert {
+    --faih-pulse-scale: 1.15;
+    --faih-pulse-color: rgba(255, 0, 0, 0.6);
+    --faih-animation-duration: 0.8s;
+}
+
+.faih-pulse-success {
+    --faih-pulse-scale: 1.1;
+    --faih-pulse-color: rgba(0, 255, 0, 0.6);
+    --faih-animation-duration: 0.8s;
+}
+
+.faih-pulse-warning {
+    --faih-pulse-scale: 1.1;
+    --faih-pulse-color: rgba(255, 165, 0, 0.6);
+    --faih-animation-duration: 0.8s;
+}
+
+.faih-pulse-loading {
+    --faih-pulse-scale: 1.05;
+    --faih-pulse-opacity: 0.7;
+    --faih-animation-duration: 1.2s;
+}
+
+/* Direction variations */
+.faih-pulse-reverse {
+    animation-direction: reverse;
+}
+
+.faih-pulse-alternate {
+    animation-direction: alternate;
+}
+
+.faih-pulse-alternate-reverse {
+    animation-direction: alternate-reverse;
+}
+
+/* Pulse cascade for multiple elements */
+.faih-pulse-cascade > * {
+    animation: faih-pulse 0.8s ease-in-out;
+}
+
+.faih-pulse-cascade > *:nth-child(1) { animation-delay: 0.1s; }
+.faih-pulse-cascade > *:nth-child(2) { animation-delay: 0.2s; }
+.faih-pulse-cascade > *:nth-child(3) { animation-delay: 0.3s; }
+.faih-pulse-cascade > *:nth-child(4) { animation-delay: 0.4s; }
+.faih-pulse-cascade > *:nth-child(5) { animation-delay: 0.5s; }
+.faih-pulse-cascade > *:nth-child(n+6) { animation-delay: 0.6s; }
+
+/*uses example
+
+<!-- Basic pulse -->
+<div class="faih-animation faih-pulse">Pulse</div>
+
+<!-- Pulse with opacity -->
+<div class="faih-animation faih-pulseOpacity">Pulse with fade</div>
+
+<!-- Color pulse -->
+<div class="faih-animation faih-pulseColor faih-pulse-blue">Blue pulse</div>
+
+<!-- Glow pulse -->
+<div class="faih-animation faih-pulseGlow faih-pulse-gold">Glowing pulse</div>
+
+<!-- Border pulse -->
+<div class="faih-animation faih-pulseBorder faih-pulse-red">Border pulse</div>
+
+<!-- Text pulse -->
+<div class="faih-animation faih-pulseText faih-pulse-green">Text pulse</div>
+
+<!-- Double pulse -->
+<div class="faih-animation faih-pulseDouble">Double pulse</div>
+
+<!-- Heartbeat pulse -->
+<div class="faih-animation faih-pulseHeartbeat">Heartbeat</div>
+
+<!-- Breathing pulse -->
+<div class="faih-animation faih-pulseBreath">Breathing</div>
+
+<!-- Strong pulse -->
+<div class="faih-animation faih-pulse faih-pulse-strong">Strong pulse</div>
+
+<!-- Fast pulse -->
+<div class="faih-animation faih-pulse faih-pulse-fast">Quick pulse</div>
+
+<!-- Alert pulse -->
+<div class="faih-animation faih-pulse faih-pulse-alert">Alert pulse</div>
+
+<!-- Success pulse -->
+<div class="faih-animation faih-pulse faih-pulse-success">Success!</div>
+
+<!-- Infinite pulse -->
+<div class="faih-animation faih-pulse faih-pulse-infinite">Pulsing</div>
+
+<!-- Loading pulse -->
+<div class="faih-animation faih-pulse faih-pulse-loading">Loading...</div>
+
+<!-- Cascade pulse -->
+<div class="faih-pulse-cascade">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+</div>
+
+<!-- Combined with timing utilities -->
+<div class="faih-animation faih-pulse speed-slow delay-1s">Slow delayed pulse</div>
+
+*/

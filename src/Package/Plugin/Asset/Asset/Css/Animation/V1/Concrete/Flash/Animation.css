@@ -1,0 +1,557 @@
+@-webkit-keyframes faih-flash {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-flash-opacity);
+    }
+}
+
+@keyframes faih-flash {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-flash-opacity);
+    }
+}
+
+@-webkit-keyframes faih-flashQuick {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-flash-opacity);
+    }
+}
+
+@keyframes faih-flashQuick {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-flash-opacity);
+    }
+}
+
+@-webkit-keyframes faih-flashDouble {
+    0%, 20%, 40%, 60%, 80%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-flash-opacity);
+    }
+}
+
+@keyframes faih-flashDouble {
+    0%, 20%, 40%, 60%, 80%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-flash-opacity);
+    }
+}
+
+@-webkit-keyframes faih-flashColor {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        background-color: transparent;
+        color: inherit;
+        border-color: transparent;
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        background-color: var(--faih-flash-color, rgba(255, 255, 255, 0.8));
+        color: var(--faih-flash-text-color, inherit);
+        border-color: var(--faih-flash-color, rgba(255, 255, 255, 0.8));
+    }
+}
+
+@keyframes faih-flashColor {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        background-color: transparent;
+        color: inherit;
+        border-color: transparent;
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        background-color: var(--faih-flash-color, rgba(255, 255, 255, 0.8));
+        color: var(--faih-flash-text-color, inherit);
+        border-color: var(--faih-flash-color, rgba(255, 255, 255, 0.8));
+    }
+}
+
+@-webkit-keyframes faih-flashScale {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+        transform: scale3d(1, 1, 1);
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-flash-opacity);
+        transform: scale3d(var(--faih-flash-scale), var(--faih-flash-scale), 1);
+    }
+}
+
+@keyframes faih-flashScale {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+        transform: scale3d(1, 1, 1);
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-flash-opacity);
+        transform: scale3d(var(--faih-flash-scale), var(--faih-flash-scale), 1);
+    }
+}
+
+@-webkit-keyframes faih-flashBorder {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        border-color: transparent;
+        box-shadow: none;
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        border-color: var(--faih-flash-color, #ffffff);
+        box-shadow: 0 0 0 var(--faih-flash-border-width) var(--faih-flash-color, #ffffff);
+    }
+}
+
+@keyframes faih-flashBorder {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        border-color: transparent;
+        box-shadow: none;
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        border-color: var(--faih-flash-color, #ffffff);
+        box-shadow: 0 0 0 var(--faih-flash-border-width) var(--faih-flash-color, #ffffff);
+    }
+}
+
+@-webkit-keyframes faih-flashGlow {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        box-shadow: none;
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        box-shadow: 0 0 var(--faih-flash-glow-size) var(--faih-flash-glow-spread) var(--faih-flash-color, rgba(255, 255, 255, 0.8));
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@keyframes faih-flashGlow {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        box-shadow: none;
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        box-shadow: 0 0 var(--faih-flash-glow-size) var(--faih-flash-glow-spread) var(--faih-flash-color, rgba(255, 255, 255, 0.8));
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@-webkit-keyframes faih-flashText {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        color: inherit;
+        text-shadow: none;
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        color: var(--faih-flash-color, #ffffff);
+        text-shadow: 0 0 var(--faih-flash-glow-size) var(--faih-flash-color, rgba(255, 255, 255, 0.8));
+    }
+}
+
+@keyframes faih-flashText {
+    0%, 50%, to {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        color: inherit;
+        text-shadow: none;
+    }
+    
+    25%, 75% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        color: var(--faih-flash-color, #ffffff);
+        text-shadow: 0 0 var(--faih-flash-glow-size) var(--faih-flash-color, rgba(255, 255, 255, 0.8));
+    }
+}
+
+@-webkit-keyframes faih-flashAttention {
+    0%, 8%, 16%, 24%, 32%, 40%, 48%, 56%, 64%, 72%, 80%, 88%, 96% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+        transform: scale3d(1, 1, 1);
+    }
+    
+    4%, 12%, 20%, 28%, 36%, 44%, 52%, 60%, 68%, 76%, 84%, 92%, 100% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-flash-opacity);
+        transform: scale3d(var(--faih-flash-scale), var(--faih-flash-scale), 1);
+    }
+}
+
+@keyframes faih-flashAttention {
+    0%, 8%, 16%, 24%, 32%, 40%, 48%, 56%, 64%, 72%, 80%, 88%, 96% {
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: var(--faih-fade-end-opacity);
+        transform: scale3d(1, 1, 1);
+    }
+    
+    4%, 12%, 20%, 28%, 36%, 44%, 52%, 60%, 68%, 76%, 84%, 92%, 100% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: var(--faih-flash-opacity);
+        transform: scale3d(var(--faih-flash-scale), var(--faih-flash-scale), 1);
+    }
+}
+
+/* Flash animation classes */
+.faih-flash {
+    -webkit-animation-name: faih-flash;
+    animation-name: faih-flash;
+}
+
+.faih-flashQuick {
+    -webkit-animation-name: faih-flashQuick;
+    animation-name: faih-flashQuick;
+}
+
+.faih-flashDouble {
+    -webkit-animation-name: faih-flashDouble;
+    animation-name: faih-flashDouble;
+}
+
+.faih-flashColor {
+    -webkit-animation-name: faih-flashColor;
+    animation-name: faih-flashColor;
+}
+
+.faih-flashScale {
+    -webkit-animation-name: faih-flashScale;
+    animation-name: faih-flashScale;
+}
+
+.faih-flashBorder {
+    -webkit-animation-name: faih-flashBorder;
+    animation-name: faih-flashBorder;
+}
+
+.faih-flashGlow {
+    -webkit-animation-name: faih-flashGlow;
+    animation-name: faih-flashGlow;
+}
+
+.faih-flashText {
+    -webkit-animation-name: faih-flashText;
+    animation-name: faih-flashText;
+}
+
+.faih-flashAttention {
+    -webkit-animation-name: faih-flashAttention;
+    animation-name: faih-flashAttention;
+}
+
+/* Flash intensity variations */
+.faih-flash-subtle {
+    --faih-flash-opacity: 0.7;
+    --faih-flash-scale: 1.02;
+    --faih-flash-border-width: 1px;
+    --faih-flash-glow-size: 5px;
+    --faih-flash-glow-spread: 2px;
+}
+
+.faih-flash-normal {
+    --faih-flash-opacity: 0.3;
+    --faih-flash-scale: 1.05;
+    --faih-flash-border-width: 2px;
+    --faih-flash-glow-size: 10px;
+    --faih-flash-glow-spread: 3px;
+}
+
+.faih-flash-strong {
+    --faih-flash-opacity: 0.1;
+    --faih-flash-scale: 1.1;
+    --faih-flash-border-width: 3px;
+    --faih-flash-glow-size: 20px;
+    --faih-flash-glow-spread: 5px;
+}
+
+.faih-flash-intense {
+    --faih-flash-opacity: 0;
+    --faih-flash-scale: 1.2;
+    --faih-flash-border-width: 4px;
+    --faih-flash-glow-size: 30px;
+    --faih-flash-glow-spread: 8px;
+}
+
+/* Flash speed variations */
+.faih-flash-fast {
+    --faih-animation-duration: 0.5s;
+}
+
+.faih-flash-slow {
+    --faih-animation-duration: 2s;
+}
+
+.faih-flash-very-slow {
+    --faih-animation-duration: 3s;
+}
+
+/* Flash color variations */
+.faih-flash-red {
+    --faih-flash-color: rgba(255, 0, 0, 0.8);
+    --faih-flash-text-color: #ff0000;
+}
+
+.faih-flash-blue {
+    --faih-flash-color: rgba(0, 100, 255, 0.8);
+    --faih-flash-text-color: #0064ff;
+}
+
+.faih-flash-green {
+    --faih-flash-color: rgba(0, 255, 0, 0.8);
+    --faih-flash-text-color: #00ff00;
+}
+
+.faih-flash-yellow {
+    --faih-flash-color: rgba(255, 255, 0, 0.8);
+    --faih-flash-text-color: #ffff00;
+}
+
+.faih-flash-orange {
+    --faih-flash-color: rgba(255, 165, 0, 0.8);
+    --faih-flash-text-color: #ffa500;
+}
+
+.faih-flash-purple {
+    --faih-flash-color: rgba(128, 0, 128, 0.8);
+    --faih-flash-text-color: #800080;
+}
+
+.faih-flash-gold {
+    --faih-flash-color: rgba(255, 215, 0, 0.8);
+    --faih-flash-text-color: #ffd700;
+}
+
+.faih-flash-silver {
+    --faih-flash-color: rgba(192, 192, 192, 0.8);
+    --faih-flash-text-color: #c0c0c0;
+}
+
+/* Flash timing variations */
+.faih-flash-ease {
+    animation-timing-function: ease-in-out;
+}
+
+.faih-flash-bounce {
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.faih-flash-elastic {
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.faih-flash-linear {
+    animation-timing-function: linear;
+}
+
+/* Infinite flash variations */
+.faih-flash-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.faih-flash-slow-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    --faih-animation-duration: 2s;
+}
+
+.faih-flash-fast-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    --faih-animation-duration: 0.3s;
+}
+
+/* Special flash effects */
+.faih-flash-alert {
+    --faih-flash-opacity: 0;
+    --faih-flash-scale: 1.15;
+    --faih-flash-color: rgba(255, 0, 0, 0.9);
+    --faih-animation-duration: 0.8s;
+}
+
+.faih-flash-success {
+    --faih-flash-opacity: 0;
+    --faih-flash-scale: 1.1;
+    --faih-flash-color: rgba(0, 255, 0, 0.9);
+    --faih-animation-duration: 0.8s;
+}
+
+.faih-flash-warning {
+    --faih-flash-opacity: 0;
+    --faih-flash-scale: 1.1;
+    --faih-flash-color: rgba(255, 165, 0, 0.9);
+    --faih-animation-duration: 0.8s;
+}
+
+.faih-flash-notification {
+    --faih-flash-opacity: 0.5;
+    --faih-flash-scale: 1.05;
+    --faih-flash-color: rgba(64, 156, 255, 0.8);
+    --faih-animation-duration: 1.5s;
+}
+
+/* Direction variations */
+.faih-flash-reverse {
+    animation-direction: reverse;
+}
+
+.faih-flash-alternate {
+    animation-direction: alternate;
+}
+
+.faih-flash-alternate-reverse {
+    animation-direction: alternate-reverse;
+}
+
+/* Flash cascade for multiple elements */
+.faih-flash-cascade > * {
+    animation: faih-flash 0.6s ease-in-out;
+}
+
+.faih-flash-cascade > *:nth-child(1) { animation-delay: 0.1s; }
+.faih-flash-cascade > *:nth-child(2) { animation-delay: 0.2s; }
+.faih-flash-cascade > *:nth-child(3) { animation-delay: 0.3s; }
+.faih-flash-cascade > *:nth-child(4) { animation-delay: 0.4s; }
+.faih-flash-cascade > *:nth-child(5) { animation-delay: 0.5s; }
+.faih-flash-cascade > *:nth-child(n+6) { animation-delay: 0.6s; }
+
+/*example uses
+
+<!-- Basic flash -->
+<div class="faih-animation faih-flash">Flash me</div>
+
+<!-- Quick flash -->
+<div class="faih-animation faih-flashQuick">Quick flash</div>
+
+<!-- Double flash -->
+<div class="faih-animation faih-flashDouble">Double flash</div>
+
+<!-- Color flash -->
+<div class="faih-animation faih-flashColor faih-flash-red">Red flash</div>
+
+<!-- Scale flash -->
+<div class="faih-animation faih-flashScale">Scale flash</div>
+
+<!-- Border flash -->
+<div class="faih-animation faih-flashBorder faih-flash-blue">Border flash</div>
+
+<!-- Glow flash -->
+<div class="faih-animation faih-flashGlow faih-flash-gold">Glowing flash</div>
+
+<!-- Text flash -->
+<div class="faih-animation faih-flashText faih-flash-green">Text flash</div>
+
+<!-- Attention flash -->
+<div class="faih-animation faih-flashAttention">Attention!</div>
+
+<!-- Strong flash -->
+<div class="faih-animation faih-flash faih-flash-strong">Strong flash</div>
+
+<!-- Fast flash -->
+<div class="faih-animation faih-flash faih-flash-fast">Quick flash</div>
+
+<!-- Red alert flash -->
+<div class="faih-animation faih-flash faih-flash-alert">Alert!</div>
+
+<!-- Success flash -->
+<div class="faih-animation faih-flash faih-flash-success">Success!</div>
+
+<!-- Infinite flash -->
+<div class="faih-animation faih-flash faih-flash-infinite">Flashing</div>
+
+<!-- Cascade flash -->
+<div class="faih-flash-cascade">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+</div>
+
+<!-- Combined with timing utilities -->
+<div class="faih-animation faih-flash speed-slow delay-1s">Slow delayed flash</div>
+
+*/

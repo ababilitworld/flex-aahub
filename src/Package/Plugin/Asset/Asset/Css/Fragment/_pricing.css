@@ -1,0 +1,58 @@
+.pricing {
+  padding: var(--space-12) var(--space-4);
+}
+
+.pricing__header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.pricing-card--featured {
+  border-color: var(--primary-500);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.pricing-card__badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-500);
+  color: white;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.pricing-card__actions {
+  margin-top: var(--space-6);
+}
+
+/* Pricing-specific button styling */
+.pricing-card .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.pricing-card--featured .btn {
+  background-color: var(--primary-500);
+  border-color: var(--primary-500);
+}

@@ -1,4 +1,7 @@
+@import url('../../../../Animation/V1/Manager/Style.css');
 @import url('../../../../Theme/V1/Manager/Style.css');
-@import url('../../../../Layout/V1/Manager/Style.css');
 @import url('../../../../Component/V1/Manager/Style.css');
+@import url('../../../../Fragment/V1/Manager/Style.css');
+@import url('../../../../Layout/V1/Manager/Style.css');
+@import url('../../../../Template/V1/Manager/Style.css');
 @import url('../../../../App/Style.css');

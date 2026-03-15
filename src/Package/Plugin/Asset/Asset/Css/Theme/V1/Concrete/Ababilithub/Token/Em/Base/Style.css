@@ -37,12 +37,6 @@
     
     /* === COMPONENT-SPECIFIC EM TOKENS === */
 
-    /* Button Scaling */
-    --faih-button-padding-y: var(--faih-sm-em);
-    --faih-button-padding-x: var(--faih-md-em);
-    --faih-button-gap: var(--faih-xs-em);
-    --faih-button-border-radius: 0.375em;
-
     /* Form Element Scaling */
     --faih-input-padding-y: var(--faih-sm-em);
     --faih-input-padding-x: var(--faih-base-em);

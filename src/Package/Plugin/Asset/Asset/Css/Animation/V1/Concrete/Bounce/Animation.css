@@ -1,0 +1,140 @@
+@-webkit-keyframes faih-bounce {
+    0%,
+    20%,
+    53%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, var(--faih-bounce-distance), 0) scaleY(calc(1 + var(--faih-bounce-intensity)));
+        transform: translate3d(0, var(--faih-bounce-distance), 0) scaleY(calc(1 + var(--faih-bounce-intensity)))
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, calc(var(--faih-bounce-distance) * 0.5), 0) scaleY(calc(1 + var(--faih-bounce-intensity) * 0.5));
+        transform: translate3d(0, calc(var(--faih-bounce-distance) * 0.5), 0) scaleY(calc(1 + var(--faih-bounce-intensity) * 0.5))
+    }
+
+    80% {
+        -webkit-transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translateZ(0) scaleY(calc(1 - var(--faih-bounce-intensity) * 0.5));
+        transform: translateZ(0) scaleY(calc(1 - var(--faih-bounce-intensity) * 0.5))
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, calc(var(--faih-bounce-distance) * 0.133), 0) scaleY(calc(1 + var(--faih-bounce-intensity) * 0.067));
+        transform: translate3d(0, calc(var(--faih-bounce-distance) * 0.133), 0) scaleY(calc(1 + var(--faih-bounce-intensity) * 0.067))
+    }
+}
+
+@keyframes faih-bounce {
+    0%,
+    20%,
+    53%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, var(--faih-bounce-distance), 0) scaleY(calc(1 + var(--faih-bounce-intensity)));
+        transform: translate3d(0, var(--faih-bounce-distance), 0) scaleY(calc(1 + var(--faih-bounce-intensity)))
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, calc(var(--faih-bounce-distance) * 0.5), 0) scaleY(calc(1 + var(--faih-bounce-intensity) * 0.5));
+        transform: translate3d(0, calc(var(--faih-bounce-distance) * 0.5), 0) scaleY(calc(1 + var(--faih-bounce-intensity) * 0.5))
+    }
+
+    80% {
+        -webkit-transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translateZ(0) scaleY(calc(1 - var(--faih-bounce-intensity) * 0.5));
+        transform: translateZ(0) scaleY(calc(1 - var(--faih-bounce-intensity) * 0.5))
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, calc(var(--faih-bounce-distance) * 0.133), 0) scaleY(calc(1 + var(--faih-bounce-intensity) * 0.067));
+        transform: translate3d(0, calc(var(--faih-bounce-distance) * 0.133), 0) scaleY(calc(1 + var(--faih-bounce-intensity) * 0.067))
+    }
+}
+
+/* Bounce animation class */
+.faih-bounce {
+    -webkit-animation-name: faih-bounce;
+    animation-name: faih-bounce;
+    transform-origin: center bottom;
+}
+
+/* Bounce intensity variations */
+.faih-bounce-intense {
+    --faih-bounce-intensity: 0.5;
+    --faih-bounce-distance: -50px;
+}
+
+.faih-bounce-subtle {
+    --faih-bounce-intensity: 0.15;
+    --faih-bounce-distance: -15px;
+}
+
+.faih-bounce-strong {
+    --faih-bounce-intensity: 0.7;
+    --faih-bounce-distance: -70px;
+}
+
+/* Direction variations */
+.faih-bounce-left {
+    transform-origin: left bottom;
+}
+
+.faih-bounce-right {
+    transform-origin: right bottom;
+}
+
+/* Size variations */
+.faih-bounce-small {
+    --faih-bounce-intensity: 0.2;
+    --faih-bounce-distance: -20px;
+}
+
+.faih-bounce-large {
+    --faih-bounce-intensity: 0.4;
+    --faih-bounce-distance: -40px;
+}
+
+
+/* Uses example
+
+<!-- Basic bounce -->
+<div class="faih-animation faih-bounce">Bouncing element</div>
+
+<!-- Intense bounce -->
+<div class="faih-animation faih-bounce faih-bounce-intense">Strong bounce</div>
+
+<!-- Subtle bounce -->
+<div class="faih-animation faih-bounce faih-bounce-subtle">Gentle bounce</div>
+
+<!-- Bounce with custom timing -->
+<div class="faih-animation faih-bounce speed-fast delay-2s">Fast delayed bounce</div>
+
+<!-- Directional bounce -->
+<div class="faih-animation faih-bounce faih-bounce-left">Left-anchored bounce</div>
+
+*/

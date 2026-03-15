@@ -1,0 +1,270 @@
+@-webkit-keyframes faih-zoomIn {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale));
+        transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale));
+        opacity: var(--faih-fade-start-opacity);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@keyframes faih-zoomIn {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale));
+        transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale));
+        opacity: var(--faih-fade-start-opacity);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@-webkit-keyframes faih-zoomOut {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale));
+        transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale));
+        opacity: var(--faih-fade-start-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(calc(var(--faih-zoom-start-scale) * 0.3), calc(var(--faih-zoom-start-scale) * 0.3), calc(var(--faih-zoom-start-scale) * 0.3));
+        transform: scale3d(calc(var(--faih-zoom-start-scale) * 0.3), calc(var(--faih-zoom-start-scale) * 0.3), calc(var(--faih-zoom-start-scale) * 0.3));
+        opacity: var(--faih-fade-start-opacity);
+    }
+}
+
+@keyframes faih-zoomOut {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    50% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale));
+        transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale));
+        opacity: var(--faih-fade-start-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(calc(var(--faih-zoom-start-scale) * 0.3), calc(var(--faih-zoom-start-scale) * 0.3), calc(var(--faih-zoom-start-scale) * 0.3));
+        transform: scale3d(calc(var(--faih-zoom-start-scale) * 0.3), calc(var(--faih-zoom-start-scale) * 0.3), calc(var(--faih-zoom-start-scale) * 0.3));
+        opacity: var(--faih-fade-start-opacity);
+    }
+}
+
+@-webkit-keyframes faih-zoomInDown {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale)) translate3d(0, calc(-1 * var(--faih-slide-distance)), 0);
+        transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale)) translate3d(0, calc(-1 * var(--faih-slide-distance)), 0);
+        opacity: var(--faih-fade-start-opacity);
+    }
+    
+    60% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(calc(var(--faih-zoom-start-scale) + 0.2), calc(var(--faih-zoom-start-scale) + 0.2), calc(var(--faih-zoom-start-scale) + 0.2)) translate3d(0, 25px, 0);
+        transform: scale3d(calc(var(--faih-zoom-start-scale) + 0.2), calc(var(--faih-zoom-start-scale) + 0.2), calc(var(--faih-zoom-start-scale) + 0.2)) translate3d(0, 25px, 0);
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@keyframes faih-zoomInDown {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale)) translate3d(0, calc(-1 * var(--faih-slide-distance)), 0);
+        transform: scale3d(var(--faih-zoom-start-scale), var(--faih-zoom-start-scale), var(--faih-zoom-start-scale)) translate3d(0, calc(-1 * var(--faih-slide-distance)), 0);
+        opacity: var(--faih-fade-start-opacity);
+    }
+    
+    60% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(calc(var(--faih-zoom-start-scale) + 0.2), calc(var(--faih-zoom-start-scale) + 0.2), calc(var(--faih-zoom-start-scale) + 0.2)) translate3d(0, 25px, 0);
+        transform: scale3d(calc(var(--faih-zoom-start-scale) + 0.2), calc(var(--faih-zoom-start-scale) + 0.2), calc(var(--faih-zoom-start-scale) + 0.2)) translate3d(0, 25px, 0);
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        transform: scale3d(var(--faih-zoom-end-scale), var(--faih-zoom-end-scale), var(--faih-zoom-end-scale));
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+/* Zoom animation classes */
+.faih-zoomIn {
+    -webkit-animation-name: faih-zoomIn;
+    animation-name: faih-zoomIn;
+    transform-origin: center;
+}
+
+.faih-zoomOut {
+    -webkit-animation-name: faih-zoomOut;
+    animation-name: faih-zoomOut;
+    transform-origin: center;
+}
+
+.faih-zoomInDown {
+    -webkit-animation-name: faih-zoomInDown;
+    animation-name: faih-zoomInDown;
+    transform-origin: center bottom;
+}
+
+/* Zoom scale variations */
+.faih-zoom-subtle {
+    --faih-zoom-start-scale: 0.8;
+    --faih-zoom-end-scale: 1;
+}
+
+.faih-zoom-dramatic {
+    --faih-zoom-start-scale: 0.1;
+    --faih-zoom-end-scale: 1;
+}
+
+.faih-zoom-large {
+    --faih-zoom-start-scale: 0.5;
+    --faih-zoom-end-scale: 1.2;
+}
+
+.faih-zoom-small {
+    --faih-zoom-start-scale: 1.2;
+    --faih-zoom-end-scale: 1;
+}
+
+.faih-zoom-shrink {
+    --faih-zoom-start-scale: 1.5;
+    --faih-zoom-end-scale: 1;
+}
+
+/* Zoom origin variations */
+.faih-zoom-top {
+    transform-origin: center top;
+}
+
+.faih-zoom-bottom {
+    transform-origin: center bottom;
+}
+
+.faih-zoom-left {
+    transform-origin: left center;
+}
+
+.faih-zoom-right {
+    transform-origin: right center;
+}
+
+.faih-zoom-top-left {
+    transform-origin: left top;
+}
+
+.faih-zoom-top-right {
+    transform-origin: right top;
+}
+
+.faih-zoom-bottom-left {
+    transform-origin: left bottom;
+}
+
+.faih-zoom-bottom-right {
+    transform-origin: right bottom;
+}
+
+/* Zoom timing variations */
+.faih-zoom-bounce {
+    --faih-zoom-timing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.faih-zoom-elastic {
+    --faih-zoom-timing: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+
+/* Uses example
+
+<!-- Basic zoom in -->
+<div class="faih-animation faih-zoomIn">Zoom in</div>
+
+<!-- Basic zoom out -->
+<div class="faih-animation faih-zoomOut">Zoom out</div>
+
+<!-- Zoom in from top -->
+<div class="faih-animation faih-zoomInDown">Zoom from top</div>
+
+<!-- Dramatic zoom -->
+<div class="faih-animation faih-zoomIn faih-zoom-dramatic">Dramatic zoom</div>
+
+<!-- Subtle zoom -->
+<div class="faih-animation faih-zoomIn faih-zoom-subtle">Subtle zoom</div>
+
+<!-- Zoom from specific origin -->
+<div class="faih-animation faih-zoomIn faih-zoom-top-left">Zoom from top left</div>
+
+<!-- Zoom with bounce -->
+<div class="faih-animation faih-zoomIn faih-zoom-bounce">Bouncy zoom</div>
+
+<!-- Combined with timing utilities -->
+<div class="faih-animation faih-zoomIn speed-slow delay-2s">Slow delayed zoom</div>
+
+<!-- Zoom out large -->
+<div class="faih-animation faih-zoomOut faih-zoom-large">Zoom out large</div>
+
+*/

@@ -1,1749 +1,212 @@
 /* Forest Green - ColorScheme */
 
-.forest-green {
-
-
-    /* === CORE BRAND COLORS === */
-
-
-    --faih-color-primary-50: #e8f5e9;
-
-
-    --faih-color-primary-100: #c8e6c9;
-
-
-    --faih-color-primary-200: #a5d6a7;
-
-
-    --faih-color-primary-300: #81c784;
-
-
-    --faih-color-primary-400: #66bb6a;
-
-
-    --faih-color-primary-500: #4caf50;
-
-
-    --faih-color-primary-600: #43a047;
-
-
-    --faih-color-primary-700: #388e3c;
-
-
-    --faih-color-primary-800: #2e7d32;
-
-
-    --faih-color-primary-900: #1b5e20;
-
-
-
-
-
-    /* === THEME-SPECIFIC APPLICATION COLORS === */
-
-
-    --faih-color-background-primary: #ffffff;
-
-
-    --faih-color-background-secondary: #f8fdf8;
-
-
-    --faih-color-background-tertiary: #e8f5e9;
-
-
-    --faih-color-background-inverse: #1b5e20;
-
-
-    --faih-color-surface-01: #ffffff;
-
-
-    --faih-color-surface-02: #f8fdf8;
-
-
-    --faih-color-surface-03: #f0faf0;
-
-
-    --faih-color-surface-elevated: #ffffff;
-
-
-    --faih-color-surface-raised: #f8fdf8;
-
-
-    --faih-color-text-primary: #1b5e20;
-
-
-    --faih-color-text-secondary: #388e3c;
-
-
-    --faih-color-text-tertiary: #66bb6a;
-
-
-    --faih-color-text-disabled: #81c784;
-
-
-    --faih-color-text-placeholder: #a5d6a7;
-
-
-    --faih-color-border-primary: #c8e6c9;
-
-
-    --faih-color-border-secondary: #a5d6a7;
-
-
-    --faih-color-border-strong: #4caf50;
-
-
-    --faih-color-hover-primary: rgba(76, 175, 80, 0.08);
-
-
-    --faih-color-hover-secondary: rgba(168, 216, 169, 0.12);
-
-
-    --faih-color-pressed-primary: rgba(76, 175, 80, 0.16);
-
-
-    --faih-color-focus-ring: rgba(76, 175, 80, 0.4);
-
-
-    --faih-color-icon-primary: var(--faih-color-primary-600);
-
-
-    --faih-color-status-active: #4caf50;
-
-
-
-
-
-    /* === THEME-SPECIFIC GRADIENTS === */
-
-
-    --faih-gradient-primary: linear-gradient(135deg, var(--faih-color-primary-400), var(--faih-color-primary-700));
-
-
-    --faih-gradient-premium: linear-gradient(135deg, #4caf50, #1b5e20);
-
-
-    --faih-gradient-luxury: linear-gradient(135deg, #66bb6a, #087f23, #1b5e20);
-
-
-    --faih-gradient-glass: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(33, 150, 243, 0.05));
-
-
-    --faih-gradient-hero: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
-
-
-
-
-
-    /* === THEME-SPECIFIC SHADOWS === */
-
-
-    --faih-color-shadow-subtle: rgba(27, 94, 32, 0.08);
-
-
-    --faih-color-shadow-soft: rgba(27, 94, 32, 0.12);
-
-
-    --faih-color-shadow-medium: rgba(27, 94, 32, 0.16);
-
-
-    --faih-color-shadow-strong: rgba(27, 94, 32, 0.24);
-
-
-    --faih-color-shadow-luxury: rgba(27, 94, 32, 0.32);
-
-
-    --faih-color-overlay-dark: rgba(27, 94, 32, 0.64);
-
-
-    --faih-color-overlay-premium: rgba(27, 94, 32, 0.88);
-
-
-
-
-
-    /* === THEME-SPECIFIC BUTTON COLORS === */
-
-
-    --faih-color-button-primary-bg: var(--faih-color-primary-500);
-
-
-    --faih-color-button-primary-hover: var(--faih-color-primary-600);
-
-
-    --faih-color-button-primary-pressed: var(--faih-color-primary-700);
-
-
-    --faih-color-button-secondary-bg: transparent;
-
-
-    --faih-color-button-secondary-border: var(--faih-color-primary-500);
-
-
-    --faih-color-button-secondary-hover: rgba(76, 175, 80, 0.08);
-
-
-    --faih-color-button-ghost-hover: rgba(76, 175, 80, 0.12);
-
-
+/* ============================================ */
+/* Forest Green – Light Theme (fresh & vibrant) */
+/* ============================================ */
+.forest-green-light {
+    /* Primary: Forest Green (dominant) */
+    --faih-color-primary-50: #edf7e9;
+    --faih-color-primary-100: #d0e8c0;
+    --faih-color-primary-200: #b1d997;
+    --faih-color-primary-300: #92ca6e;
+    --faih-color-primary-400: #7abe4f;
+    --faih-color-primary-500: #5fb233;
+    --faih-color-primary-600: #4f9e2b;
+    --faih-color-primary-700: #3d8823;
+    --faih-color-primary-800: #2f721d;
+    --faih-color-primary-900: #1f5314;
+
+    /* Secondary: Moss / Earth (complementary) */
+    --faih-color-secondary-50: #f5f0e6;
+    --faih-color-secondary-100: #e8d9c2;
+    --faih-color-secondary-200: #dac29e;
+    --faih-color-secondary-300: #ccab7a;
+    --faih-color-secondary-400: #c19b60;
+    --faih-color-secondary-500: #b58b46;
+    --faih-color-secondary-600: #a07a3d;
+    --faih-color-secondary-700: #886734;
+    --faih-color-secondary-800: #70552b;
+    --faih-color-secondary-900: #523f20;
+
+    /* Tertiary: Forest Floor / Bark (accent depth) */
+    --faih-color-tertiary-50: #efe7de;
+    --faih-color-tertiary-100: #dac8b5;
+    --faih-color-tertiary-200: #c3a88c;
+    --faih-color-tertiary-300: #ac8963;
+    --faih-color-tertiary-400: #9c7247;
+    --faih-color-tertiary-500: #8b5c2b;
+    --faih-color-tertiary-600: #7a4f24;
+    --faih-color-tertiary-700: #66411e;
+    --faih-color-tertiary-800: #523418;
+    --faih-color-tertiary-900: #3b2511;
+
+    /* Neutral: Warm grays (tree bark / stone) */
+    --faih-color-neutral-50: #faf8f5;
+    --faih-color-neutral-100: #f0ede8;
+    --faih-color-neutral-200: #e3ded6;
+    --faih-color-neutral-300: #d3ccc2;
+    --faih-color-neutral-400: #b9b0a4;
+    --faih-color-neutral-500: #a09488;
+    --faih-color-neutral-600: #82786c;
+    --faih-color-neutral-700: #696056;
+    --faih-color-neutral-800: #4f4840;
+    --faih-color-neutral-900: #332e28;
+
+    /* Accent: Sunlight / Golden highlights */
+    --faih-color-accent-50: #fff8e6;
+    --faih-color-accent-100: #ffedc2;
+    --faih-color-accent-200: #ffe19e;
+    --faih-color-accent-300: #ffd67a;
+    --faih-color-accent-400: #ffcd60;
+    --faih-color-accent-500: #ffc446;
+    --faih-color-accent-600: #e0ab3a;
+    --faih-color-accent-700: #bd902f;
+    --faih-color-accent-800: #9a7524;
+    --faih-color-accent-900: #6f541a;
 }
 
-
-
-
-
-/* Ocean Blue - ColorScheme */
-
-
-.ocean-blue {
-
-
-    /* === CORE BRAND COLORS === */
-
-
-    --faih-color-primary-50: #e3f2fd;
-
-
-    --faih-color-primary-100: #bbdefb;
-
-
-    --faih-color-primary-200: #90caf9;
-
-
-    --faih-color-primary-300: #64b5f6;
-
-
-    --faih-color-primary-400: #42a5f5;
-
-
-    --faih-color-primary-500: #2196f3;
-
-
-    --faih-color-primary-600: #1e88e5;
-
-
-    --faih-color-primary-700: #1976d2;
-
-
-    --faih-color-primary-800: #1565c0;
-
-
-    --faih-color-primary-900: #0d47a1;
-
-
-
-
-
-    /* === THEME-SPECIFIC APPLICATION COLORS === */
-
-
-    --faih-color-background-primary: #ffffff;
-
-
-    --faih-color-background-secondary: #f3f9ff;
-
-
-    --faih-color-background-tertiary: #e3f2fd;
-
-
-    --faih-color-background-inverse: #0d47a1;
-
-
-    --faih-color-surface-01: #ffffff;
-
-
-    --faih-color-surface-02: #f3f9ff;
-
-
-    --faih-color-surface-03: #e8f4fe;
-
-
-    --faih-color-surface-elevated: #ffffff;
-
-
-    --faih-color-surface-raised: #f3f9ff;
-
-
-    --faih-color-text-primary: #0d47a1;
-
-
-    --faih-color-text-secondary: #1976d2;
-
-
-    --faih-color-text-tertiary: #42a5f5;
-
-
-    --faih-color-text-disabled: #90caf9;
-
-
-    --faih-color-text-placeholder: #bbdefb;
-
-
-    --faih-color-border-primary: #bbdefb;
-
-
-    --faih-color-border-secondary: #90caf9;
-
-
-    --faih-color-border-strong: #2196f3;
-
-
-    --faih-color-hover-primary: rgba(33, 150, 243, 0.08);
-
-
-    --faih-color-hover-secondary: rgba(187, 222, 251, 0.12);
-
-
-    --faih-color-pressed-primary: rgba(33, 150, 243, 0.16);
-
-
-    --faih-color-focus-ring: rgba(33, 150, 243, 0.4);
-
-
-    --faih-color-icon-primary: var(--faih-color-primary-600);
-
-
-    --faih-color-status-active: #2196f3;
-
-
-
-
-
-    /* === THEME-SPECIFIC GRADIENTS === */
-
-
-    --faih-gradient-primary: linear-gradient(135deg, var(--faih-color-primary-400), var(--faih-color-primary-700));
-
-
-    --faih-gradient-premium: linear-gradient(135deg, #2196f3, #0d47a1);
-
-
-    --faih-gradient-luxury: linear-gradient(135deg, #42a5f5, #1565c0, #0d47a1);
-
-
-    --faih-gradient-glass: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(76, 175, 80, 0.05));
-
-
-    --faih-gradient-hero: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
-
-
-
-
-
-    /* === THEME-SPECIFIC SHADOWS === */
-
-
-    --faih-color-shadow-subtle: rgba(13, 71, 161, 0.08);
-
-
-    --faih-color-shadow-soft: rgba(13, 71, 161, 0.12);
-
-
-    --faih-color-shadow-medium: rgba(13, 71, 161, 0.16);
-
-
-    --faih-color-shadow-strong: rgba(13, 71, 161, 0.24);
-
-
-    --faih-color-shadow-luxury: rgba(13, 71, 161, 0.32);
-
-
-    --faih-color-overlay-dark: rgba(13, 71, 161, 0.64);
-
-
-    --faih-color-overlay-premium: rgba(13, 71, 161, 0.88);
-
-
-
-
-
-    /* === THEME-SPECIFIC BUTTON COLORS === */
-
-
-    --faih-color-button-primary-bg: var(--faih-color-primary-500);
-
-
-    --faih-color-button-primary-hover: var(--faih-color-primary-600);
-
-
-    --faih-color-button-primary-pressed: var(--faih-color-primary-700);
-
-
-    --faih-color-button-secondary-bg: transparent;
-
-
-    --faih-color-button-secondary-border: var(--faih-color-primary-500);
-
-
-    --faih-color-button-secondary-hover: rgba(33, 150, 243, 0.08);
-
-
-    --faih-color-button-ghost-hover: rgba(33, 150, 243, 0.12);
-
-
+/* ============================================ */
+/* Forest Green – Warm Theme (golden & earthy)  */
+/* ============================================ */
+.forest-green-warm {
+    /* Primary: Warmer greens with golden undertones */
+    --faih-color-primary-50: #f4f5e6;
+    --faih-color-primary-100: #e2e6b8;
+    --faih-color-primary-200: #cfd78a;
+    --faih-color-primary-300: #bcc85c;
+    --faih-color-primary-400: #aebd3f;
+    --faih-color-primary-500: #9fb233;      /* warm green base */
+    --faih-color-primary-600: #8a9c2b;
+    --faih-color-primary-700: #738423;
+    --faih-color-primary-800: #5c6d1d;
+    --faih-color-primary-900: #404f14;
+
+    /* Secondary: Richer, warmer moss / ochre */
+    --faih-color-secondary-50: #f9f2e0;
+    --faih-color-secondary-100: #f0ddb5;
+    --faih-color-secondary-200: #e6c88a;
+    --faih-color-secondary-300: #dcb35f;
+    --faih-color-secondary-400: #d5a441;
+    --faih-color-secondary-500: #ce952b;    /* warm ochre */
+    --faih-color-secondary-600: #b48224;
+    --faih-color-secondary-700: #976d1d;
+    --faih-color-secondary-800: #795716;
+    --faih-color-secondary-900: #574010;
+
+    /* Tertiary: Deep bark / terracotta */
+    --faih-color-tertiary-50: #f4e9da;
+    --faih-color-tertiary-100: #e5ccad;
+    --faih-color-tertiary-200: #d5ae80;
+    --faih-color-tertiary-300: #c59153;
+    --faih-color-tertiary-400: #b97b34;
+    --faih-color-tertiary-500: #ae661f;    /* warm bark */
+    --faih-color-tertiary-600: #98581b;
+    --faih-color-tertiary-700: #7e4816;
+    --faih-color-tertiary-800: #643811;
+    --faih-color-tertiary-900: #47280c;
+
+    /* Neutral: Warm, sandy grays */
+    --faih-color-neutral-50: #fcf9f2;
+    --faih-color-neutral-100: #f5efe3;
+    --faih-color-neutral-200: #ede3d2;
+    --faih-color-neutral-300: #e2d4be;
+    --faih-color-neutral-400: #cdbba1;
+    --faih-color-neutral-500: #b9a386;
+    --faih-color-neutral-600: #9f8970;
+    --faih-color-neutral-700: #846f5b;
+    --faih-color-neutral-800: #685645;
+    --faih-color-neutral-900: #4a3d31;
+
+    /* Accent: Deep honey / amber */
+    --faih-color-accent-50: #fff2d9;
+    --faih-color-accent-100: #ffdfaa;
+    --faih-color-accent-200: #ffcc7a;
+    --faih-color-accent-300: #ffb94a;
+    --faih-color-accent-400: #ffab2b;
+    --faih-color-accent-500: #ff9e1a;       /* warm amber */
+    --faih-color-accent-600: #e08714;
+    --faih-color-accent-700: #ba6e10;
+    --faih-color-accent-800: #94550c;
+    --faih-color-accent-900: #693d08;
 }
 
-
-
-
-
-/* Royal Purple - ColorScheme */
-
-
-.royal-purple {
-
-
-    /* === CORE BRAND COLORS === */
-
-
-    --faih-color-primary-50: #f3e5f5;
-
-
-    --faih-color-primary-100: #e1bee7;
-
-
-    --faih-color-primary-200: #ce93d8;
-
-
-    --faih-color-primary-300: #ba68c8;
-
-
-    --faih-color-primary-400: #ab47bc;
-
-
-    --faih-color-primary-500: #9c27b0;
-
-
-    --faih-color-primary-600: #8e24aa;
-
-
-    --faih-color-primary-700: #7b1fa2;
-
-
-    --faih-color-primary-800: #6a1b9a;
-
-
-    --faih-color-primary-900: #4a148c;
-
-
-
-
-
-    /* === THEME-SPECIFIC APPLICATION COLORS === */
-
-
-    --faih-color-background-primary: #ffffff;
-
-
-    --faih-color-background-secondary: #faf5ff;
-
-
-    --faih-color-background-tertiary: #f3e5f5;
-
-
-    --faih-color-background-inverse: #4a148c;
-
-
-    --faih-color-surface-01: #ffffff;
-
-
-    --faih-color-surface-02: #faf5ff;
-
-
-    --faih-color-surface-03: #f5edfa;
-
-
-    --faih-color-surface-elevated: #ffffff;
-
-
-    --faih-color-surface-raised: #faf5ff;
-
-
-    --faih-color-text-primary: #4a148c;
-
-
-    --faih-color-text-secondary: #6a1b9a;
-
-
-    --faih-color-text-tertiary: #9c27b0;
-
-
-    --faih-color-text-disabled: #ba68c8;
-
-
-    --faih-color-text-placeholder: #ce93d8;
-
-
-    --faih-color-border-primary: #e1bee7;
-
-
-    --faih-color-border-secondary: #ce93d8;
-
-
-    --faih-color-border-strong: #9c27b0;
-
-
-    --faih-color-hover-primary: rgba(156, 39, 176, 0.08);
-
-
-    --faih-color-hover-secondary: rgba(225, 190, 231, 0.12);
-
-
-    --faih-color-pressed-primary: rgba(156, 39, 176, 0.16);
-
-
-    --faih-color-focus-ring: rgba(156, 39, 176, 0.4);
-
-
-    --faih-color-icon-primary: var(--faih-color-primary-600);
-
-
-    --faih-color-status-active: #9c27b0;
-
-
-
-
-
-    /* === THEME-SPECIFIC GRADIENTS === */
-
-
-    --faih-gradient-primary: linear-gradient(135deg, var(--faih-color-primary-400), var(--faih-color-primary-700));
-
-
-    --faih-gradient-premium: linear-gradient(135deg, #9c27b0, #4a148c);
-
-
-    --faih-gradient-luxury: linear-gradient(135deg, #ba68c8, #7b1fa2, #4a148c);
-
-
-    --faih-gradient-glass: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(33, 150, 243, 0.05));
-
-
-    --faih-gradient-hero: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 50%, #ce93d8 100%);
-
-
-
-
-
-    /* === THEME-SPECIFIC SHADOWS === */
-
-
-    --faih-color-shadow-subtle: rgba(74, 20, 140, 0.08);
-
-
-    --faih-color-shadow-soft: rgba(74, 20, 140, 0.12);
-
-
-    --faih-color-shadow-medium: rgba(74, 20, 140, 0.16);
-
-
-    --faih-color-shadow-strong: rgba(74, 20, 140, 0.24);
-
-
-    --faih-color-shadow-luxury: rgba(74, 20, 140, 0.32);
-
-
-    --faih-color-overlay-dark: rgba(74, 20, 140, 0.64);
-
-
-    --faih-color-overlay-premium: rgba(74, 20, 140, 0.88);
-
-
-
-
-
-    /* === THEME-SPECIFIC BUTTON COLORS === */
-
-
-    --faih-color-button-primary-bg: var(--faih-color-primary-500);
-
-
-    --faih-color-button-primary-hover: var(--faih-color-primary-600);
-
-
-    --faih-color-button-primary-pressed: var(--faih-color-primary-700);
-
-
-    --faih-color-button-secondary-bg: transparent;
-
-
-    --faih-color-button-secondary-border: var(--faih-color-primary-500);
-
-
-    --faih-color-button-secondary-hover: rgba(156, 39, 176, 0.08);
-
-
-    --faih-color-button-ghost-hover: rgba(156, 39, 176, 0.12);
-
-
+/* ============================================ */
+/* Forest Green – Dark Theme (deep & moody)     */
+/* ============================================ */
+.forest-green-dark {
+    /* Primary: Deep forest greens, lower lightness */
+    --faih-color-primary-50: #e3efe0;
+    --faih-color-primary-100: #bdd7b6;
+    --faih-color-primary-200: #96bf8c;
+    --faih-color-primary-300: #70a762;
+    --faih-color-primary-400: #529542;
+    --faih-color-primary-500: #3d832b;       /* deep green base */
+    --faih-color-primary-600: #347224;
+    --faih-color-primary-700: #2a5f1d;
+    --faih-color-primary-800: #204c16;
+    --faih-color-primary-900: #153610;
+
+    /* Secondary: Muted moss / olive */
+    --faih-color-secondary-50: #eeeadb;
+    --faih-color-secondary-100: #d8ceaf;
+    --faih-color-secondary-200: #c1b283;
+    --faih-color-secondary-300: #aa9657;
+    --faih-color-secondary-400: #9a823d;
+    --faih-color-secondary-500: #8b6f2d;     /* muted olive */
+    --faih-color-secondary-600: #786026;
+    --faih-color-secondary-700: #634e1f;
+    --faih-color-secondary-800: #4e3c18;
+    --faih-color-secondary-900: #392c12;
+
+    /* Tertiary: Dark bark / charcoal */
+    --faih-color-tertiary-50: #e3dbd2;
+    --faih-color-tertiary-100: #c9b9a8;
+    --faih-color-tertiary-200: #af977e;
+    --faih-color-tertiary-300: #957554;
+    --faih-color-tertiary-400: #825d3b;
+    --faih-color-tertiary-500: #704826;      /* dark bark */
+    --faih-color-tertiary-600: #613f20;
+    --faih-color-tertiary-700: #4f341a;
+    --faih-color-tertiary-800: #3d2814;
+    --faih-color-tertiary-900: #2c1d0f;
+
+    /* Neutral: Cool, dark grays (slate / shadow) */
+    --faih-color-neutral-50: #f2f0ed;
+    --faih-color-neutral-100: #e0dbd4;
+    --faih-color-neutral-200: #cbc3b9;
+    --faih-color-neutral-300: #b3a89b;
+    --faih-color-neutral-400: #978b7d;
+    --faih-color-neutral-500: #7c7062;       /* mid gray */
+    --faih-color-neutral-600: #685d51;
+    --faih-color-neutral-700: #534a40;
+    --faih-color-neutral-800: #3f382f;
+    --faih-color-neutral-900: #2b2620;
+
+    /* Accent: Muted gold / brass */
+    --faih-color-accent-50: #f9f2dd;
+    --faih-color-accent-100: #f2deb2;
+    --faih-color-accent-200: #e9c987;
+    --faih-color-accent-300: #e0b45c;
+    --faih-color-accent-400: #daa540;
+    --faih-color-accent-500: #d4962b;        /* muted gold */
+    --faih-color-accent-600: #b98223;
+    --faih-color-accent-700: #9a6b1c;
+    --faih-color-accent-800: #7a5415;
+    --faih-color-accent-900: #573d0f;
 }
 
+.ocean-blue { }
 
+.royal-purple { }
 
+.sunset-orange { }
 
+.deep-pink { }
 
-/* Sunset Orange - ColorScheme */
+.gold-luxury { }
 
+.emerald-luxury { }
 
-.sunset-orange {
+.sapphire-elite { }
 
-
-    /* === CORE BRAND COLORS === */
-
-
-    --faih-color-primary-50: #fff3e0;
-
-
-    --faih-color-primary-100: #ffe0b2;
-
-
-    --faih-color-primary-200: #ffcc80;
-
-
-    --faih-color-primary-300: #ffb74d;
-
-
-    --faih-color-primary-400: #ffa726;
-
-
-    --faih-color-primary-500: #ff9800;
-
-
-    --faih-color-primary-600: #fb8c00;
-
-
-    --faih-color-primary-700: #f57c00;
-
-
-    --faih-color-primary-800: #ef6c00;
-
-
-    --faih-color-primary-900: #e65100;
-
-
-
-
-
-    /* === THEME-SPECIFIC APPLICATION COLORS === */
-
-
-    --faih-color-background-primary: #ffffff;
-
-
-    --faih-color-background-secondary: #fffaf2;
-
-
-    --faih-color-background-tertiary: #fff3e0;
-
-
-    --faih-color-background-inverse: #e65100;
-
-
-    --faih-color-surface-01: #ffffff;
-
-
-    --faih-color-surface-02: #fffaf2;
-
-
-    --faih-color-surface-03: #fff5e6;
-
-
-    --faih-color-surface-elevated: #ffffff;
-
-
-    --faih-color-surface-raised: #fffaf2;
-
-
-    --faih-color-text-primary: #e65100;
-
-
-    --faih-color-text-secondary: #f57c00;
-
-
-    --faih-color-text-tertiary: #ff9800;
-
-
-    --faih-color-text-disabled: #ffb74d;
-
-
-    --faih-color-text-placeholder: #ffcc80;
-
-
-    --faih-color-border-primary: #ffe0b2;
-
-
-    --faih-color-border-secondary: #ffcc80;
-
-
-    --faih-color-border-strong: #ff9800;
-
-
-    --faih-color-hover-primary: rgba(255, 152, 0, 0.08);
-
-
-    --faih-color-hover-secondary: rgba(255, 224, 178, 0.12);
-
-
-    --faih-color-pressed-primary: rgba(255, 152, 0, 0.16);
-
-
-    --faih-color-focus-ring: rgba(255, 152, 0, 0.4);
-
-
-    --faih-color-icon-primary: var(--faih-color-primary-600);
-
-
-    --faih-color-status-active: #ff9800;
-
-
-
-
-
-    /* === THEME-SPECIFIC GRADIENTS === */
-
-
-    --faih-gradient-primary: linear-gradient(135deg, var(--faih-color-primary-400), var(--faih-color-primary-700));
-
-
-    --faih-gradient-premium: linear-gradient(135deg, #ff9800, #e65100);
-
-
-    --faih-gradient-luxury: linear-gradient(135deg, #ffb74d, #f57c00, #e65100);
-
-
-    --faih-gradient-glass: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(33, 150, 243, 0.05));
-
-
-    --faih-gradient-hero: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 50%, #ffcc80 100%);
-
-
-
-
-
-    /* === THEME-SPECIFIC SHADOWS === */
-
-
-    --faih-color-shadow-subtle: rgba(230, 81, 0, 0.08);
-
-
-    --faih-color-shadow-soft: rgba(230, 81, 0, 0.12);
-
-
-    --faih-color-shadow-medium: rgba(230, 81, 0, 0.16);
-
-
-    --faih-color-shadow-strong: rgba(230, 81, 0, 0.24);
-
-
-    --faih-color-shadow-luxury: rgba(230, 81, 0, 0.32);
-
-
-    --faih-color-overlay-dark: rgba(230, 81, 0, 0.64);
-
-
-    --faih-color-overlay-premium: rgba(230, 81, 0, 0.88);
-
-
-
-
-
-    /* === THEME-SPECIFIC BUTTON COLORS === */
-
-
-    --faih-color-button-primary-bg: var(--faih-color-primary-500);
-
-
-    --faih-color-button-primary-hover: var(--faih-color-primary-600);
-
-
-    --faih-color-button-primary-pressed: var(--faih-color-primary-700);
-
-
-    --faih-color-button-secondary-bg: transparent;
-
-
-    --faih-color-button-secondary-border: var(--faih-color-primary-500);
-
-
-    --faih-color-button-secondary-hover: rgba(255, 152, 0, 0.08);
-
-
-    --faih-color-button-ghost-hover: rgba(255, 152, 0, 0.12);
-
-
-}
-
-
-
-
-
-/* Deep Pink - ColorScheme */
-
-
-.deep-pink {
-
-
-    /* === CORE BRAND COLORS === */
-
-
-    --faih-color-primary-50: #fce4ec;
-
-
-    --faih-color-primary-100: #f8bbd0;
-
-
-    --faih-color-primary-200: #f48fb1;
-
-
-    --faih-color-primary-300: #f06292;
-
-
-    --faih-color-primary-400: #ec407a;
-
-
-    --faih-color-primary-500: #e91e63;
-
-
-    --faih-color-primary-600: #d81b60;
-
-
-    --faih-color-primary-700: #c2185b;
-
-
-    --faih-color-primary-800: #ad1457;
-
-
-    --faih-color-primary-900: #880e4f;
-
-
-
-
-
-    /* === THEME-SPECIFIC APPLICATION COLORS === */
-
-
-    --faih-color-background-primary: #ffffff;
-
-
-    --faih-color-background-secondary: #fef5f9;
-
-
-    --faih-color-background-tertiary: #fce4ec;
-
-
-    --faih-color-background-inverse: #880e4f;
-
-
-    --faih-color-surface-01: #ffffff;
-
-
-    --faih-color-surface-02: #fef5f9;
-
-
-    --faih-color-surface-03: #fcecf3;
-
-
-    --faih-color-surface-elevated: #ffffff;
-
-
-    --faih-color-surface-raised: #fef5f9;
-
-
-    --faih-color-text-primary: #880e4f;
-
-
-    --faih-color-text-secondary: #ad1457;
-
-
-    --faih-color-text-tertiary: #e91e63;
-
-
-    --faih-color-text-disabled: #f06292;
-
-
-    --faih-color-text-placeholder: #f48fb1;
-
-
-    --faih-color-border-primary: #f8bbd0;
-
-
-    --faih-color-border-secondary: #f48fb1;
-
-
-    --faih-color-border-strong: #e91e63;
-
-
-    --faih-color-hover-primary: rgba(233, 30, 99, 0.08);
-
-
-    --faih-color-hover-secondary: rgba(248, 187, 208, 0.12);
-
-
-    --faih-color-pressed-primary: rgba(233, 30, 99, 0.16);
-
-
-    --faih-color-focus-ring: rgba(233, 30, 99, 0.4);
-
-
-    --faih-color-icon-primary: var(--faih-color-primary-600);
-
-
-    --faih-color-status-active: #e91e63;
-
-
-
-
-
-    /* === THEME-SPECIFIC GRADIENTS === */
-
-
-    --faih-gradient-primary: linear-gradient(135deg, var(--faih-color-primary-400), var(--faih-color-primary-700));
-
-
-    --faih-gradient-premium: linear-gradient(135deg, #e91e63, #880e4f);
-
-
-    --faih-gradient-luxury: linear-gradient(135deg, #f06292, #c2185b, #880e4f);
-
-
-    --faih-gradient-glass: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(33, 150, 243, 0.05));
-
-
-    --faih-gradient-hero: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
-
-
-
-
-
-    /* === THEME-SPECIFIC SHADOWS === */
-
-
-    --faih-color-shadow-subtle: rgba(136, 14, 79, 0.08);
-
-
-    --faih-color-shadow-soft: rgba(136, 14, 79, 0.12);
-
-
-    --faih-color-shadow-medium: rgba(136, 14, 79, 0.16);
-
-
-    --faih-color-shadow-strong: rgba(136, 14, 79, 0.24);
-
-
-    --faih-color-shadow-luxury: rgba(136, 14, 79, 0.32);
-
-
-    --faih-color-overlay-dark: rgba(136, 14, 79, 0.64);
-
-
-    --faih-color-overlay-premium: rgba(136, 14, 79, 0.88);
-
-
-
-
-
-    /* === THEME-SPECIFIC BUTTON COLORS === */
-
-
-    --faih-color-button-primary-bg: var(--faih-color-primary-500);
-
-
-    --faih-color-button-primary-hover: var(--faih-color-primary-600);
-
-
-    --faih-color-button-primary-pressed: var(--faih-color-primary-700);
-
-
-    --faih-color-button-secondary-bg: transparent;
-
-
-    --faih-color-button-secondary-border: var(--faih-color-primary-500);
-
-
-    --faih-color-button-secondary-hover: rgba(233, 30, 99, 0.08);
-
-
-    --faih-color-button-ghost-hover: rgba(233, 30, 99, 0.12);
-
-
-}
-
-
-
-
-
-/* Gold Luxury - ColorScheme */
-
-
-.gold-luxury {
-
-
-    /* === CORE BRAND COLORS === */
-
-
-    --faih-color-primary-50: #fff8e1;
-
-
-    --faih-color-primary-100: #ffecb3;
-
-
-    --faih-color-primary-200: #ffe082;
-
-
-    --faih-color-primary-300: #ffd54f;
-
-
-    --faih-color-primary-400: #ffca28;
-
-
-    --faih-color-primary-500: #ffc107;
-
-
-    --faih-color-primary-600: #ffb300;
-
-
-    --faih-color-primary-700: #ffa000;
-
-
-    --faih-color-primary-800: #ff8f00;
-
-
-    --faih-color-primary-900: #ff6f00;
-
-
-
-
-
-    /* === THEME-SPECIFIC APPLICATION COLORS === */
-
-
-    --faih-color-background-primary: #ffffff;
-
-
-    --faih-color-background-secondary: #fffbf0;
-
-
-    --faih-color-background-tertiary: #fff8e1;
-
-
-    --faih-color-background-inverse: #5d4037;
-
-
-    --faih-color-surface-01: #ffffff;
-
-
-    --faih-color-surface-02: #fffbf0;
-
-
-    --faih-color-surface-03: #fff9e6;
-
-
-    --faih-color-surface-elevated: #ffffff;
-
-
-    --faih-color-surface-raised: #fffbf0;
-
-
-    --faih-color-text-primary: #5d4037;
-
-
-    --faih-color-text-secondary: #8d6e63;
-
-
-    --faih-color-text-tertiary: #ffb300;
-
-
-    --faih-color-text-disabled: #ffd54f;
-
-
-    --faih-color-text-placeholder: #ffe082;
-
-
-    --faih-color-border-primary: #ffecb3;
-
-
-    --faih-color-border-secondary: #ffe082;
-
-
-    --faih-color-border-strong: #ffc107;
-
-
-    --faih-color-hover-primary: rgba(255, 193, 7, 0.08);
-
-
-    --faih-color-hover-secondary: rgba(255, 236, 179, 0.12);
-
-
-    --faih-color-pressed-primary: rgba(255, 193, 7, 0.16);
-
-
-    --faih-color-focus-ring: rgba(255, 193, 7, 0.4);
-
-
-    --faih-color-icon-primary: var(--faih-color-primary-600);
-
-
-    --faih-color-status-active: #ffc107;
-
-
-
-
-
-    /* === THEME-SPECIFIC GRADIENTS === */
-
-
-    --faih-gradient-primary: linear-gradient(135deg, var(--faih-color-primary-400), var(--faih-color-primary-700));
-
-
-    --faih-gradient-premium: linear-gradient(135deg, #ffc107, #ff8f00);
-
-
-    --faih-gradient-luxury: linear-gradient(135deg, #ffd54f, #ffb300, #ff8f00);
-
-
-    --faih-gradient-glass: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(33, 150, 243, 0.05));
-
-
-    --faih-gradient-hero: linear-gradient(135deg, #fff8e1 0%, #ffecb3 50%, #ffe082 100%);
-
-
-
-
-
-    /* === THEME-SPECIFIC SHADOWS === */
-
-
-    --faih-color-shadow-subtle: rgba(93, 64, 55, 0.08);
-
-
-    --faih-color-shadow-soft: rgba(93, 64, 55, 0.12);
-
-
-    --faih-color-shadow-medium: rgba(93, 64, 55, 0.16);
-
-
-    --faih-color-shadow-strong: rgba(93, 64, 55, 0.24);
-
-
-    --faih-color-shadow-luxury: rgba(93, 64, 55, 0.32);
-
-
-    --faih-color-overlay-dark: rgba(93, 64, 55, 0.64);
-
-
-    --faih-color-overlay-premium: rgba(93, 64, 55, 0.88);
-
-
-
-
-
-    /* === THEME-SPECIFIC BUTTON COLORS === */
-
-
-    --faih-color-button-primary-bg: var(--faih-color-primary-500);
-
-
-    --faih-color-button-primary-hover: var(--faih-color-primary-600);
-
-
-    --faih-color-button-primary-pressed: var(--faih-color-primary-700);
-
-
-    --faih-color-button-secondary-bg: transparent;
-
-
-    --faih-color-button-secondary-border: var(--faih-color-primary-500);
-
-
-    --faih-color-button-secondary-hover: rgba(255, 193, 7, 0.08);
-
-
-    --faih-color-button-ghost-hover: rgba(255, 193, 7, 0.12);
-
-
-}
-
-
-
-
-
-/* Emerald Luxury - ColorScheme */
-
-
-.emerald-luxury {
-
-
-    /* === CORE BRAND COLORS === */
-
-
-    --faih-color-primary-50: #e8f5e9;
-
-
-    --faih-color-primary-100: #c8e6c9;
-
-
-    --faih-color-primary-200: #a5d6a7;
-
-
-    --faih-color-primary-300: #81c784;
-
-
-    --faih-color-primary-400: #66bb6a;
-
-
-    --faih-color-primary-500: #4caf50;
-
-
-    --faih-color-primary-600: #43a047;
-
-
-    --faih-color-primary-700: #388e3c;
-
-
-    --faih-color-primary-800: #2e7d32;
-
-
-    --faih-color-primary-900: #1b5e20;
-
-
-
-
-
-    /* === THEME-SPECIFIC APPLICATION COLORS === */
-
-
-    --faih-color-background-primary: #ffffff;
-
-
-    --faih-color-background-secondary: #f8fdf8;
-
-
-    --faih-color-background-tertiary: #e8f5e9;
-
-
-    --faih-color-background-inverse: #1b5e20;
-
-
-    --faih-color-surface-01: #ffffff;
-
-
-    --faih-color-surface-02: #f8fdf8;
-
-
-    --faih-color-surface-03: #f0faf0;
-
-
-    --faih-color-surface-elevated: #ffffff;
-
-
-    --faih-color-surface-raised: #f8fdf8;
-
-
-    --faih-color-text-primary: #1b5e20;
-
-
-    --faih-color-text-secondary: #388e3c;
-
-
-    --faih-color-text-tertiary: #66bb6a;
-
-
-    --faih-color-text-disabled: #81c784;
-
-
-    --faih-color-text-placeholder: #a5d6a7;
-
-
-    --faih-color-border-primary: #c8e6c9;
-
-
-    --faih-color-border-secondary: #a5d6a7;
-
-
-    --faih-color-border-strong: #4caf50;
-
-
-    --faih-color-hover-primary: rgba(76, 175, 80, 0.08);
-
-
-    --faih-color-hover-secondary: rgba(168, 216, 169, 0.12);
-
-
-    --faih-color-pressed-primary: rgba(76, 175, 80, 0.16);
-
-
-    --faih-color-focus-ring: rgba(76, 175, 80, 0.4);
-
-
-    --faih-color-icon-primary: var(--faih-color-primary-600);
-
-
-    --faih-color-status-active: #4caf50;
-
-
-
-
-
-    /* === THEME-SPECIFIC GRADIENTS === */
-
-
-    --faih-gradient-primary: linear-gradient(135deg, var(--faih-color-primary-400), var(--faih-color-primary-700));
-
-
-    --faih-gradient-premium: linear-gradient(135deg, #4caf50, #1b5e20);
-
-
-    --faih-gradient-luxury: linear-gradient(135deg, #66bb6a, #087f23, #1b5e20);
-
-
-    --faih-gradient-glass: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(33, 150, 243, 0.05));
-
-
-    --faih-gradient-hero: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
-
-
-
-
-
-    /* === THEME-SPECIFIC SHADOWS === */
-
-
-    --faih-color-shadow-subtle: rgba(27, 94, 32, 0.08);
-
-
-    --faih-color-shadow-soft: rgba(27, 94, 32, 0.12);
-
-
-    --faih-color-shadow-medium: rgba(27, 94, 32, 0.16);
-
-
-    --faih-color-shadow-strong: rgba(27, 94, 32, 0.24);
-
-
-    --faih-color-shadow-luxury: rgba(27, 94, 32, 0.32);
-
-
-    --faih-color-overlay-dark: rgba(27, 94, 32, 0.64);
-
-
-    --faih-color-overlay-premium: rgba(27, 94, 32, 0.88);
-
-
-
-
-
-    /* === THEME-SPECIFIC BUTTON COLORS === */
-
-
-    --faih-color-button-primary-bg: var(--faih-color-primary-500);
-
-
-    --faih-color-button-primary-hover: var(--faih-color-primary-600);
-
-
-    --faih-color-button-primary-pressed: var(--faih-color-primary-700);
-
-
-    --faih-color-button-secondary-bg: transparent;
-
-
-    --faih-color-button-secondary-border: var(--faih-color-primary-500);
-
-
-    --faih-color-button-secondary-hover: rgba(76, 175, 80, 0.08);
-
-
-    --faih-color-button-ghost-hover: rgba(76, 175, 80, 0.12);
-
-
-}
-
-
-
-
-
-/* Sapphire Elite - ColorScheme */
-
-
-.sapphire-elite {
-
-
-    /* === CORE BRAND COLORS === */
-
-
-    --faih-color-primary-50: #e3f2fd;
-
-
-    --faih-color-primary-100: #bbdefb;
-
-
-    --faih-color-primary-200: #90caf9;
-
-
-    --faih-color-primary-300: #64b5f6;
-
-
-    --faih-color-primary-400: #42a5f5;
-
-
-    --faih-color-primary-500: #2196f3;
-
-
-    --faih-color-primary-600: #1e88e5;
-
-
-    --faih-color-primary-700: #1976d2;
-
-
-    --faih-color-primary-800: #1565c0;
-
-
-    --faih-color-primary-900: #0d47a1;
-
-
-
-
-
-    /* === THEME-SPECIFIC APPLICATION COLORS === */
-
-
-    --faih-color-background-primary: #ffffff;
-
-
-    --faih-color-background-secondary: #f3f9ff;
-
-
-    --faih-color-background-tertiary: #e3f2fd;
-
-
-    --faih-color-background-inverse: #0d47a1;
-
-
-    --faih-color-surface-01: #ffffff;
-
-
-    --faih-color-surface-02: #f3f9ff;
-
-
-    --faih-color-surface-03: #e8f4fe;
-
-
-    --faih-color-surface-elevated: #ffffff;
-
-
-    --faih-color-surface-raised: #f3f9ff;
-
-
-    --faih-color-text-primary: #0d47a1;
-
-
-    --faih-color-text-secondary: #1976d2;
-
-
-    --faih-color-text-tertiary: #42a5f5;
-
-
-    --faih-color-text-disabled: #90caf9;
-
-
-    --faih-color-text-placeholder: #bbdefb;
-
-
-    --faih-color-border-primary: #bbdefb;
-
-
-    --faih-color-border-secondary: #90caf9;
-
-
-    --faih-color-border-strong: #2196f3;
-
-
-    --faih-color-hover-primary: rgba(33, 150, 243, 0.08);
-
-
-    --faih-color-hover-secondary: rgba(187, 222, 251, 0.12);
-
-
-    --faih-color-pressed-primary: rgba(33, 150, 243, 0.16);
-
-
-    --faih-color-focus-ring: rgba(33, 150, 243, 0.4);
-
-
-    --faih-color-icon-primary: var(--faih-color-primary-600);
-
-
-    --faih-color-status-active: #2196f3;
-
-
-
-
-
-    /* === THEME-SPECIFIC GRADIENTS === */
-
-
-    --faih-gradient-primary: linear-gradient(135deg, var(--faih-color-primary-400), var(--faih-color-primary-700));
-
-
-    --faih-gradient-premium: linear-gradient(135deg, #2196f3, #0d47a1);
-
-
-    --faih-gradient-luxury: linear-gradient(135deg, #42a5f5, #1565c0, #0d47a1);
-
-
-    --faih-gradient-glass: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(76, 175, 80, 0.05));
-
-
-    --faih-gradient-hero: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
-
-
-
-
-
-    /* === THEME-SPECIFIC SHADOWS === */
-
-
-    --faih-color-shadow-subtle: rgba(13, 71, 161, 0.08);
-
-
-    --faih-color-shadow-soft: rgba(13, 71, 161, 0.12);
-
-
-    --faih-color-shadow-medium: rgba(13, 71, 161, 0.16);
-
-
-    --faih-color-shadow-strong: rgba(13, 71, 161, 0.24);
-
-
-    --faih-color-shadow-luxury: rgba(13, 71, 161, 0.32);
-
-
-    --faih-color-overlay-dark: rgba(13, 71, 161, 0.64);
-
-
-    --faih-color-overlay-premium: rgba(13, 71, 161, 0.88);
-
-
-
-
-
-    /* === THEME-SPECIFIC BUTTON COLORS === */
-
-
-    --faih-color-button-primary-bg: var(--faih-color-primary-500);
-
-
-    --faih-color-button-primary-hover: var(--faih-color-primary-600);
-
-
-    --faih-color-button-primary-pressed: var(--faih-color-primary-700);
-
-
-    --faih-color-button-secondary-bg: transparent;
-
-
-    --faih-color-button-secondary-border: var(--faih-color-primary-500);
-
-
-    --faih-color-button-secondary-hover: rgba(33, 150, 243, 0.08);
-
-
-    --faih-color-button-ghost-hover: rgba(33, 150, 243, 0.12);
-
-
-}
-
-
-
-
-
-/* Platinum Corporate - ColorScheme */
-
-
-.platinum-corporate {
-
-
-    /* === CORE BRAND COLORS === */
-
-
-    --faih-color-primary-50: #fafafa;
-
-
-    --faih-color-primary-100: #f5f5f5;
-
-
-    --faih-color-primary-200: #eeeeee;
-
-
-    --faih-color-primary-300: #e0e0e0;
-
-
-    --faih-color-primary-400: #bdbdbd;
-
-
-    --faih-color-primary-500: #9e9e9e;
-
-
-    --faih-color-primary-600: #757575;
-
-
-    --faih-color-primary-700: #616161;
-
-
-    --faih-color-primary-800: #424242;
-
-
-    --faih-color-primary-900: #212121;
-
-
-
-
-
-    /* === THEME-SPECIFIC APPLICATION COLORS === */
-
-
-    --faih-color-background-primary: #ffffff;
-
-
-    --faih-color-background-secondary: #fafafa;
-
-
-    --faih-color-background-tertiary: #f5f5f5;
-
-
-    --faih-color-background-inverse: #212121;
-
-
-    --faih-color-surface-01: #ffffff;
-
-
-    --faih-color-surface-02: #fafafa;
-
-
-    --faih-color-surface-03: #f5f5f5;
-
-
-    --faih-color-surface-elevated: #ffffff;
-
-
-    --faih-color-surface-raised: #fafafa;
-
-
-    --faih-color-text-primary: #212121;
-
-
-    --faih-color-text-secondary: #424242;
-
-
-    --faih-color-text-tertiary: #616161;
-
-
-    --faih-color-text-disabled: #9e9e9e;
-
-
-    --faih-color-text-placeholder: #bdbdbd;
-
-
-    --faih-color-border-primary: #e0e0e0;
-
-
-    --faih-color-border-secondary: #bdbdbd;
-
-
-    --faih-color-border-strong: #616161;
-
-
-    --faih-color-hover-primary: rgba(33, 33, 33, 0.08);
-
-
-    --faih-color-hover-secondary: rgba(158, 158, 158, 0.12);
-
-
-    --faih-color-pressed-primary: rgba(33, 33, 33, 0.16);
-
-
-    --faih-color-focus-ring: rgba(33, 150, 243, 0.4);
-
-
-    --faih-color-icon-primary: var(--faih-color-primary-700);
-
-
-    --faih-color-status-active: #424242;
-
-
-
-
-
-    /* === THEME-SPECIFIC GRADIENTS === */
-
-
-    --faih-gradient-primary: linear-gradient(135deg, #bdbdbd, #424242);
-
-
-    --faih-gradient-premium: linear-gradient(135deg, #9e9e9e, #212121);
-
-
-    --faih-gradient-luxury: linear-gradient(135deg, #e0e0e0, #757575, #212121);
-
-
-    --faih-gradient-glass: linear-gradient(135deg, rgba(158, 158, 158, 0.1), rgba(33, 150, 243, 0.05));
-
-
-    --faih-gradient-hero: linear-gradient(135deg, #fafafa 0%, #f5f5f5 50%, #eeeeee 100%);
-
-
-
-
-
-    /* === THEME-SPECIFIC SHADOWS === */
-
-
-    --faih-color-shadow-subtle: rgba(33, 33, 33, 0.08);
-
-
-    --faih-color-shadow-soft: rgba(33, 33, 33, 0.12);
-
-
-    --faih-color-shadow-medium: rgba(33, 33, 33, 0.16);
-
-
-    --faih-color-shadow-strong: rgba(33, 33, 33, 0.24);
-
-
-    --faih-color-shadow-luxury: rgba(33, 33, 33, 0.32);
-
-
-    --faih-color-overlay-dark: rgba(33, 33, 33, 0.64);
-
-
-    --faih-color-overlay-premium: rgba(33, 33, 33, 0.88);
-
-
-
-
-
-    /* === THEME-SPECIFIC BUTTON COLORS === */
-
-
-    --faih-color-button-primary-bg: var(--faih-color-primary-700);
-
-
-    --faih-color-button-primary-hover: var(--faih-color-primary-800);
-
-
-    --faih-color-button-primary-pressed: var(--faih-color-primary-900);
-
-
-    --faih-color-button-secondary-bg: transparent;
-
-
-    --faih-color-button-secondary-border: var(--faih-color-primary-700);
-
-
-    --faih-color-button-secondary-hover: rgba(33, 33, 33, 0.08);
-
-
-    --faih-color-button-ghost-hover: rgba(158, 158, 158, 0.12);
-
-
-}
+.platinum-corporate { }

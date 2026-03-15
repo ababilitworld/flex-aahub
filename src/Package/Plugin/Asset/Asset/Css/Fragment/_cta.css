@@ -1,0 +1,36 @@
+.cta {
+  background-color: var(--gray-100);
+  padding: var(--space-12) var(--space-4);
+  text-align: center;
+  border-radius: var(--radius-lg);
+  margin: var(--space-8) 0;
+}
+
+.cta__content {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.cta__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.cta__description {
+  font-size: 1.125rem;
+  margin-bottom: var(--space-6);
+  color: var(--gray-800);
+}
+
+.cta__actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CTA-specific button styling */
+.cta .btn {
+  min-width: 120px;
+}

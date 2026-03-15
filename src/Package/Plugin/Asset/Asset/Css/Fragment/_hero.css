@@ -1,0 +1,48 @@
+.hero {
+  background: linear-gradient(135deg, var(--faih-primary-dark) 0%, var(--faih-primary) 100%);
+  color: white;
+  padding: var(--space-16) var(--space-4);
+  text-align: center;
+}
+
+.hero__content {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.hero__description {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-8);
+  opacity: 0.9;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Hero-specific button styling */
+.hero .btn {
+  /* Using the same btn component but with hero-specific size */
+  composes: btn; /* This shows the concept - in real CSS, we use multiple classes */
+  min-width: 140px;
+}
+
+.hero .btn-outline {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+.hero .btn-outline:hover {
+  background-color: white;
+  color: var(--primary-500);
+}

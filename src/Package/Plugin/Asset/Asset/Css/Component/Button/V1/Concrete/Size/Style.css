@@ -1,0 +1,15 @@
+.faih-button.size-sm {
+  padding: var(--faih-button-padding-tight);
+  font-size: 0.57rem;
+}
+
+.faih-button.size-lg {
+  padding: var(--faih-button-border-radius-specious);
+  font-size: .76rem;
+}
+
+.faih-button.size-xl {
+  padding: var(--faih-button-padding-loose);
+  font-size: 1rem;
+  font-weight: 600;
+}

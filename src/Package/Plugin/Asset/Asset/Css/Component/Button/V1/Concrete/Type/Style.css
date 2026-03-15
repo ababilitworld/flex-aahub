@@ -1,0 +1,114 @@
+/* === <Button Primary> === */
+
+.faih-button.type-primary {
+  background-color: var(--faih-color-primary-400);
+  border-color: var(--faih-color-primary-400);
+}
+
+/* === Button State === */
+
+.faih-button.type-primary:hover {
+  background-color: var(--faih-color-primary-700);
+  border-color: var(--faih-color-primary-700);
+}
+
+/* === </Button Primary> === */
+
+/* === <Button Secondary> === */
+
+.faih-button.type-secondary {
+  background-color: var(--faih-color-secondary-400);
+  border-color: var(--faih-color-secondary-400);
+}
+
+/* === Button State === */
+
+.faih-button.type-secondary:hover {
+  background-color: var(--faih-color-secondary-700);
+  border-color: var(--faih-color-secondary-700);
+}
+
+/* === </Button Secondary> === */
+
+/* === <Button Tertiary> === */
+
+.faih-button.type-tertiary {
+  background-color: transparent;
+  color: var(--primary-500);
+  border-color: var(--primary-500);
+}
+
+/* === Button State === */
+
+.faih-button.type-tertiary:hover {
+  background-color: var(--primary-500);
+  color: var(--white);
+}
+
+/* === </Button Tertiary> === */
+
+/* === <Button Outline> === */
+
+.faih-button.type-outline {
+  background-color: transparent;
+  color: var(--primary-500);
+  border-color: var(--primary-500);
+}
+
+/* === Button State === */
+
+.faih-button.type-outline:hover {
+  background-color: var(--primary-500);
+  color: var(--white);
+}
+
+/* === </Button Outline> === */
+
+/* === <Button Ghost> === */
+
+.faih-button.type-ghost {
+  background-color: transparent;
+  color: var(--gray-800);
+  border-color: transparent;
+}
+
+/* === Button State === */
+
+.faih-button.type-ghost:hover {
+  background-color: var(--gray-100);
+}
+
+/* === </Button Ghost> === */
+
+/* === <Button Success> === */
+
+.faih-button.type-success {
+  background: var(--faih-type-background-color-default);
+  border-color: var(--faih-type-background-color-default);
+}
+
+/* === Button State === */
+
+.faih-button.type-success:hover {
+  background: var(--faih-type-background-color-default-hover);
+  border-color: var(--faih-type-background-color-default-hover);
+}
+
+/* === </Button Success> === */
+
+/* === <Button Danger> === */
+
+.faih-button.type-danger {
+  background-color: var(--danger-500);
+  border-color: var(--danger-500);
+}
+
+
+/* === Button State === */
+
+.faih-button.type-danger:hover {
+  background-color: var(--danger-600);
+  border-color: var(--danger-600);
+}
+
+/* === </Button Danger> === */

@@ -1,0 +1,351 @@
+@-webkit-keyframes faih-rotateClockwise {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+        opacity: var(--faih-fade-start-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-end));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-end));
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@keyframes faih-rotateClockwise {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+        opacity: var(--faih-fade-start-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-end));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-end));
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@-webkit-keyframes faih-rotateAntiClockwise {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-start)));
+        transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-start)));
+        opacity: var(--faih-fade-start-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-end)));
+        transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-end)));
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@keyframes faih-rotateAntiClockwise {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-start)));
+        transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-start)));
+        opacity: var(--faih-fade-start-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-end)));
+        transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-end)));
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@-webkit-keyframes faih-spin {
+    0% {
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+    }
+    
+    to {
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-degree));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-degree));
+    }
+}
+
+@keyframes faih-spin {
+    0% {
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+    }
+    
+    to {
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-degree));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-degree));
+    }
+}
+
+@-webkit-keyframes faih-rotateIn {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-degree)));
+        transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-degree)));
+        opacity: var(--faih-fade-start-opacity);
+        transform-origin: center;
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-end));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-end));
+        opacity: var(--faih-fade-end-opacity);
+        transform-origin: center;
+    }
+}
+
+@keyframes faih-rotateIn {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-degree)));
+        transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-rotate-degree)));
+        opacity: var(--faih-fade-start-opacity);
+        transform-origin: center;
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-end));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-end));
+        opacity: var(--faih-fade-end-opacity);
+        transform-origin: center;
+    }
+}
+
+@-webkit-keyframes faih-rotateOut {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+        opacity: var(--faih-fade-end-opacity);
+        transform-origin: center;
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-degree));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-degree));
+        opacity: var(--faih-fade-start-opacity);
+        transform-origin: center;
+    }
+}
+
+@keyframes faih-rotateOut {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-start));
+        opacity: var(--faih-fade-end-opacity);
+        transform-origin: center;
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-rotate-degree));
+        transform: rotate3d(0, 0, 1, var(--faih-rotate-degree));
+        opacity: var(--faih-fade-start-opacity);
+        transform-origin: center;
+    }
+}
+
+/* Rotate animation classes */
+.faih-rotateClockwise {
+    -webkit-animation-name: faih-rotateClockwise;
+    animation-name: faih-rotateClockwise;
+    transform-origin: center;
+}
+
+.faih-rotateAntiClockwise {
+    -webkit-animation-name: faih-rotateAntiClockwise;
+    animation-name: faih-rotateAntiClockwise;
+    transform-origin: center;
+}
+
+.faih-spin {
+    -webkit-animation-name: faih-spin;
+    animation-name: faih-spin;
+    transform-origin: center;
+}
+
+.faih-rotateIn {
+    -webkit-animation-name: faih-rotateIn;
+    animation-name: faih-rotateIn;
+    transform-origin: center;
+}
+
+.faih-rotateOut {
+    -webkit-animation-name: faih-rotateOut;
+    animation-name: faih-rotateOut;
+    transform-origin: center;
+}
+
+/* Rotation degree variations */
+.faih-rotate-90 {
+    --faih-rotate-start: 0deg;
+    --faih-rotate-end: 90deg;
+    --faih-rotate-degree: 90deg;
+}
+
+.faih-rotate-180 {
+    --faih-rotate-start: 0deg;
+    --faih-rotate-end: 180deg;
+    --faih-rotate-degree: 180deg;
+}
+
+.faih-rotate-360 {
+    --faih-rotate-start: 0deg;
+    --faih-rotate-end: 360deg;
+    --faih-rotate-degree: 360deg;
+}
+
+.faih-rotate-720 {
+    --faih-rotate-start: 0deg;
+    --faih-rotate-end: 720deg;
+    --faih-rotate-degree: 720deg;
+}
+
+/* Rotation speed variations */
+.faih-rotate-fast {
+    --faih-animation-duration: 0.5s;
+}
+
+.faih-rotate-slow {
+    --faih-animation-duration: 2s;
+}
+
+.faih-rotate-very-slow {
+    --faih-animation-duration: 3s;
+}
+
+/* Rotation origin variations */
+.faih-rotate-origin-top {
+    transform-origin: center top;
+}
+
+.faih-rotate-origin-bottom {
+    transform-origin: center bottom;
+}
+
+.faih-rotate-origin-left {
+    transform-origin: left center;
+}
+
+.faih-rotate-origin-right {
+    transform-origin: right center;
+}
+
+.faih-rotate-origin-top-left {
+    transform-origin: left top;
+}
+
+.faih-rotate-origin-top-right {
+    transform-origin: right top;
+}
+
+.faih-rotate-origin-bottom-left {
+    transform-origin: left bottom;
+}
+
+.faih-rotate-origin-bottom-right {
+    transform-origin: right bottom;
+}
+
+/* Rotation timing variations */
+.faih-rotate-bounce {
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.faih-rotate-elastic {
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.faih-rotate-ease {
+    animation-timing-function: ease-in-out;
+}
+
+/* Infinite spin variations */
+.faih-spin-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.faih-spin-slow-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    --faih-animation-duration: 3s;
+}
+
+.faih-spin-fast-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    --faih-animation-duration: 0.5s;
+}
+
+
+/* Uses example
+
+<!-- Clockwise rotation -->
+<div class="faih-animation faih-rotateClockwise faih-rotate-360">Rotate 360°</div>
+
+<!-- Anti-clockwise rotation -->
+<div class="faih-animation faih-rotateAntiClockwise faih-rotate-180">Rotate back 180°</div>
+
+<!-- Continuous spin -->
+<div class="faih-animation faih-spin faih-spin-infinite">Spinning</div>
+
+<!-- Rotate in with fade -->
+<div class="faih-animation faih-rotateIn faih-rotate-360">Rotate in</div>
+
+<!-- Rotate out with fade -->
+<div class="faih-animation faih-rotateOut faih-rotate-180">Rotate out</div>
+
+<!-- Custom rotation degree -->
+<div class="faih-animation faih-rotateClockwise faih-rotate-90">90° turn</div>
+
+<!-- Different rotation origin -->
+<div class="faih-animation faih-rotateClockwise faih-rotate-360 faih-rotate-origin-top">Rotate from top</div>
+
+<!-- Bouncy rotation -->
+<div class="faih-animation faih-rotateClockwise faih-rotate-360 faih-rotate-bounce">Bouncy rotate</div>
+
+<!-- Slow infinite spin -->
+<div class="faih-animation faih-spin faih-spin-slow-infinite">Slow spin</div>
+
+<!-- Combined with timing utilities -->
+<div class="faih-animation faih-rotateIn speed-slow delay-1s">Slow delayed rotate</div>
+
+*/

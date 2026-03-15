@@ -1,0 +1,249 @@
+@-webkit-keyframes faih-slideInLeft {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(calc(-1 * var(--faih-slide-distance)), 0, 0);
+        transform: translate3d(calc(-1 * var(--faih-slide-distance)), 0, 0);
+        opacity: var(--faih-fade-start-opacity);
+        visibility: visible;
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@keyframes faih-slideInLeft {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(calc(-1 * var(--faih-slide-distance)), 0, 0);
+        transform: translate3d(calc(-1 * var(--faih-slide-distance)), 0, 0);
+        opacity: var(--faih-fade-start-opacity);
+        visibility: visible;
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@-webkit-keyframes faih-slideInRight {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(var(--faih-slide-distance), 0, 0);
+        transform: translate3d(var(--faih-slide-distance), 0, 0);
+        opacity: var(--faih-fade-start-opacity);
+        visibility: visible;
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@keyframes faih-slideInRight {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(var(--faih-slide-distance), 0, 0);
+        transform: translate3d(var(--faih-slide-distance), 0, 0);
+        opacity: var(--faih-fade-start-opacity);
+        visibility: visible;
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: var(--faih-fade-end-opacity);
+    }
+}
+
+@-webkit-keyframes faih-slideOutLeft {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(calc(-1 * var(--faih-slide-distance)), 0, 0);
+        transform: translate3d(calc(-1 * var(--faih-slide-distance)), 0, 0);
+        opacity: var(--faih-fade-start-opacity);
+        visibility: hidden;
+    }
+}
+
+@keyframes faih-slideOutLeft {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(calc(-1 * var(--faih-slide-distance)), 0, 0);
+        transform: translate3d(calc(-1 * var(--faih-slide-distance)), 0, 0);
+        opacity: var(--faih-fade-start-opacity);
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes faih-slideOutRight {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(var(--faih-slide-distance), 0, 0);
+        transform: translate3d(var(--faih-slide-distance), 0, 0);
+        opacity: var(--faih-fade-start-opacity);
+        visibility: hidden;
+    }
+}
+
+@keyframes faih-slideOutRight {
+    0% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: var(--faih-fade-end-opacity);
+    }
+    
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(var(--faih-slide-distance), 0, 0);
+        transform: translate3d(var(--faih-slide-distance), 0, 0);
+        opacity: var(--faih-fade-start-opacity);
+        visibility: hidden;
+    }
+}
+
+/* Slide animation classes */
+.faih-slideInLeft {
+    -webkit-animation-name: faih-slideInLeft;
+    animation-name: faih-slideInLeft;
+}
+
+.faih-slideInRight {
+    -webkit-animation-name: faih-slideInRight;
+    animation-name: faih-slideInRight;
+}
+
+.faih-slideOutLeft {
+    -webkit-animation-name: faih-slideOutLeft;
+    animation-name: faih-slideOutLeft;
+}
+
+.faih-slideOutRight {
+    -webkit-animation-name: faih-slideOutRight;
+    animation-name: faih-slideOutRight;
+}
+
+/* Slide distance variations */
+.faih-slide-short {
+    --faih-slide-distance: 50px;
+}
+
+.faih-slide-normal {
+    --faih-slide-distance: 100px;
+}
+
+.faih-slide-long {
+    --faih-slide-distance: 200px;
+}
+
+.faih-slide-extra-long {
+    --faih-slide-distance: 300px;
+}
+
+/* Slide timing variations */
+.faih-slide-smooth {
+    --faih-slide-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.faih-slide-bounce {
+    --faih-slide-timing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.faih-slide-snap {
+    --faih-slide-timing: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+/* Opacity variations */
+.faih-slide-fade-strong {
+    --faih-fade-start-opacity: 0;
+    --faih-fade-end-opacity: 1;
+}
+
+.faih-slide-fade-subtle {
+    --faih-fade-start-opacity: 0.3;
+    --faih-fade-end-opacity: 1;
+}
+
+.faih-slide-no-fade {
+    --faih-fade-start-opacity: 1;
+    --faih-fade-end-opacity: 1;
+}
+
+
+
+
+/* Uses example 
+
+<!-- Slide in from left -->
+<div class="faih-animation faih-slideInLeft">Slide from left</div>
+
+<!-- Slide in from right -->
+<div class="faih-animation faih-slideInRight">Slide from right</div>
+
+<!-- Slide out to left -->
+<div class="faih-animation faih-slideOutLeft">Slide out left</div>
+
+<!-- Slide out to right -->
+<div class="faih-animation faih-slideOutRight">Slide out right</div>
+
+<!-- Custom slide distance -->
+<div class="faih-animation faih-slideInLeft faih-slide-long">Long slide</div>
+
+<!-- Custom timing -->
+<div class="faih-animation faih-slideInRight faih-slide-bounce">Bouncy slide</div>
+
+<!-- No fade effect -->
+<div class="faih-animation faih-slideInLeft faih-slide-no-fade">Slide without fade</div>
+
+<!-- Combined with timing utilities -->
+<div class="faih-animation faih-slideInLeft speed-slow delay-1s">Slow delayed slide</div>
+
+*/

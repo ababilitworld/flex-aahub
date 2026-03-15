@@ -1,94 +1,120 @@
-.root 
-{ 
-    /* == Universal Gradients == */
-    --faih-color-gradient-royal: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-    --faih-color-gradient-ocean-depth: linear-gradient(135deg, #000428, #004e92, #2c3e50);
-    --faih-color-gradient-emerald-luxury: linear-gradient(135deg, #0f9b0f, #00b09b, #96c93d);
-    --faih-color-gradient-sunset-premium: linear-gradient(135deg, #834d9b, #d04ed6, #f5576c);
-    --faih-color-gradient-gold-prestige: linear-gradient(135deg, #D4AF37, #FFD700, #FFEC8B);
-    --faih-color-gradient-corporate-pro: linear-gradient(135deg, #2c3e50, #3498db, #bdc3c7);
-    --faih-color-gradient-tech-futuristic: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-    --faih-color-gradient-luxury-brand: linear-gradient(135deg, #6a363b, #da98b4, #fad0c4);
-    --faih-color-gradient-financial-elite: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
+:root {
+    /* == Gradients == */
 
-    /* == ECOMMERCE PRODUCT BACKGROUND GRADIENTS == */
+    /* === <royal> === */
+    --faih-color-royal-gradient-first-color-stop: #1a2a6c;
+    --faih-color-royal-gradient-second-color-stop: #b21f1f;
+    --faih-color-royal-gradient-third-color-stop: #fdbb2d;
+    --faih-color-royal-linear-gradient-20: linear-gradient(20deg, var(--faih-color-royal-gradient-first-color-stop), var(--faih-color-royal-gradient-second-color-stop), var(--faih-color-royal-gradient-third-color-stop));
+    --faih-color-royal-linear-gradient-90: linear-gradient(90deg, var(--faih-color-royal-gradient-first-color-stop), var(--faih-color-royal-gradient-second-color-stop), var(--faih-color-royal-gradient-third-color-stop));
+    --faih-color-royal-linear-gradient-135: linear-gradient(135deg, var(--faih-color-royal-gradient-first-color-stop), var(--faih-color-royal-gradient-second-color-stop), var(--faih-color-royal-gradient-third-color-stop));
+    --faih-color-royal-radial-gradient-circle: radial-gradient(circle, var(--faih-color-royal-gradient-first-color-stop), var(--faih-color-royal-gradient-second-color-stop), var(--faih-color-royal-gradient-third-color-stop));
+    --faih-color-royal-radial-gradient-ellipse: radial-gradient(ellipse at center, var(--faih-color-royal-gradient-first-color-stop), var(--faih-color-royal-gradient-second-color-stop), var(--faih-color-royal-gradient-third-color-stop));
+    --faih-color-royal-radial-gradient-farthest-corner: radial-gradient(circle farthest-corner at top left, var(--faih-color-royal-gradient-first-color-stop), var(--faih-color-royal-gradient-second-color-stop), var(--faih-color-royal-gradient-third-color-stop));
+    --faih-color-royal-radial-gradient-closest-side: radial-gradient(ellipse closest-side at 30% 50%, var(--faih-color-royal-gradient-first-color-stop), var(--faih-color-royal-gradient-second-color-stop), var(--faih-color-royal-gradient-third-color-stop));
+    /* === </royal> === */
 
-    /* 1. Luxury Jewelry Gold */
-    --faih-gradient-ecommerce-jewelry: linear-gradient(135deg, #D4AF37, #FFD700, #F7EF8A, #D4AF37);
+    /* === <yellow-luxury> === */
+    --faih-color-yellow-luxury-gradient-first-color-stop: #020024;
+    --faih-color-yellow-luxury-gradient-second-color-stop: #090979;
+    --faih-color-yellow-luxury-gradient-third-color-stop: #00d4ff;
+    --faih-color-yellow-luxury-linear-gradient-20: linear-gradient(20deg, var(--faih-color-yellow-luxury-gradient-first-color-stop), var(--faih-color-yellow-luxury-gradient-second-color-stop), var(--faih-color-yellow-luxury-gradient-third-color-stop));
+    --faih-color-yellow-luxury-linear-gradient-90: linear-gradient(90deg, var(--faih-color-yellow-luxury-gradient-first-color-stop), var(--faih-color-yellow-luxury-gradient-second-color-stop), var(--faih-color-yellow-luxury-gradient-third-color-stop));
+    --faih-color-yellow-luxury-linear-gradient-135: linear-gradient(135deg, var(--faih-color-yellow-luxury-gradient-first-color-stop), var(--faih-color-yellow-luxury-gradient-second-color-stop), var(--faih-color-yellow-luxury-gradient-third-color-stop));
+    --faih-color-yellow-luxury-radial-gradient-circle: radial-gradient(circle, var(--faih-color-yellow-luxury-gradient-first-color-stop), var(--faih-color-yellow-luxury-gradient-second-color-stop), var(--faih-color-yellow-luxury-gradient-third-color-stop));
+    --faih-color-yellow-luxury-radial-gradient-ellipse: radial-gradient(ellipse at center, var(--faih-color-yellow-luxury-gradient-first-color-stop), var(--faih-color-yellow-luxury-gradient-second-color-stop), var(--faih-color-yellow-luxury-gradient-third-color-stop));
+    --faih-color-yellow-luxury-radial-gradient-farthest-corner: radial-gradient(circle farthest-corner at top left, var(--faih-color-yellow-luxury-gradient-first-color-stop), var(--faih-color-yellow-luxury-gradient-second-color-stop), var(--faih-color-yellow-luxury-gradient-third-color-stop));
+    --faih-color-yellow-luxury-radial-gradient-closest-side: radial-gradient(ellipse closest-side at 30% 50%, var(--faih-color-yellow-luxury-gradient-first-color-stop), var(--faih-color-yellow-luxury-gradient-second-color-stop), var(--faih-color-yellow-luxury-gradient-third-color-stop));
+    /* === </yellow-luxury> === */
 
-    /* 2. Premium Tech Blue */
-    --faih-gradient-ecommerce-tech: linear-gradient(135deg, #667eea, #764ba2, #86A8E7, #667eea);
+    /* === <ocean-depth> === */
+    --faih-color-ocean-depth-gradient-first-color-stop: #000428;
+    --faih-color-ocean-depth-gradient-second-color-stop: #004e92;
+    --faih-color-ocean-depth-gradient-third-color-stop: #2c3e50;
+    --faih-color-ocean-depth-linear-gradient-20: linear-gradient(20deg, var(--faih-color-ocean-depth-gradient-first-color-stop), var(--faih-color-ocean-depth-gradient-second-color-stop), var(--faih-color-ocean-depth-gradient-third-color-stop));
+    --faih-color-ocean-depth-linear-gradient-90: linear-gradient(90deg, var(--faih-color-ocean-depth-gradient-first-color-stop), var(--faih-color-ocean-depth-gradient-second-color-stop), var(--faih-color-ocean-depth-gradient-third-color-stop));
+    --faih-color-ocean-depth-linear-gradient-135: linear-gradient(135deg, var(--faih-color-ocean-depth-gradient-first-color-stop), var(--faih-color-ocean-depth-gradient-second-color-stop), var(--faih-color-ocean-depth-gradient-third-color-stop));
+    --faih-color-ocean-depth-radial-gradient-circle: radial-gradient(circle, var(--faih-color-ocean-depth-gradient-first-color-stop), var(--faih-color-ocean-depth-gradient-second-color-stop), var(--faih-color-ocean-depth-gradient-third-color-stop));
+    --faih-color-ocean-depth-radial-gradient-ellipse: radial-gradient(ellipse at center, var(--faih-color-ocean-depth-gradient-first-color-stop), var(--faih-color-ocean-depth-gradient-second-color-stop), var(--faih-color-ocean-depth-gradient-third-color-stop));
+    --faih-color-ocean-depth-radial-gradient-farthest-corner: radial-gradient(circle farthest-corner at top left, var(--faih-color-ocean-depth-gradient-first-color-stop), var(--faih-color-ocean-depth-gradient-second-color-stop), var(--faih-color-ocean-depth-gradient-third-color-stop));
+    --faih-color-ocean-depth-radial-gradient-closest-side: radial-gradient(ellipse closest-side at 30% 50%, var(--faih-color-ocean-depth-gradient-first-color-stop), var(--faih-color-ocean-depth-gradient-second-color-stop), var(--faih-color-ocean-depth-gradient-third-color-stop));
+    /* === </ocean-depth> === */
 
-    /* 3. Fashion Luxury Purple */
-    --faih-gradient-ecommerce-fashion: linear-gradient(135deg, #654ea3, #da98b4, #ee9ca7, #654ea3);
+    /* === <emerald-luxury> === */
+    --faih-color-emerald-luxury-gradient-first-color-stop: #0f9b0f;
+    --faih-color-emerald-luxury-gradient-second-color-stop: #00b09b;
+    --faih-color-emerald-luxury-gradient-third-color-stop: #96c93d;
+    --faih-color-emerald-luxury-linear-gradient-20: linear-gradient(20deg, var(--faih-color-emerald-luxury-gradient-first-color-stop), var(--faih-color-emerald-luxury-gradient-second-color-stop), var(--faih-color-emerald-luxury-gradient-third-color-stop));
+    --faih-color-emerald-luxury-linear-gradient-90: linear-gradient(90deg, var(--faih-color-emerald-luxury-gradient-first-color-stop), var(--faih-color-emerald-luxury-gradient-second-color-stop), var(--faih-color-emerald-luxury-gradient-third-color-stop));
+    --faih-color-emerald-luxury-linear-gradient-135: linear-gradient(135deg, var(--faih-color-emerald-luxury-gradient-first-color-stop), var(--faih-color-emerald-luxury-gradient-second-color-stop), var(--faih-color-emerald-luxury-gradient-third-color-stop));
+    --faih-color-emerald-luxury-radial-gradient-circle: radial-gradient(circle, var(--faih-color-emerald-luxury-gradient-first-color-stop), var(--faih-color-emerald-luxury-gradient-second-color-stop), var(--faih-color-emerald-luxury-gradient-third-color-stop));
+    --faih-color-emerald-luxury-radial-gradient-ellipse: radial-gradient(ellipse at center, var(--faih-color-emerald-luxury-gradient-first-color-stop), var(--faih-color-emerald-luxury-gradient-second-color-stop), var(--faih-color-emerald-luxury-gradient-third-color-stop));
+    --faih-color-emerald-luxury-radial-gradient-farthest-corner: radial-gradient(circle farthest-corner at top left, var(--faih-color-emerald-luxury-gradient-first-color-stop), var(--faih-color-emerald-luxury-gradient-second-color-stop), var(--faih-color-emerald-luxury-gradient-third-color-stop));
+    --faih-color-emerald-luxury-radial-gradient-closest-side: radial-gradient(ellipse closest-side at 30% 50%, var(--faih-color-emerald-luxury-gradient-first-color-stop), var(--faih-color-emerald-luxury-gradient-second-color-stop), var(--faih-color-emerald-luxury-gradient-third-color-stop));
+    /* === </emerald-luxury> === */
 
-    /* 4. Beauty & Cosmetics Pink */
-    --faih-gradient-ecommerce-beauty: linear-gradient(135deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e);
+    /* === <sunset-premium> === */
+    --faih-color-sunset-premium-gradient-first-color-stop: #834d9b;
+    --faih-color-sunset-premium-gradient-second-color-stop: #d04ed6;
+    --faih-color-sunset-premium-gradient-third-color-stop: #f5576c;
+    --faih-color-sunset-premium-linear-gradient-20: linear-gradient(20deg, var(--faih-color-sunset-premium-gradient-first-color-stop), var(--faih-color-sunset-premium-gradient-second-color-stop), var(--faih-color-sunset-premium-gradient-third-color-stop));
+    --faih-color-sunset-premium-linear-gradient-90: linear-gradient(90deg, var(--faih-color-sunset-premium-gradient-first-color-stop), var(--faih-color-sunset-premium-gradient-second-color-stop), var(--faih-color-sunset-premium-gradient-third-color-stop));
+    --faih-color-sunset-premium-linear-gradient-135: linear-gradient(135deg, var(--faih-color-sunset-premium-gradient-first-color-stop), var(--faih-color-sunset-premium-gradient-second-color-stop), var(--faih-color-sunset-premium-gradient-third-color-stop));
+    --faih-color-sunset-premium-radial-gradient-circle: radial-gradient(circle, var(--faih-color-sunset-premium-gradient-first-color-stop), var(--faih-color-sunset-premium-gradient-second-color-stop), var(--faih-color-sunset-premium-gradient-third-color-stop));
+    --faih-color-sunset-premium-radial-gradient-ellipse: radial-gradient(ellipse at center, var(--faih-color-sunset-premium-gradient-first-color-stop), var(--faih-color-sunset-premium-gradient-second-color-stop), var(--faih-color-sunset-premium-gradient-third-color-stop));
+    --faih-color-sunset-premium-radial-gradient-farthest-corner: radial-gradient(circle farthest-corner at top left, var(--faih-color-sunset-premium-gradient-first-color-stop), var(--faih-color-sunset-premium-gradient-second-color-stop), var(--faih-color-sunset-premium-gradient-third-color-stop));
+    --faih-color-sunset-premium-radial-gradient-closest-side: radial-gradient(ellipse closest-side at 30% 50%, var(--faih-color-sunset-premium-gradient-first-color-stop), var(--faih-color-sunset-premium-gradient-second-color-stop), var(--faih-color-sunset-premium-gradient-third-color-stop));
+    /* === </sunset-premium> === */
 
-    /* 5. Home & Living Warm */
-    --faih-gradient-ecommerce-home: linear-gradient(135deg, #FFECD2, #FCB69F, #FFECD2, #FCB69F);
+    /* === <tech-futuristic> === */
+    --faih-color-tech-futuristic-gradient-first-color-stop: #667eea;
+    --faih-color-tech-futuristic-gradient-second-color-stop: #764ba2;
+    --faih-color-tech-futuristic-gradient-third-color-stop: #f093fb;
+    --faih-color-tech-futuristic-linear-gradient-20: linear-gradient(20deg, var(--faih-color-tech-futuristic-gradient-first-color-stop), var(--faih-color-tech-futuristic-gradient-second-color-stop), var(--faih-color-tech-futuristic-gradient-third-color-stop));
+    --faih-color-tech-futuristic-linear-gradient-90: linear-gradient(90deg, var(--faih-color-tech-futuristic-gradient-first-color-stop), var(--faih-color-tech-futuristic-gradient-second-color-stop), var(--faih-color-tech-futuristic-gradient-third-color-stop));
+    --faih-color-tech-futuristic-linear-gradient-135: linear-gradient(135deg, var(--faih-color-tech-futuristic-gradient-first-color-stop), var(--faih-color-tech-futuristic-gradient-second-color-stop), var(--faih-color-tech-futuristic-gradient-third-color-stop));
+    --faih-color-tech-futuristic-radial-gradient-circle: radial-gradient(circle, var(--faih-color-tech-futuristic-gradient-first-color-stop), var(--faih-color-tech-futuristic-gradient-second-color-stop), var(--faih-color-tech-futuristic-gradient-third-color-stop));
+    --faih-color-tech-futuristic-radial-gradient-ellipse: radial-gradient(ellipse at center, var(--faih-color-tech-futuristic-gradient-first-color-stop), var(--faih-color-tech-futuristic-gradient-second-color-stop), var(--faih-color-tech-futuristic-gradient-third-color-stop));
+    --faih-color-tech-futuristic-radial-gradient-farthest-corner: radial-gradient(circle farthest-corner at top left, var(--faih-color-tech-futuristic-gradient-first-color-stop), var(--faih-color-tech-futuristic-gradient-second-color-stop), var(--faih-color-tech-futuristic-gradient-third-color-stop));
+    --faih-color-tech-futuristic-radial-gradient-closest-side: radial-gradient(ellipse closest-side at 30% 50%, var(--faih-color-tech-futuristic-gradient-first-color-stop), var(--faih-color-tech-futuristic-gradient-second-color-stop), var(--faih-color-tech-futuristic-gradient-third-color-stop));
+    /* === </tech-futuristic> === */
 
-    /* 6. Health & Wellness Green */
-    --faih-gradient-ecommerce-wellness: linear-gradient(135deg, #56ab2f, #a8e6cf, #56ab2f, #a8e6cf);
+    /* === <gold-prestige> === */
+    --faih-color-gold-prestige-gradient-first-color-stop: #D4AF37;
+    --faih-color-gold-prestige-gradient-second-color-stop: #FFD700;
+    --faih-color-gold-prestige-gradient-third-color-stop: #FFEC8B;
+    --faih-color-gold-prestige-linear-gradient-20: linear-gradient(20deg, var(--faih-color-gold-prestige-gradient-first-color-stop), var(--faih-color-gold-prestige-gradient-second-color-stop), var(--faih-color-gold-prestige-gradient-third-color-stop));
+    --faih-color-gold-prestige-linear-gradient-90: linear-gradient(90deg, var(--faih-color-gold-prestige-gradient-first-color-stop), var(--faih-color-gold-prestige-gradient-second-color-stop), var(--faih-color-gold-prestige-gradient-third-color-stop));
+    --faih-color-gold-prestige-linear-gradient-135: linear-gradient(135deg, var(--faih-color-gold-prestige-gradient-first-color-stop), var(--faih-color-gold-prestige-gradient-second-color-stop), var(--faih-color-gold-prestige-gradient-third-color-stop));
+    --faih-color-gold-prestige-radial-gradient-circle: radial-gradient(circle, var(--faih-color-gold-prestige-gradient-first-color-stop), var(--faih-color-gold-prestige-gradient-second-color-stop), var(--faih-color-gold-prestige-gradient-third-color-stop));
+    --faih-color-gold-prestige-radial-gradient-ellipse: radial-gradient(ellipse at center, var(--faih-color-gold-prestige-gradient-first-color-stop), var(--faih-color-gold-prestige-gradient-second-color-stop), var(--faih-color-gold-prestige-gradient-third-color-stop));
+    --faih-color-gold-prestige-radial-gradient-farthest-corner: radial-gradient(circle farthest-corner at top left, var(--faih-color-gold-prestige-gradient-first-color-stop), var(--faih-color-gold-prestige-gradient-second-color-stop), var(--faih-color-gold-prestige-gradient-third-color-stop));
+    --faih-color-gold-prestige-radial-gradient-closest-side: radial-gradient(ellipse closest-side at 30% 50%, var(--faih-color-gold-prestige-gradient-first-color-stop), var(--faih-color-gold-prestige-gradient-second-color-stop), var(--faih-color-gold-prestige-gradient-third-color-stop));
+    /* === </gold-prestige> === */
 
-    /* 7. Sports & Fitness Energy */
-    --faih-gradient-ecommerce-sports: linear-gradient(135deg, #ff6b6b, #ffd93d, #ff6b6b, #ffd93d);
+    /* === <corporate-pro> === */
+    --faih-color-corporate-pro-gradient-first-color-stop: #2c3e50;
+    --faih-color-corporate-pro-gradient-second-color-stop: #3498db;
+    --faih-color-corporate-pro-gradient-third-color-stop: #bdc3c7;
+    --faih-color-corporate-pro-linear-gradient-20: linear-gradient(20deg, var(--faih-color-corporate-pro-gradient-first-color-stop), var(--faih-color-corporate-pro-gradient-second-color-stop), var(--faih-color-corporate-pro-gradient-third-color-stop));
+    --faih-color-corporate-pro-linear-gradient-90: linear-gradient(90deg, var(--faih-color-corporate-pro-gradient-first-color-stop), var(--faih-color-corporate-pro-gradient-second-color-stop), var(--faih-color-corporate-pro-gradient-third-color-stop));
+    --faih-color-corporate-pro-linear-gradient-135: linear-gradient(135deg, var(--faih-color-corporate-pro-gradient-first-color-stop), var(--faih-color-corporate-pro-gradient-second-color-stop), var(--faih-color-corporate-pro-gradient-third-color-stop));
+    --faih-color-corporate-pro-radial-gradient-circle: radial-gradient(circle, var(--faih-color-corporate-pro-gradient-first-color-stop), var(--faih-color-corporate-pro-gradient-second-color-stop), var(--faih-color-corporate-pro-gradient-third-color-stop));
+    --faih-color-corporate-pro-radial-gradient-ellipse: radial-gradient(ellipse at center, var(--faih-color-corporate-pro-gradient-first-color-stop), var(--faih-color-corporate-pro-gradient-second-color-stop), var(--faih-color-corporate-pro-gradient-third-color-stop));
+    --faih-color-corporate-pro-radial-gradient-farthest-corner: radial-gradient(circle farthest-corner at top left, var(--faih-color-corporate-pro-gradient-first-color-stop), var(--faih-color-corporate-pro-gradient-second-color-stop), var(--faih-color-corporate-pro-gradient-third-color-stop));
+    --faih-color-corporate-pro-radial-gradient-closest-side: radial-gradient(ellipse closest-side at 30% 50%, var(--faih-color-corporate-pro-gradient-first-color-stop), var(--faih-color-corporate-pro-gradient-second-color-stop), var(--faih-color-corporate-pro-gradient-third-color-stop));
+    /* === </corporate-pro> === */
 
-    /* 8. Luxury Watches Silver */
-    --faih-gradient-ecommerce-watches: linear-gradient(135deg, #BFC0C0, #E2E2E2, #FFFFFF, #BFC0C0);
-
-    /* 9. Premium Automotive */
-    --faih-gradient-ecommerce-automotive: linear-gradient(135deg, #2c3e50, #34495e, #7f8c8d, #2c3e50);
-
-    /* == SPECIALIZED ECOMMERCE GRADIENTS == */
-
-    /* Electronics & Gadgets */
-    --faih-gradient-ecommerce-electronics: linear-gradient(135deg, #485563, #29323c, #485563, #29323c);
-
-    /* Luxury Fashion Black */
-    --faih-gradient-ecommerce-luxury-black: linear-gradient(135deg, #000000, #434343, #000000, #434343);
-
-    /* Organic & Natural */
-    --faih-gradient-ecommerce-organic: linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d, #c6ffdd);
-
-    /* Kids & Toys */
-    --faih-gradient-ecommerce-kids: linear-gradient(135deg, #ffafbd, #ffc3a0, #ffafbd, #ffc3a0);
-
-    /* Office & Stationery */
-    --faih-gradient-ecommerce-office: linear-gradient(135deg, #74b9ff, #0984e3, #74b9ff, #0984e3);
-
-    /* == PRODUCT CATEGORY GRADIENTS == */
-
-    /* Premium Product Showcase */
-    --faih-gradient-product-showcase: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
-    /* Sale & Discount Badge */
-    --faih-gradient-sale-badge: linear-gradient(135deg, #ff6b6b, #ffd93d, #ff6b6b);
-
-    /* New Arrival Tag */
-    --faih-gradient-new-arrival: linear-gradient(135deg, #4facfe, #00f2fe, #4facfe);
-
-    /* Limited Edition */
-    --faih-gradient-limited-edition: linear-gradient(135deg, #fa709a, #fee140, #fa709a);
-
-    /* Best Seller */
-    --faih-gradient-best-seller: linear-gradient(135deg, #43e97b, #38f9d7, #43e97b);
-
-    /* == ECOMMERCE UTILITY CLASSES == */
-    .product-bg-jewelry { background: var(--faih-gradient-ecommerce-jewelry); }
-    .product-bg-tech { background: var(--faih-gradient-ecommerce-tech); }
-    .product-bg-fashion { background: var(--faih-gradient-ecommerce-fashion); }
-    .product-bg-beauty { background: var(--faih-gradient-ecommerce-beauty); }
-    .product-bg-home { background: var(--faih-gradient-ecommerce-home); }
-    .product-bg-wellness { background: var(--faih-gradient-ecommerce-wellness); }
-    .product-bg-sports { background: var(--faih-gradient-ecommerce-sports); }
-    .product-bg-watches { background: var(--faih-gradient-ecommerce-watches); }
-    .product-bg-automotive { background: var(--faih-gradient-ecommerce-automotive); }
-
-    /* Status Gradients */
-    .product-bg-sale { background: var(--faih-gradient-sale-badge); }
-    .product-bg-new { background: var(--faih-gradient-new-arrival); }
-    .product-bg-limited { background: var(--faih-gradient-limited-edition); }
-    .product-bg-bestseller { background: var(--faih-gradient-best-seller); }
-
+    /* === <luxury-brand> === */
+    --faih-color-luxury-brand-gradient-first-color-stop: #6a363b;
+    --faih-color-luxury-brand-gradient-second-color-stop: #da98b4;
+    --faih-color-luxury-brand-gradient-third-color-stop: #fad0c4;
+    --faih-color-luxury-brand-linear-gradient-20: linear-gradient(20deg, var(--faih-color-luxury-brand-gradient-first-color-stop), var(--faih-color-luxury-brand-gradient-second-color-stop), var(--faih-color-luxury-brand-gradient-third-color-stop));
+    --faih-color-luxury-brand-linear-gradient-90: linear-gradient(90deg, var(--faih-color-luxury-brand-gradient-first-color-stop), var(--faih-color-luxury-brand-gradient-second-color-stop), var(--faih-color-luxury-brand-gradient-third-color-stop));
+    --faih-color-luxury-brand-linear-gradient-135: linear-gradient(135deg, var(--faih-color-luxury-brand-gradient-first-color-stop), var(--faih-color-luxury-brand-gradient-second-color-stop), var(--faih-color-luxury-brand-gradient-third-color-stop));
+    --faih-color-luxury-brand-radial-gradient-circle: radial-gradient(circle, var(--faih-color-luxury-brand-gradient-first-color-stop), var(--faih-color-luxury-brand-gradient-second-color-stop), var(--faih-color-luxury-brand-gradient-third-color-stop));
+    --faih-color-luxury-brand-radial-gradient-ellipse: radial-gradient(ellipse at center, var(--faih-color-luxury-brand-gradient-first-color-stop), var(--faih-color-luxury-brand-gradient-second-color-stop), var(--faih-color-luxury-brand-gradient-third-color-stop));
+    --faih-color-luxury-brand-radial-gradient-farthest-corner: radial-gradient(circle farthest-corner at top left, var(--faih-color-luxury-brand-gradient-first-color-stop), var(--faih-color-luxury-brand-gradient-second-color-stop), var(--faih-color-luxury-brand-gradient-third-color-stop));
+    --faih-color-luxury-brand-radial-gradient-closest-side: radial-gradient(ellipse closest-side at 30% 50%, var(--faih-color-luxury-brand-gradient-first-color-stop), var(--faih-color-luxury-brand-gradient-second-color-stop), var(--faih-color-luxury-brand-gradient-third-color-stop));
+    /* === </luxury-brand> === */
 }

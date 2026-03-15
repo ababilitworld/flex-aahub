@@ -1,0 +1,346 @@
+@-webkit-keyframes faih-shake {
+    0%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(calc(-1 * var(--faih-shake-intensity)), 0, 0) rotate3d(0, 0, 1, calc(-1 * var(--faih-shake-rotation)));
+        transform: translate3d(calc(-1 * var(--faih-shake-intensity)), 0, 0) rotate3d(0, 0, 1, calc(-1 * var(--faih-shake-rotation)));
+    }
+    
+    20%, 40%, 60%, 80% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(var(--faih-shake-intensity), 0, 0) rotate3d(0, 0, 1, var(--faih-shake-rotation));
+        transform: translate3d(var(--faih-shake-intensity), 0, 0) rotate3d(0, 0, 1, var(--faih-shake-rotation));
+    }
+}
+
+@keyframes faih-shake {
+    0%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(calc(-1 * var(--faih-shake-intensity)), 0, 0) rotate3d(0, 0, 1, calc(-1 * var(--faih-shake-rotation)));
+        transform: translate3d(calc(-1 * var(--faih-shake-intensity)), 0, 0) rotate3d(0, 0, 1, calc(-1 * var(--faih-shake-rotation)));
+    }
+    
+    20%, 40%, 60%, 80% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(var(--faih-shake-intensity), 0, 0) rotate3d(0, 0, 1, var(--faih-shake-rotation));
+        transform: translate3d(var(--faih-shake-intensity), 0, 0) rotate3d(0, 0, 1, var(--faih-shake-rotation));
+    }
+}
+
+@-webkit-keyframes faih-shakeVertical {
+    0%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, calc(-1 * var(--faih-shake-intensity)), 0);
+        transform: translate3d(0, calc(-1 * var(--faih-shake-intensity)), 0);
+    }
+    
+    20%, 40%, 60%, 80% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, var(--faih-shake-intensity), 0);
+        transform: translate3d(0, var(--faih-shake-intensity), 0);
+    }
+}
+
+@keyframes faih-shakeVertical {
+    0%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, calc(-1 * var(--faih-shake-intensity)), 0);
+        transform: translate3d(0, calc(-1 * var(--faih-shake-intensity)), 0);
+    }
+    
+    20%, 40%, 60%, 80% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, var(--faih-shake-intensity), 0);
+        transform: translate3d(0, var(--faih-shake-intensity), 0);
+    }
+}
+
+@-webkit-keyframes faih-shakeRotate {
+    0%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, 0);
+        transform: rotate3d(0, 0, 1, 0);
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-shake-rotation)));
+        transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-shake-rotation)));
+    }
+    
+    20%, 40%, 60%, 80% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-shake-rotation));
+        transform: rotate3d(0, 0, 1, var(--faih-shake-rotation));
+    }
+}
+
+@keyframes faih-shakeRotate {
+    0%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: rotate3d(0, 0, 1, 0);
+        transform: rotate3d(0, 0, 1, 0);
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-shake-rotation)));
+        transform: rotate3d(0, 0, 1, calc(-1 * var(--faih-shake-rotation)));
+    }
+    
+    20%, 40%, 60%, 80% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: rotate3d(0, 0, 1, var(--faih-shake-rotation));
+        transform: rotate3d(0, 0, 1, var(--faih-shake-rotation));
+    }
+}
+
+@-webkit-keyframes faih-shakeScale {
+    0%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: scale3d(calc(1 + var(--faih-shake-intensity) * 0.01), calc(1 + var(--faih-shake-intensity) * 0.01), 1);
+        transform: scale3d(calc(1 + var(--faih-shake-intensity) * 0.01), calc(1 + var(--faih-shake-intensity) * 0.01), 1);
+    }
+    
+    20%, 40%, 60%, 80% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: scale3d(calc(1 - var(--faih-shake-intensity) * 0.01), calc(1 - var(--faih-shake-intensity) * 0.01), 1);
+        transform: scale3d(calc(1 - var(--faih-shake-intensity) * 0.01), calc(1 - var(--faih-shake-intensity) * 0.01), 1);
+    }
+}
+
+@keyframes faih-shakeScale {
+    0%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: scale3d(calc(1 + var(--faih-shake-intensity) * 0.01), calc(1 + var(--faih-shake-intensity) * 0.01), 1);
+        transform: scale3d(calc(1 + var(--faih-shake-intensity) * 0.01), calc(1 + var(--faih-shake-intensity) * 0.01), 1);
+    }
+    
+    20%, 40%, 60%, 80% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: scale3d(calc(1 - var(--faih-shake-intensity) * 0.01), calc(1 - var(--faih-shake-intensity) * 0.01), 1);
+        transform: scale3d(calc(1 - var(--faih-shake-intensity) * 0.01), calc(1 - var(--faih-shake-intensity) * 0.01), 1);
+    }
+}
+
+/* Shake animation classes */
+.faih-shake {
+    -webkit-animation-name: faih-shake;
+    animation-name: faih-shake;
+    transform-origin: center;
+}
+
+.faih-shakeVertical {
+    -webkit-animation-name: faih-shakeVertical;
+    animation-name: faih-shakeVertical;
+    transform-origin: center;
+}
+
+.faih-shakeRotate {
+    -webkit-animation-name: faih-shakeRotate;
+    animation-name: faih-shakeRotate;
+    transform-origin: center;
+}
+
+.faih-shakeScale {
+    -webkit-animation-name: faih-shakeScale;
+    animation-name: faih-shakeScale;
+    transform-origin: center;
+}
+
+/* Shake intensity variations */
+.faih-shake-subtle {
+    --faih-shake-intensity: 5px;
+    --faih-shake-rotation: 2deg;
+}
+
+.faih-shake-normal {
+    --faih-shake-intensity: 10px;
+    --faih-shake-rotation: 5deg;
+}
+
+.faih-shake-strong {
+    --faih-shake-intensity: 20px;
+    --faih-shake-rotation: 10deg;
+}
+
+.faih-shake-violent {
+    --faih-shake-intensity: 30px;
+    --faih-shake-rotation: 15deg;
+}
+
+.faih-shake-extreme {
+    --faih-shake-intensity: 40px;
+    --faih-shake-rotation: 20deg;
+}
+
+/* Shake speed variations */
+.faih-shake-fast {
+    --faih-animation-duration: 0.5s;
+}
+
+.faih-shake-slow {
+    --faih-animation-duration: 1.5s;
+}
+
+.faih-shake-very-slow {
+    --faih-animation-duration: 2s;
+}
+
+/* Shake timing variations */
+.faih-shake-bounce {
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.faih-shake-elastic {
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+/* Shake origin variations */
+.faih-shake-origin-top {
+    transform-origin: center top;
+}
+
+.faih-shake-origin-bottom {
+    transform-origin: center bottom;
+}
+
+.faih-shake-origin-left {
+    transform-origin: left center;
+}
+
+.faih-shake-origin-right {
+    transform-origin: right center;
+}
+
+/* Infinite shake variations */
+.faih-shake-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.faih-shake-slow-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    --faih-animation-duration: 2s;
+}
+
+.faih-shake-fast-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    --faih-animation-duration: 0.3s;
+}
+
+/* Special shake effects */
+.faih-shake-vibrate {
+    --faih-shake-intensity: 2px;
+    --faih-shake-rotation: 1deg;
+    --faih-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.faih-shake-wobble {
+    --faih-shake-intensity: 15px;
+    --faih-shake-rotation: 3deg;
+    --faih-animation-duration: 0.8s;
+}
+
+/* Uses example
+
+<!-- Basic horizontal shake -->
+<div class="faih-animation faih-shake">Shake me</div>
+
+<!-- Vertical shake -->
+<div class="faih-animation faih-shakeVertical">Up-down shake</div>
+
+<!-- Rotation shake -->
+<div class="faih-animation faih-shakeRotate">Rotational shake</div>
+
+<!-- Scale shake -->
+<div class="faih-animation faih-shakeScale">Pulsing shake</div>
+
+<!-- Strong shake -->
+<div class="faih-animation faih-shake faih-shake-strong">Violent shake</div>
+
+<!-- Subtle shake -->
+<div class="faih-animation faih-shake faih-shake-subtle">Gentle shake</div>
+
+<!-- Fast shake -->
+<div class="faih-animation faih-shake faih-shake-fast">Quick shake</div>
+
+<!-- Infinite vibration -->
+<div class="faih-animation faih-shake faih-shake-vibrate">Vibrating</div>
+
+<!-- Bouncy shake -->
+<div class="faih-animation faih-shake faih-shake-bounce">Bouncy shake</div>
+
+<!-- Different origin -->
+<div class="faih-animation faih-shake faih-shake-origin-top">Shake from top</div>
+
+<!-- Combined with timing utilities -->
+<div class="faih-animation faih-shake speed-slow delay-1s">Slow delayed shake</div>
+
+<!-- Extreme shake -->
+<div class="faih-animation faih-shake faih-shake-extreme">Earthquake!</div>
+
+*/

@@ -1,4 +1,5 @@
 :root {
+    /* === Forest Green === */
     /* === UNIVERSAL SEMANTIC COLORS === */
     --faih-color-success-50: #e8f5e9;
     --faih-color-success-500: #4caf50;
@@ -56,33 +57,4 @@
     --faih-color-status-failed: #f44336;
     --faih-color-status-warning: #ff9800;
 
-    /* === UNIVERSAL BADGE & TAG COLORS === */
-    --faih-color-badge-success: var(--faih-color-success-100);
-    --faih-color-badge-success-text: var(--faih-color-success-800);
-    --faih-color-badge-warning: var(--faih-color-warning-100);
-    --faih-color-badge-warning-text: var(--faih-color-warning-800);
-    --faih-color-badge-error: var(--faih-color-error-100);
-    --faih-color-badge-error-text: var(--faih-color-error-800);
-    --faih-color-badge-info: var(--faih-color-info-100);
-    --faih-color-badge-info-text: var(--faih-color-info-800);
-    --faih-color-badge-neutral: var(--faih-color-neutral-100);
-    --faih-color-badge-neutral-text: var(--faih-color-neutral-700);
-
-    /* === UNIVERSAL ICON COLORS === */
-    --faih-color-icon-secondary: var(--faih-color-neutral-600);
-    --faih-color-icon-tertiary: var(--faih-color-neutral-400);
-    --faih-color-icon-inverse: #ffffff;
-    --faih-color-icon-success: var(--faih-color-success-500);
-    --faih-color-icon-warning: var(--faih-color-warning-500);
-    --faih-color-icon-error: var(--faih-color-error-500);
-
-    /* === UNIVERSAL OVERLAY COLORS === */
-    --faih-color-overlay-light: rgba(255, 255, 255, 0.72);
-
-    /* === UNIVERSAL INTERACTIVE STATES === */
-    --faih-color-disabled: #f5f5f5;
-
-    /* === UNIVERSAL BORDER COLORS === */
-    --faih-color-border-focus: #2196f3;
-    --faih-color-border-error: #f44336;
 }
