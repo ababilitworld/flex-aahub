@@ -7,7 +7,7 @@ use Ababilithub\{
     FlexPhp\Package\Manager\V1\Base\Manager as BaseManager,
     FlexWordpress\Package\Template\V1\Factory\Template as TemplateFactory,
     FlexWordpress\Package\Template\V1\Contract\Template as TemplateContract,
-    FlexAahub\Package\Plugin\Template\V1\Concrete\List\Premium\Template as PremiumListTemplate,
+    FlexAahub\Package\Plugin\Template\V1\Concrete\List\PremiumCard\Template as PremiumCardListTemplate,
     
 };
 
@@ -21,7 +21,7 @@ class Template extends BaseManager
     protected function init(): void
     {
         $this->set_items([
-            PremiumListTemplate::class,
+            PremiumCardListTemplate::class,
             // Add more classes here...
         ]);
     }

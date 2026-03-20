@@ -12,34 +12,37 @@
     --fa-transition: all 0.3s ease;
 }
 
-.faih-template-list-premium
-{
-    display: flex;
-    flex-direction: column;
+.fa-template-premiumcard-app {
+    display: grid;
+    grid-template-rows: auto 1fr;
     gap: 1.5rem;
     padding: 1rem;
     max-width: 1600px;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
-.faih-template-list-premium-search-panel {
-    display: flex;
+/* Header and Search Panel */
+.fa-search-panel {
+    display: grid;
+    grid-template-columns: 1fr auto;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     background: var(--fa-white);
     border-radius: var(--fa-border-radius);
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    align-items: center;
 }
 
-.faih-template-list-premium-search-input {
-    flex: 1;
+.fa-search-input {
     padding: 0.75rem 1rem;
     border: 1px solid var(--fa-medium-gray);
     border-radius: var(--fa-border-radius);
     font-size: 1rem;
+    width: 100%;
 }
 
-.faih-template-list-premium-search-btn {
+.fa-search-btn {
     padding: 0.75rem 1.5rem;
     background: var(--fa-primary);
     color: var(--fa-white);
@@ -47,19 +50,27 @@
     border-radius: var(--fa-border-radius);
     cursor: pointer;
     transition: var(--fa-transition);
+    white-space: nowrap;
 }
 
-.faih-template-list-premium-search-btn:hover {
+.fa-search-btn:hover {
     background: var(--fa-primary-dark);
 }
 
-.faih-template-list-premium-deed-container {
+/* Main Content Grid */
+.fa-template-premiumcard-container {
     display: grid;
     grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
     gap: 1.5rem;
+    grid-template-areas: 
+        "filters sort"
+        "filters cards";
 }
 
-.faih-template-list-premium-filter-sidebar {
+/* Filter Sidebar */
+.fa-filter-sidebar {
+    grid-area: filters;
     background: var(--fa-white);
     border-radius: var(--fa-border-radius);
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -69,44 +80,44 @@
     top: 1rem;
 }
 
-.faih-template-list-premium-filter-header {
-    display: flex;
-    justify-content: space-between;
+.fa-filter-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
     margin-bottom: 1.5rem;
 }
 
-.faih-template-list-premium-filter-title {
+.fa-filter-title {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--fa-text-color);
     margin: 0;
 }
 
-.faih-template-list-premium-filter-reset-btn {
+.fa-filter-reset-btn {
     background: none;
     border: none;
     color: var(--fa-primary);
     font-size: 0.875rem;
     cursor: pointer;
+    justify-self: end;
 }
 
-.faih-template-list-premium-filter-accordions {
-    display: flex;
-    flex-direction: column;
+.fa-filter-accordions {
+    display: grid;
     gap: 0.75rem;
 }
 
-.faih-template-list-premium-filter-accordion {
+.fa-filter-accordion {
     border: 1px solid var(--fa-medium-gray);
     border-radius: var(--fa-border-radius);
     overflow: hidden;
 }
 
-.faih-template-list-premium-accordion-header {
+.fa-accordion-header {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
     padding: 0.75rem 1rem;
     background: var(--fa-white);
@@ -115,85 +126,75 @@
     transition: var(--fa-transition);
 }
 
-.faih-template-list-premium-accordion-header:hover {
+.fa-accordion-header:hover {
     background: var(--fa-light-gray);
 }
 
-.faih-template-list-premium-accordion-title {
-    display: flex;
+.fa-accordion-title {
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 0.75rem;
     font-weight: 500;
 }
 
-.faih-template-list-premium-accordion-icon {
+.fa-accordion-icon {
     transition: transform 0.3s ease;
 }
 
-.faih-template-list-premium-filter-accordion.active .faih-template-list-premium-accordion-icon {
+.fa-filter-accordion.active .fa-accordion-icon {
     transform: rotate(180deg);
 }
 
-.faih-template-list-premium-accordion-content {
+.fa-accordion-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 }
 
-.faih-template-list-premium-filter-accordion.active .faih-template-list-premium-accordion-content {
+.fa-filter-accordion.active .fa-accordion-content {
     max-height: 500px;
 }
 
-.faih-template-list-premium-filter-items {
+.fa-filter-items {
     padding: 0.5rem 1rem 1rem;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 0.5rem;
 }
 
-.faih-template-list-premium-filter-item {
-    display: flex;
-    justify-content: space-between;
+.fa-filter-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
+    gap: 0.5rem;
     padding: 0.5rem 0;
     cursor: pointer;
 }
 
-.faih-template-list-premium-filter-label {
-    margin-left: 0.5rem;
-}
-
-.faih-template-list-premium-filter-badge {
-    background: var(--fa-badge-bg);
-    color: var(--fa-badge-text);
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 9999px;
-}
-
-.faih-template-list-premium-price-range-filter {
+.fa-price-range-filter {
     padding: 1rem;
 }
 
-.faih-template-list-premium-price-values {
-    display: flex;
-    justify-content: space-between;
+.fa-price-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.faih-template-list-premium-price-slider {
+.fa-price-slider {
     height: 4px;
     background: var(--fa-medium-gray);
     margin: 1rem 0;
     position: relative;
 }
 
-.faih-template-list-premium-price-slider .ui-slider-range {
+.fa-price-slider .ui-slider-range {
     background: var(--fa-primary);
     height: 100%;
 }
 
-.faih-template-list-premium-price-slider .ui-slider-handle {
+.fa-price-slider .ui-slider-handle {
     width: 16px;
     height: 16px;
     background: var(--fa-primary);
@@ -203,17 +204,43 @@
     cursor: pointer;
 }
 
-.faih-template-list-premium-deed-list-container {
-    flex: 1;
+/* Sort Options */
+.fa-sort-options {
+    grid-area: sort;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
 }
 
-.faih-template-list-premium-deed-list {
+.fa-sort-label {
+    font-weight: 500;
+    color: var(--fa-dark-gray);
+}
+
+.fa-sort-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--fa-medium-gray);
+    border-radius: var(--fa-border-radius);
+    background: var(--fa-white);
+    justify-self: start;
+}
+
+/* Cards Grid */
+.fa-template-premiumcard-list-container {
+    grid-area: cards;
+}
+
+.fa-template-premiumcard-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
-.faih-template-list-premium-deed-card {
+.fa-template-premiumcard-card {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     background: var(--fa-white);
     border-radius: var(--fa-border-radius);
     overflow: hidden;
@@ -221,48 +248,52 @@
     transition: var(--fa-transition);
 }
 
-.faih-template-list-premium-deed-card:hover {
+.fa-template-premiumcard-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
 }
 
-.faih-template-list-premium-deed-image {
+.fa-template-premiumcard-image {
     height: 200px;
     background-size: cover;
     background-position: center;
 }
 
-.faih-template-list-premium-deed-content {
+.fa-template-premiumcard-content {
     padding: 1.5rem;
+    display: grid;
+    gap: 0.5rem;
 }
 
-.faih-template-list-premium-deed-content h3 {
-    margin: 0 0 0.5rem;
+.fa-template-premiumcard-content h3 {
+    margin: 0;
     font-size: 1.25rem;
 }
 
-.faih-template-list-premium-deed-meta {
-    display: flex;
+.fa-template-premiumcard-meta {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
     gap: 1rem;
     font-size: 0.875rem;
     color: var(--fa-dark-gray);
-    margin-bottom: 1rem;
 }
 
-.faih-template-list-premium-deed-footer {
-    display: flex;
-    justify-content: space-between;
+.fa-template-premiumcard-footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    padding-top: 1rem;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
     border-top: 1px solid var(--fa-medium-gray);
 }
 
-.faih-template-list-premium-deed-price {
+.fa-template-premiumcard-price {
     font-weight: 600;
     color: var(--fa-primary);
 }
 
-.faih-template-list-premium-view-btn {
+.fa-view-btn {
     padding: 0.5rem 1rem;
     background: linear-gradient(135deg, var(--fa-primary) 0%, var(--fa-primary-dark) 100%);
     color: var(--fa-white);
@@ -274,40 +305,13 @@
     transform-style: preserve-3d;
     position: relative;
     overflow: hidden;
-}
-
-.faih-template-list-premium-view-btn:hover {
-    background: var(--fa-primary-dark);
-    color: var(--fa-white);
-    text-decoration: none;
-}
-
-.faih-template-list-premium-view-btn {
+    display: grid;
+    place-items: center;
     min-width: 2.7rem;
     height: 2.1rem;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0 1.25rem;
-    background: linear-gradient(135deg, var(--fa-primary) 0%, var(--fa-primary-dark) 100%);
-    color: white;
-    box-shadow: 0 4px 12px rgba(51, 102, 255, 0.25);
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    transform-style: preserve-3d;
-    position: relative;
-    overflow: hidden;
 }
 
-.faih-template-list-premium-view-btn:hover {
+.fa-view-btn:hover {
     background: linear-gradient(135deg, var(--fa-primary-dark) 0%, #254eda 100%);
     color: white;
     box-shadow: 0 6px 16px rgba(51, 102, 255, 0.4);
@@ -315,11 +319,11 @@
     text-decoration: none;
 }
 
-.faih-template-list-premium-view-btn:active {
+.fa-view-btn:active {
     transform: translateY(1px) scale(0.98);
 }
 
-.faih-template-list-premium-view-btn::before {
+.fa-view-btn::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -333,7 +337,7 @@
     transform-origin: 50% 50%;
 }
 
-.faih-template-list-premium-view-btn:hover::before {
+.fa-view-btn:hover::before {
     animation: fa-ripple 1s ease-out;
 }
 
@@ -348,12 +352,43 @@
     }
 }
 
-@media (max-width: 992px) {
-    .faih-template-list-premium-deed-container {
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .fa-template-premiumcard-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 787px) {
+    .fa-template-premiumcard-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "sort"
+            "filters"
+            "cards";
+    }
+    
+    .fa-filter-sidebar {
+        position: static;
+    }
+    
+    .fa-search-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .fa-template-premiumcard-list {
         grid-template-columns: 1fr;
     }
     
-    .faih-template-list-premium-filter-sidebar {
-        position: static;
+    .fa-template-premiumcard-footer {
+        grid-template-columns: 1fr;
+        justify-items: start;
+        gap: 0.75rem;
+    }
+    
+    .fa-view-btn {
+        width: 100%;
     }
 }
