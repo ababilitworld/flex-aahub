@@ -1,0 +1,359 @@
+:root {
+    --fa-primary: #04aa6d;
+    --fa-primary-dark: #03744a;
+    --fa-text-color: #1f2937;
+    --fa-light-gray: #f3f4f6;
+    --fa-medium-gray: #e5e7eb;
+    --fa-dark-gray: #6b7280;
+    --fa-white: #ffffff;
+    --fa-badge-bg:  #4338ca;
+    --fa-badge-text: #e0e7ff;
+    --fa-border-radius: 0.5rem;
+    --fa-transition: all 0.3s ease;
+}
+
+.faih-template-list-premium
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.faih-template-list-premium-search-panel {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--fa-white);
+    border-radius: var(--fa-border-radius);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.faih-template-list-premium-search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--fa-medium-gray);
+    border-radius: var(--fa-border-radius);
+    font-size: 1rem;
+}
+
+.faih-template-list-premium-search-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--fa-primary);
+    color: var(--fa-white);
+    border: none;
+    border-radius: var(--fa-border-radius);
+    cursor: pointer;
+    transition: var(--fa-transition);
+}
+
+.faih-template-list-premium-search-btn:hover {
+    background: var(--fa-primary-dark);
+}
+
+.faih-template-list-premium-deed-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1.5rem;
+}
+
+.faih-template-list-premium-filter-sidebar {
+    background: var(--fa-white);
+    border-radius: var(--fa-border-radius);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    height: fit-content;
+    position: sticky;
+    top: 1rem;
+}
+
+.faih-template-list-premium-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.faih-template-list-premium-filter-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--fa-text-color);
+    margin: 0;
+}
+
+.faih-template-list-premium-filter-reset-btn {
+    background: none;
+    border: none;
+    color: var(--fa-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.faih-template-list-premium-filter-accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.faih-template-list-premium-filter-accordion {
+    border: 1px solid var(--fa-medium-gray);
+    border-radius: var(--fa-border-radius);
+    overflow: hidden;
+}
+
+.faih-template-list-premium-accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: var(--fa-white);
+    border: none;
+    cursor: pointer;
+    transition: var(--fa-transition);
+}
+
+.faih-template-list-premium-accordion-header:hover {
+    background: var(--fa-light-gray);
+}
+
+.faih-template-list-premium-accordion-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+}
+
+.faih-template-list-premium-accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.faih-template-list-premium-filter-accordion.active .faih-template-list-premium-accordion-icon {
+    transform: rotate(180deg);
+}
+
+.faih-template-list-premium-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faih-template-list-premium-filter-accordion.active .faih-template-list-premium-accordion-content {
+    max-height: 500px;
+}
+
+.faih-template-list-premium-filter-items {
+    padding: 0.5rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.faih-template-list-premium-filter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.faih-template-list-premium-filter-label {
+    margin-left: 0.5rem;
+}
+
+.faih-template-list-premium-filter-badge {
+    background: var(--fa-badge-bg);
+    color: var(--fa-badge-text);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.faih-template-list-premium-price-range-filter {
+    padding: 1rem;
+}
+
+.faih-template-list-premium-price-values {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.faih-template-list-premium-price-slider {
+    height: 4px;
+    background: var(--fa-medium-gray);
+    margin: 1rem 0;
+    position: relative;
+}
+
+.faih-template-list-premium-price-slider .ui-slider-range {
+    background: var(--fa-primary);
+    height: 100%;
+}
+
+.faih-template-list-premium-price-slider .ui-slider-handle {
+    width: 16px;
+    height: 16px;
+    background: var(--fa-primary);
+    border-radius: 50%;
+    border: none;
+    top: -6px;
+    cursor: pointer;
+}
+
+.faih-template-list-premium-deed-list-container {
+    flex: 1;
+}
+
+.faih-template-list-premium-deed-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.faih-template-list-premium-deed-card {
+    background: var(--fa-white);
+    border-radius: var(--fa-border-radius);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: var(--fa-transition);
+}
+
+.faih-template-list-premium-deed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.faih-template-list-premium-deed-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.faih-template-list-premium-deed-content {
+    padding: 1.5rem;
+}
+
+.faih-template-list-premium-deed-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.faih-template-list-premium-deed-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--fa-dark-gray);
+    margin-bottom: 1rem;
+}
+
+.faih-template-list-premium-deed-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--fa-medium-gray);
+}
+
+.faih-template-list-premium-deed-price {
+    font-weight: 600;
+    color: var(--fa-primary);
+}
+
+.faih-template-list-premium-view-btn {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--fa-primary) 0%, var(--fa-primary-dark) 100%);
+    color: var(--fa-white);
+    border: none;
+    border-radius: var(--fa-border-radius);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+.faih-template-list-premium-view-btn:hover {
+    background: var(--fa-primary-dark);
+    color: var(--fa-white);
+    text-decoration: none;
+}
+
+.faih-template-list-premium-view-btn {
+    min-width: 2.7rem;
+    height: 2.1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 1.25rem;
+    background: linear-gradient(135deg, var(--fa-primary) 0%, var(--fa-primary-dark) 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(51, 102, 255, 0.25);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+.faih-template-list-premium-view-btn:hover {
+    background: linear-gradient(135deg, var(--fa-primary-dark) 0%, #254eda 100%);
+    color: white;
+    box-shadow: 0 6px 16px rgba(51, 102, 255, 0.4);
+    transform: translateY(-2px) scale(1.05);
+    text-decoration: none;
+}
+
+.faih-template-list-premium-view-btn:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+.faih-template-list-premium-view-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+.faih-template-list-premium-view-btn:hover::before {
+    animation: fa-ripple 1s ease-out;
+}
+
+@keyframes fa-ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .faih-template-list-premium-deed-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .faih-template-list-premium-filter-sidebar {
+        position: static;
+    }
+}

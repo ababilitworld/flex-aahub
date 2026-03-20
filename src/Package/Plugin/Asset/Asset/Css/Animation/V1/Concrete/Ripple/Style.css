@@ -44,7 +44,7 @@
     }
 }
 
-@keyframes faih-ripple {
+@-webkit-keyframes faih-ripple {
     0% {
         transform: scale(0, 0);
         opacity: 0.5;
