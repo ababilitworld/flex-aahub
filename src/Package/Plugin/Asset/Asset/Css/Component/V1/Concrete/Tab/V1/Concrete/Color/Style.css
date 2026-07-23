@@ -1,0 +1,6 @@
+.faih-tab--aurora   { --faih-tab-accent: #7c3aed; --faih-tab-accent-2: #ec4899; --faih-tab-accent-soft: rgba(124,58,237,.11); }
+.faih-tab--ocean    { --faih-tab-accent: #0369a1; --faih-tab-accent-2: #06b6d4; --faih-tab-accent-soft: rgba(6,182,212,.11); }
+.faih-tab--sunset   { --faih-tab-accent: #ea580c; --faih-tab-accent-2: #f43f5e; --faih-tab-accent-soft: rgba(244,63,94,.11); }
+.faih-tab--amethyst { --faih-tab-accent: #6d28d9; --faih-tab-accent-2: #a855f7; --faih-tab-accent-soft: rgba(168,85,247,.11); }
+.faih-tab--emerald  { --faih-tab-accent: #047857; --faih-tab-accent-2: #10b981; --faih-tab-accent-soft: rgba(16,185,129,.11); }
+.faih-tab--midnight { --faih-tab-accent: #172554; --faih-tab-accent-2: #4338ca; --faih-tab-accent-soft: rgba(67,56,202,.11); }

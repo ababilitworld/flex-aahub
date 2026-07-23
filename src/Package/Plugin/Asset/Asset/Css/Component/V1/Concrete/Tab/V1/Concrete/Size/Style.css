@@ -1,0 +1,6 @@
+.faih-tab--small  { --faih-tab-font-size: .78rem; --faih-tab-padding-y: .48rem; --faih-tab-padding-x: .65rem; --faih-tab-nav-width: 10rem; }
+.faih-tab--medium { --faih-tab-font-size: .9rem;  --faih-tab-padding-y: .68rem; --faih-tab-padding-x: .9rem;  --faih-tab-nav-width: 13rem; }
+.faih-tab--large  { --faih-tab-font-size: 1rem;   --faih-tab-padding-y: .82rem; --faih-tab-padding-x: 1.05rem; --faih-tab-nav-width: 15rem; }
+.faih-tab--xl     { --faih-tab-font-size: 1.1rem; --faih-tab-padding-y: .95rem; --faih-tab-padding-x: 1.2rem;  --faih-tab-nav-width: 17rem; }
+.faih-tab--xxl    { --faih-tab-font-size: 1.2rem; --faih-tab-padding-y: 1.08rem; --faih-tab-padding-x: 1.4rem;  --faih-tab-nav-width: 19rem; }
+.faih-tab--xxxl   { --faih-tab-font-size: 1.32rem;--faih-tab-padding-y: 1.2rem;  --faih-tab-padding-x: 1.6rem;  --faih-tab-nav-width: 22rem; }

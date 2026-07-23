@@ -1,2 +1,4 @@
 @import url('../Base/Style.css');
-@import url('../../Button/V1/Manager/Style.css');
+@import url('../Concrete/Button/V1/Manager/Style.css');
+@import url('../Concrete/Panel/V1/Manager/Style.css');
+@import url('../Concrete/Tab/V1/Manager/Style.css');

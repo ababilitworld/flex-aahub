@@ -1,8 +1,0 @@
-.ababilithub .template.page .layout.ebook .main { 
-    grid-area: main;
-    background: var(--faih-background-light);
-    border-radius: 16px;
-    padding: 25px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    min-height: 400px;
-}

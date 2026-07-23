@@ -1,8 +1,0 @@
-/* Ensure the image is resized to fit within the layout item */
-.ababilithub .layout.masonry .layout-item img 
-{
-    width: 100%; /* Make the image responsive */
-    height: 100%; /* Maintain the aspect ratio */
-    object-fit: fill; /* Ensure the image covers the space without distortion */
-    border-radius: .3rem; /* Optional: make the image corners rounded */
-}

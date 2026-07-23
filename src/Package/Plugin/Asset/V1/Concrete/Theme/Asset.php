@@ -17,6 +17,7 @@ use Ababilithub\{
 use const Ababilithub\{
     FlexAahub\PLUGIN_PRE_UNDS,
     FlexAahub\PLUGIN_PRE_HYPH,
+    FlexAahub\PLUGIN_VERSION,
 };
 
 class Asset extends BaseAsset
@@ -72,229 +73,20 @@ class Asset extends BaseAsset
             time()
         );
 
+        wp_enqueue_script(
+            $this->asset_base_prefix.'tab-component',
+            $this->asset_base_url.'Asset/Js/Component/V1/Concrete/Tab/V1/Tab.js',
+            array(),
+            time(),
+            true
+        );
+
         // wp_enqueue_style(
         //     $this->asset_base_prefix.'app-theme-style', 
         //     $this->asset_base_url.'Asset/Css/Layo/V1/Manager/Style.css',
         //     array(), 
         //     time()
         // );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-base-style', 
-            $this->asset_base_url.'Css/Animation/V1/Base/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-bounce-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Bounce/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-fade-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Fade/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-flash-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Flash/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-flip-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Flip/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-pulse-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Pulse/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-ripple-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Ripple/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-rotate-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Rotate/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-shake-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Shake/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-shimmer-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Shimmer/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-slide-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Slide/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-animation-concrete-zoom-style', 
-            $this->asset_base_url.'Css/Animation/V1/Concrete/Zoom/Animation.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-header-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Header/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-header-component-bookinfo-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-header-component-bookinfo-component-title-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Title/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-header-component-bookinfo-component-rating-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Rating/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-header-component-bookinfo-component-cover-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Cover/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-header-component-bookinfo-component-cover-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Cover/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-header-component-bookinfo-component-author-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Author/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-header-component-bookinfo-component-publisher-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Publisher/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-sidebar-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-sidebar-component-h2-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Component/H2/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-sidebar-component-accordion-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Component/Accordion/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-sidebar-component-search-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Component/Search/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-main-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Main/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-main-component-toggle-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Main/Component/Toggle/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-main-component-content-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Main/Component/Content/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-main-component-content-code-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Main/Component/Content/Code/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-template-page-layout-ebook-layoutitem-footer-style', 
-            $this->asset_base_url.'Css/Template/Page/Layout/Ebook/LayoutItem/Footer/Style.css',
-            array(), 
-            time()
-        );
-
-        wp_enqueue_style(
-            $this->asset_base_prefix.'app-component-table-style', 
-            $this->asset_base_url.'Css/Component/Table/Style.css',
-            array(), 
-            time()
-        );
 
         $this->add_js_module();
 

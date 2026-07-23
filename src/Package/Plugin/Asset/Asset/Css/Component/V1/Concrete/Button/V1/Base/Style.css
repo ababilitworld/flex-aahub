@@ -1,0 +1,92 @@
+
+.faih-button {
+    position: relative;
+    min-width: 2.7rem;
+    height: 2.1rem;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: .5rem 1rem;
+    background: linear-gradient(135deg, var(--faih-color-primary-400) 0%, var(--faih-color-primary-900) 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(51, 102, 255, 0.25);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.faih-button:hover {
+    background: var(--faih-color-royal-linear-gradient-20);
+    /* background: linear-gradient(135deg, var(--faih-color-primary-900) 30%,var(--faih-color-royal-linear-gradient-second-color-stop) 60%, var(--faih-color-royal-linear-gradient-third-color-stop) 90%);  */
+    color: white;
+    box-shadow: 0 6px 16px rgba(51, 102, 255, 0.4);
+    transform: translateY(-2px) scale(1.05);
+}
+
+.faih-button:nth-child(9n+1):hover {
+    background: var(--faih-color-royal-linear-gradient-135);
+}
+
+.faih-button:nth-child(9n+2):hover {
+    background: var(--faih-color-yellow-luxury-linear-gradient-135);
+}
+
+.faih-button:nth-child(9n+3):hover {
+    background: var(--faih-color-ocean-depth-linear-gradient-135);
+}
+
+.faih-button:nth-child(9n+4):hover {
+    background: var(--faih-color-emerald-luxury-linear-gradient-135);
+}
+
+.faih-button:nth-child(9n+5):hover {
+    background: var(--faih-color-luxury-brand-linear-gradient-135);
+}
+
+.faih-button:nth-child(9n+6):hover {
+    background: var(--faih-color-corporate-pro-linear-gradient-135);
+}
+
+.faih-button:nth-child(9n+7):hover {
+    background: var(--faih-color-sunset-premium-linear-gradient-135);
+}
+
+.faih-button:nth-child(9n+8):hover {
+    background: var(--faih-color-gold-prestige-linear-gradient-135);
+}
+
+.faih-button:nth-child(9n+9):hover {
+    background: var(--faih-color-tech-futuristic-linear-gradient-135);
+}
+
+.faih-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+.faih-button:hover::before {
+    animation: fa-ripple 1s ease-out;
+}
+
+.faih-button:active {
+    transform: translateY(1px) scale(0.98);
+}

@@ -1,8 +1,0 @@
-/* Masonry Grid Container */
-.ababilithub .template.component .layout.masonry 
-{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    grid-auto-rows: auto; /* Automatically adjust row height based on content */
-    grid-gap: 1.20rem; /* Space between grid items */
-}

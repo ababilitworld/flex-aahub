@@ -1,0 +1,81 @@
+/* === <Button Primary> === */
+
+.faih-button.type-primary {
+  background: var(--faih-color-primary-400);
+  border-color: var(--faih-color-primary-400);
+}
+
+/* === Button State === */
+
+.faih-button.type-primary:hover {
+  background: var(--faih-color-primary-700);
+  border-color: var(--faih-color-primary-700);
+}
+
+/* === </Button Primary> === */
+
+/* === <Button Secondary> === */
+
+.faih-button.type-secondary {
+  background: var(--faih-color-secondary-400);
+  border-color: var(--faih-color-secondary-400);
+}
+
+/* === Button State === */
+
+.faih-button.type-secondary:hover {
+  background: var(--faih-color-secondary-700);
+  border-color: var(--faih-color-secondary-700);
+}
+
+/* === </Button Secondary> === */
+
+/* === <Button Tertiary> === */
+
+.faih-button.type-tertiary {
+  background: transparent;
+  color: var(--faih-color-teryiary-400);
+  border-color: var(--faih-color-tertiary-400);
+}
+
+/* === Button State === */
+
+.faih-button.type-tertiary:hover {
+  background: var(--faih-color-teryiary-400);
+  color: white;
+}
+
+/* === </Button Tertiary> === */
+
+/* === <Button Outline> === */
+
+.faih-button.type-outline {
+  background: transparent;
+  color: var(--faih-color-primary-400);
+  border-color: var(--faih-color-primary-400);
+}
+
+/* === Button State === */
+
+.faih-button.type-outline:hover {
+  background: var(--faih-color-primary-700);
+  color: white;
+}
+
+/* === </Button Outline> === */
+
+/* === <Button Ghost> === */
+
+.faih-button.type-ghost {
+  background: transparent;
+  color: var(--faih-color-neutral-700);
+  border-color: transparent;
+}
+
+/* === Button State === */
+
+.faih-button.type-ghost:hover {
+  background: var(--faih-color-neutral-100);
+}
+
+/* === </Button Ghost> === */

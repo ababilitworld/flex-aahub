@@ -1,0 +1,15 @@
+.faih-tab--horizontal { flex-direction: column; }
+.faih-tab--horizontal .faih-tab__navigation {
+  flex-basis: auto;
+  border-right: 0;
+  border-bottom: 1px solid var(--faih-tab-border);
+}
+.faih-tab--horizontal .faih-tab__header { padding-bottom: .55rem; }
+.faih-tab--horizontal .faih-tab__items {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 0;
+}
+.faih-tab--horizontal .faih-tab__link:hover { transform: translateY(-1px); }
+
+.faih-tab--vertical { flex-direction: row; }

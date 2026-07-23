@@ -1,8 +1,0 @@
-/* Center the title text */
-.ababilithub .layout.masonry .layout-item .title 
-{
-    text-align: center;
-    font-size: 1.3rem; /* Adjust font size as needed */
-    font-weight: bold;
-    margin-top: 0 auto; /* Add space between the image and the title */
-}

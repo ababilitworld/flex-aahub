@@ -1,0 +1,56 @@
+/* === <Color Info> === */
+
+.faih-button.color-info {
+  background-color: var(--faih-color-info-400);
+  border-color: var(--faih-color-info-400);
+}
+
+/* === </Color info> === */
+
+/* === <Color Warning> === */
+
+.faih-button.color-warning {
+  background-color: var(--faih-color-warning-400);
+  border-color: var(--faih-color-warning-400);
+}
+
+/* === </Color Warning> === */
+
+/* === <Color Continue> === */
+
+.faih-button.color-continue {
+  background-color: transparent;
+  color: var(--primary-500);
+  border-color: var(--primary-500);
+}
+
+/* === </Color Continue> === */
+
+/* === <Color Danger> === */
+
+.faih-button.color-danger {
+  background-color: transparent;
+  color: var(--primary-500);
+  border-color: var(--primary-500);
+}
+
+/* === </Color Danger> === */
+
+/* === <Color Success> === */
+
+.faih-button.color-success {
+  background-color: transparent;
+  color: var(--gray-800);
+  border-color: transparent;
+}
+
+/* === </Color Success> === */
+
+/* === <Color Error> === */
+
+.faih-button.color-error {
+  background: var(--faih-color-background-color-default);
+  border-color: var(--faih-color-background-color-default);
+}
+
+/* === </Color Error> === */
