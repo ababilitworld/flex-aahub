@@ -1,4 +1,8 @@
 @import url('../Base/Style.css');
 @import url('../Concrete/Button/V1/Manager/Style.css');
+@import url('../Concrete/Filter/V1/Manager/Style.css');
+@import url('../Concrete/List/V1/Manager/Style.css');
+@import url('../Concrete/Pagination/V1/Manager/Style.css');
 @import url('../Concrete/Panel/V1/Manager/Style.css');
+@import url('../Concrete/Table/V1/Manager/Style.css');
 @import url('../Concrete/Tab/V1/Manager/Style.css');

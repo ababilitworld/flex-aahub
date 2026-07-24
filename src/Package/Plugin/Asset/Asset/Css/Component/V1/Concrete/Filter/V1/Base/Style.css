@@ -1,0 +1,59 @@
+.faih-filter {
+  --faih-filter-accent: var(--faih-color-primary-500, #2563eb);
+  --faih-filter-accent-dark: var(--faih-color-primary-700, #1d4ed8);
+  --faih-filter-background: #fff;
+  --faih-filter-border: #e5e7eb;
+  --faih-filter-text: #1f2937;
+  --faih-filter-muted: #6b7280;
+  --faih-filter-gap: .75rem;
+  --faih-filter-padding: 1rem;
+  background: var(--faih-filter-background);
+  border: 1px solid var(--faih-filter-border);
+  border-radius: .75rem;
+  color: var(--faih-filter-text);
+  padding: var(--faih-filter-padding);
+}
+
+.faih-filter *,
+.faih-filter *::before,
+.faih-filter *::after {
+  box-sizing: border-box;
+}
+
+.faih-filter-header {
+  align-items: center;
+  display: flex;
+  gap: var(--faih-filter-gap);
+  justify-content: space-between;
+}
+
+.faih-filter-title {
+  color: inherit;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.faih-filter-action,
+.faih-filter-toggle {
+  background: transparent;
+  border: 0;
+  color: var(--faih-filter-accent);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.faih-filter-action:hover,
+.faih-filter-toggle:hover {
+  color: var(--faih-filter-accent-dark);
+}
+
+.faih-filter-body {
+  display: flex;
+  gap: var(--faih-filter-gap);
+  margin-top: var(--faih-filter-gap);
+}
+
+.faih-filter-group {
+  border-color: var(--faih-filter-border);
+}

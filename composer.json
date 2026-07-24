@@ -20,6 +20,7 @@
     ],
     "require": {
         "firebase/php-jwt": "^6.0",
+        "fakerphp/faker": "^1.24",
         "ababilitworld/flex-php": "dev-main",
         "ababilitworld/flex-wordpress": "dev-main"       
     },

@@ -1,0 +1,6 @@
+.faih-list.size-small  { --faih-list-gap: .5rem;  --faih-list-padding: .6rem;  --faih-list-min-width: 11rem; font-size: .75rem; }
+.faih-list.size-medium { --faih-list-gap: .75rem; --faih-list-padding: .8rem;  --faih-list-min-width: 14rem; font-size: .875rem; }
+.faih-list.size-large  { --faih-list-gap: 1rem;   --faih-list-padding: 1rem;   --faih-list-min-width: 17rem; font-size: 1rem; }
+.faih-list.size-xl     { --faih-list-gap: 1.25rem;--faih-list-padding: 1.25rem;--faih-list-min-width: 20rem; font-size: 1.125rem; }
+.faih-list.size-xxl    { --faih-list-gap: 1.5rem; --faih-list-padding: 1.5rem; --faih-list-min-width: 23rem; font-size: 1.25rem; }
+.faih-list.size-xxxl   { --faih-list-gap: 2rem;   --faih-list-padding: 2rem;   --faih-list-min-width: 26rem; font-size: 1.5rem; }

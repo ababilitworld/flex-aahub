@@ -1,0 +1,8 @@
+.faih-pagination.color-primary { --faih-pagination-accent: var(--faih-color-primary-500, #2563eb); --faih-pagination-accent-dark: var(--faih-color-primary-700, #1d4ed8); --faih-pagination-soft: #eff6ff; }
+.faih-pagination.color-secondary { --faih-pagination-accent: var(--faih-color-secondary-500, #7c3aed); --faih-pagination-accent-dark: var(--faih-color-secondary-700, #5b21b6); --faih-pagination-soft: #f5f3ff; }
+.faih-pagination.color-success { --faih-pagination-accent: var(--faih-color-success-500, #16a34a); --faih-pagination-accent-dark: var(--faih-color-success-700, #15803d); --faih-pagination-soft: #f0fdf4; }
+.faih-pagination.color-info { --faih-pagination-accent: var(--faih-color-info-500, #0284c7); --faih-pagination-accent-dark: var(--faih-color-info-700, #0369a1); --faih-pagination-soft: #f0f9ff; }
+.faih-pagination.color-warning { --faih-pagination-accent: var(--faih-color-warning-500, #d97706); --faih-pagination-accent-dark: var(--faih-color-warning-700, #b45309); --faih-pagination-soft: #fffbeb; }
+.faih-pagination.color-danger,
+.faih-pagination.color-error { --faih-pagination-accent: var(--faih-color-danger-500, #dc2626); --faih-pagination-accent-dark: var(--faih-color-danger-700, #b91c1c); --faih-pagination-soft: #fef2f2; }
+.faih-pagination.color-neutral { --faih-pagination-accent: var(--faih-color-neutral-500, #4b5563); --faih-pagination-accent-dark: var(--faih-color-neutral-800, #1f2937); --faih-pagination-soft: #f9fafb; }

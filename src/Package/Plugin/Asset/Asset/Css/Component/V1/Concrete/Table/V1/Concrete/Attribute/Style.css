@@ -1,0 +1,30 @@
+.faih-table-wrapper.attribute-scroll-x {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-gutter: stable;
+}
+
+.faih-table.attribute-bordered {
+  border: 1px solid var(--faih-table-border);
+  border-radius: .75rem;
+  overflow: hidden;
+}
+
+.faih-table.attribute-bordered .faih-table-cell + .faih-table-cell {
+  border-inline-start: 1px solid var(--faih-table-border);
+}
+
+.faih-table.attribute-hover .faih-table-row:not(.faih-table-header):hover {
+  background: color-mix(in srgb, var(--faih-table-accent) 7%, var(--faih-table-background));
+}
+
+.faih-table.attribute-sticky-header .faih-table-header .faih-table-cell {
+  background: var(--faih-table-accent-soft);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.faih-table.attribute-nowrap .faih-table-cell {
+  white-space: nowrap;
+}

@@ -1,0 +1,40 @@
+.faih-table-wrapper {
+  max-width: 100%;
+}
+
+.faih-table {
+  --faih-table-accent: var(--faih-color-primary-500, #2563eb);
+  --faih-table-accent-soft: #eff6ff;
+  --faih-table-background: #fff;
+  --faih-table-border: #e5e7eb;
+  --faih-table-text: #1f2937;
+  --faih-table-muted: #6b7280;
+  --faih-table-padding-block: .75rem;
+  --faih-table-padding-inline: 1rem;
+  background: var(--faih-table-background);
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--faih-table-text);
+  display: table;
+  min-width: 100%;
+  width: 100%;
+}
+
+.faih-table-header {
+  background: var(--faih-table-accent-soft);
+  color: var(--faih-table-text);
+  display: table-header-group;
+  font-weight: 700;
+}
+
+.faih-table-row {
+  display: table-row;
+}
+
+.faih-table-cell {
+  border-bottom: 1px solid var(--faih-table-border);
+  display: table-cell;
+  padding: var(--faih-table-padding-block) var(--faih-table-padding-inline);
+  text-align: start;
+  vertical-align: middle;
+}

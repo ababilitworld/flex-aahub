@@ -1,0 +1,24 @@
+.faih-filter.type-vertical .faih-filter-body,
+.faih-filter.type-verticle .faih-filter-body {
+  flex-direction: column;
+}
+
+.faih-filter.type-horizontal .faih-filter-body {
+  align-items: start;
+  flex-flow: row wrap;
+}
+
+.faih-filter.type-horizontal .faih-filter-group {
+  flex: 1 1 13rem;
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .faih-filter.type-horizontal .faih-filter-body {
+    flex-direction: column;
+  }
+
+  .faih-filter.type-horizontal .faih-filter-group {
+    width: 100%;
+  }
+}

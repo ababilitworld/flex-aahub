@@ -1,0 +1,8 @@
+.faih-table.type-normal .faih-table-row:not(.faih-table-header) {
+  background: var(--faih-table-background);
+}
+
+.faih-table.type-striped .faih-table-row:nth-child(even),
+.faih-table.type-stripped .faih-table-row:nth-child(even) {
+  background: color-mix(in srgb, var(--faih-table-accent) 5%, var(--faih-table-background));
+}

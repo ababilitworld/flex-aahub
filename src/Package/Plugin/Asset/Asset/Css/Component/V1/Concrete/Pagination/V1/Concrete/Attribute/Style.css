@@ -1,0 +1,26 @@
+.faih-pagination.attribute-centered {
+  justify-content: center;
+}
+
+.faih-pagination.attribute-end {
+  justify-content: flex-end;
+}
+
+.faih-pagination.attribute-rounded .faih-pagination-button {
+  border-radius: 999px;
+}
+
+.faih-pagination.attribute-borderless .faih-pagination-button {
+  border-color: transparent;
+}
+
+.faih-pagination.attribute-compact {
+  --faih-pagination-gap: .15rem;
+  --faih-pagination-padding-block: .35rem;
+  --faih-pagination-padding-inline: .55rem;
+}
+
+.faih-pagination.attribute-full-width .faih-pagination-load-more {
+  flex: 1 1 100%;
+  width: 100%;
+}

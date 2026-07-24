@@ -1,0 +1,6 @@
+.faih-pagination.size-small  { --faih-pagination-padding-block: .25rem; --faih-pagination-padding-inline: .4rem; font-size: .75rem; }
+.faih-pagination.size-medium { --faih-pagination-padding-block: .4rem; --faih-pagination-padding-inline: .6rem; font-size: .875rem; }
+.faih-pagination.size-large  { --faih-pagination-padding-block: .55rem; --faih-pagination-padding-inline: .8rem; font-size: 1rem; }
+.faih-pagination.size-xl     { --faih-pagination-padding-block: .7rem; --faih-pagination-padding-inline: 1rem; font-size: 1.125rem; }
+.faih-pagination.size-xxl    { --faih-pagination-padding-block: .85rem; --faih-pagination-padding-inline: 1.2rem; font-size: 1.25rem; }
+.faih-pagination.size-xxxl   { --faih-pagination-padding-block: 1rem; --faih-pagination-padding-inline: 1.5rem; font-size: 1.5rem; }

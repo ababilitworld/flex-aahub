@@ -1,0 +1,6 @@
+.faih-table.size-small  { --faih-table-padding-block: .35rem; --faih-table-padding-inline: .5rem; font-size: .75rem; }
+.faih-table.size-medium { --faih-table-padding-block: .55rem; --faih-table-padding-inline: .7rem; font-size: .875rem; }
+.faih-table.size-large  { --faih-table-padding-block: .75rem; --faih-table-padding-inline: 1rem; font-size: 1rem; }
+.faih-table.size-xl     { --faih-table-padding-block: 1rem; --faih-table-padding-inline: 1.25rem; font-size: 1.125rem; }
+.faih-table.size-xxl    { --faih-table-padding-block: 1.25rem; --faih-table-padding-inline: 1.5rem; font-size: 1.25rem; }
+.faih-table.size-xxxl   { --faih-table-padding-block: 1.5rem; --faih-table-padding-inline: 2rem; font-size: 1.5rem; }

@@ -1,0 +1,8 @@
+.faih-filter.color-primary { --faih-filter-accent: var(--faih-color-primary-500, #2563eb); --faih-filter-accent-dark: var(--faih-color-primary-700, #1d4ed8); }
+.faih-filter.color-secondary { --faih-filter-accent: var(--faih-color-secondary-500, #7c3aed); --faih-filter-accent-dark: var(--faih-color-secondary-700, #5b21b6); }
+.faih-filter.color-success { --faih-filter-accent: var(--faih-color-success-500, #16a34a); --faih-filter-accent-dark: var(--faih-color-success-700, #15803d); }
+.faih-filter.color-info { --faih-filter-accent: var(--faih-color-info-500, #0284c7); --faih-filter-accent-dark: var(--faih-color-info-700, #0369a1); }
+.faih-filter.color-warning { --faih-filter-accent: var(--faih-color-warning-500, #d97706); --faih-filter-accent-dark: var(--faih-color-warning-700, #b45309); }
+.faih-filter.color-danger,
+.faih-filter.color-error { --faih-filter-accent: var(--faih-color-danger-500, #dc2626); --faih-filter-accent-dark: var(--faih-color-danger-700, #b91c1c); }
+.faih-filter.color-neutral { --faih-filter-accent: var(--faih-color-neutral-500, #4b5563); --faih-filter-accent-dark: var(--faih-color-neutral-800, #1f2937); }

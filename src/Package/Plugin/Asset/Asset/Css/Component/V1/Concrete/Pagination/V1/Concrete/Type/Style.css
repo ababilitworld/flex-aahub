@@ -1,0 +1,19 @@
+.faih-pagination.type-load-more .faih-pagination-pages,
+.faih-pagination.type-load-more .faih-pagination-previous,
+.faih-pagination.type-load-more .faih-pagination-next {
+  display: none;
+}
+
+.faih-pagination.type-paged .faih-pagination-load-more,
+.faih-pagination.type-previous-next .faih-pagination-load-more,
+.faih-pagination.type-previous-next .faih-pagination-pages {
+  display: none;
+}
+
+.faih-pagination.type-none {
+  display: none;
+}
+
+.faih-pagination-pages {
+  display: contents;
+}

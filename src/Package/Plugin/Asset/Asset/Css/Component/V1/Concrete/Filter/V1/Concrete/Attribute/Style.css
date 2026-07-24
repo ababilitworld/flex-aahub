@@ -1,0 +1,18 @@
+.faih-filter.attribute-fixed .faih-filter-toggle {
+  display: none;
+}
+
+.faih-filter.attribute-collapsible .faih-filter-toggle::after {
+  content: "▾";
+  display: inline-block;
+  margin-inline-start: .35em;
+  transition: transform .2s ease;
+}
+
+.faih-filter.attribute-collapsible.is-collapsed .faih-filter-toggle::after {
+  transform: rotate(-90deg);
+}
+
+.faih-filter.attribute-collapsible.is-collapsed .faih-filter-body {
+  display: none;
+}

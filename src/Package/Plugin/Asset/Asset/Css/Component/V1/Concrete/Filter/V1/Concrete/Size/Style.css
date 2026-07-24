@@ -1,0 +1,6 @@
+.faih-filter.size-small  { --faih-filter-gap: .4rem;  --faih-filter-padding: .55rem; font-size: .75rem; }
+.faih-filter.size-medium { --faih-filter-gap: .6rem;  --faih-filter-padding: .75rem; font-size: .875rem; }
+.faih-filter.size-large  { --faih-filter-gap: .8rem;  --faih-filter-padding: 1rem; font-size: 1rem; }
+.faih-filter.size-xl     { --faih-filter-gap: 1rem;   --faih-filter-padding: 1.25rem; font-size: 1.125rem; }
+.faih-filter.size-xxl    { --faih-filter-gap: 1.25rem;--faih-filter-padding: 1.5rem; font-size: 1.25rem; }
+.faih-filter.size-xxxl   { --faih-filter-gap: 1.5rem; --faih-filter-padding: 2rem; font-size: 1.5rem; }
