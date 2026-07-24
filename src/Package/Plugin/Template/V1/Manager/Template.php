@@ -7,7 +7,8 @@ use Ababilithub\{
     FlexPhp\Package\Manager\V1\Base\Manager as BaseManager,
     FlexWordpress\Package\Template\V1\Factory\Template as TemplateFactory,
     FlexWordpress\Package\Template\V1\Contract\Template as TemplateContract,
-    FlexAahub\Package\Plugin\Template\V1\Concrete\List\PremiumCard\Template as PremiumCardListTemplate,
+    FlexAahub\Package\Plugin\Template\V1\Concrete\Pagination\Template as PaginationTemplate,
+    FlexAahub\Package\Plugin\Template\V1\Concrete\List\Table\Template as ListTableTemplate,
     
 };
 
@@ -20,8 +21,9 @@ class Template extends BaseManager
 
     protected function init(): void
     {
-        $this->set_items([
-            PremiumCardListTemplate::class,
+        $this->set_items([            
+            PaginationTemplate::class,
+            ListTableTemplate::class,
             // Add more classes here...
         ]);
     }
@@ -34,7 +36,7 @@ class Template extends BaseManager
 
             if ($itemInstasnce instanceof TemplateContract) 
             {
-                $itemInstasnce->register();
+                
             }
         }
     }

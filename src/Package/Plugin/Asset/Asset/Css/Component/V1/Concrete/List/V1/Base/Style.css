@@ -51,3 +51,25 @@
 .faih-list-item-link:hover {
   color: var(--faih-list-accent-dark);
 }
+
+.faih-list-fields {
+  display: grid;
+  gap: .35rem;
+  margin: .75rem 0 0;
+}
+
+.faih-list-fields > div {
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: minmax(7rem, .6fr) 1fr;
+}
+
+.faih-list-fields dt {
+  color: var(--faih-list-muted);
+  font-weight: 600;
+}
+
+.faih-list-fields dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
