@@ -1,7 +1,9 @@
 <?php
-namespace Ababilithub\FlexAahub\Package\Plugin\Template\V1\Concrete\Pagination;
+namespace Ababilithub\FlexAahub\Package\Plugin\Template\Pagination;
 
-use Ababilithub\FlexWordpress\Package\Template\V1\Base\Template as BaseTemplate;
+use Ababilithub\{
+    FlexWordpress\Package\Template\V1\Base\Template as BaseTemplate,
+};
 
 class Template extends BaseTemplate
 {
@@ -10,7 +12,7 @@ class Template extends BaseTemplate
         return $this;
     }
 
-    public function render($config = null): bool|string
+    public function render($config = null): string
     {
         $config = array_merge([
             'enabled' => true,

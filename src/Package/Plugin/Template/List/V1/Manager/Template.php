@@ -8,7 +8,9 @@ use Ababilithub\{
     FlexWordpress\Package\Template\V1\Factory\Template as TemplateFactory,
     FlexWordpress\Package\Template\V1\Contract\Template as TemplateContract,
     FlexAahub\Package\Plugin\Template\V1\Concrete\Pagination\Template as PaginationTemplate,
-    FlexAahub\Package\Plugin\Template\V1\Concrete\List\Table\Template as ListTableTemplate,
+    FlexAahub\Package\Plugin\Template\List\V1\Concrete\Table\Template as TableListTemplate,
+    FlexAahub\Package\Plugin\Template\List\V1\Concrete\Masonry\Template as MasonryListTemplate,
+    FlexAahub\Package\Plugin\Template\List\V1\Concrete\PremiumCard\Template as PremiumCardListTemplate,
     
 };
 
@@ -23,7 +25,9 @@ class Template extends BaseManager
     {
         $this->set_items([            
             PaginationTemplate::class,
-            ListTableTemplate::class,
+            TableListTemplate::class,
+            MasonryListTemplate::class,
+            PremiumCardListTemplate::class,
             // Add more classes here...
         ]);
     }
