@@ -7,7 +7,10 @@ use Ababilithub\{
     FlexPhp\Package\Mixin\V1\Standard\Mixin as StandardMixin,
     FlexAahub\Package\Plugin\Menu\V1\Manager\Menu as MenuManager,
     FlexAahub\Package\Plugin\Asset\V1\Manager\Asset as AssetManager, 
-    FlexAahub\Package\Plugin\Template\V1\Manager\Template as TemplateManager,
+    FlexAahub\Package\Plugin\Query\V1\Manager\Query as QueryManager,
+    FlexAahub\Package\Plugin\Pagination\V1\Manager\Pagination as PaginationManager, 
+    FlexAahub\Package\Plugin\Template\List\V1\Manager\Template as ListTemplateManager,
+    FlexAahub\Package\Plugin\Template\Pagination\V1\Manager\Template as PaginationTemplateManager,
 
 };
 
@@ -29,7 +32,15 @@ if (!class_exists(__NAMESPACE__.'\Production'))
             });
 
             add_action('init', function () {
-                (new TemplateManager())->boot();
+                (new QueryManager())->boot();
+            });
+
+            add_action('init', function () {
+                (new PaginationManager())->boot();
+            });
+
+            add_action('init', function () {
+                (new ListTemplateManager())->boot();
             });
         }
         

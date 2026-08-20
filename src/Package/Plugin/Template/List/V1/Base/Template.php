@@ -6,6 +6,7 @@ use Ababilithub\{
     FlexWordpress\Package\Template\V1\Base\Template as BaseTemplate,
     FlexAahub\Package\Plugin\Template\List\V1\Contract\Template as TemplateListContract,
 };
+use ReflectionClass;
 
 abstract class Template extends BaseTemplate implements TemplateListContract
 {
@@ -39,6 +40,17 @@ abstract class Template extends BaseTemplate implements TemplateListContract
 
     protected function init_hook(): void
     {
+    }
+
+    /**
+     * Resolve an asset URL relative to the concrete template class.
+     */
+    protected function get_url(string $url_suffix = ''): string
+    {
+        $reflection = new ReflectionClass($this);
+        $base_url = plugin_dir_url($reflection->getFileName());
+
+        return $base_url . ltrim($url_suffix, '/\\');
     }
 
     protected function render_empty_message(): string

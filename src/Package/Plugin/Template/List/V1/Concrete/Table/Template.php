@@ -4,7 +4,7 @@ namespace Ababilithub\FlexAahub\Package\Plugin\Template\List\V1\Concrete\Table;
 
 use Ababilithub\{
     FlexAahub\Package\Plugin\Template\List\V1\Base\Template as BaseListTemplate,
-    FlexAahub\Package\Plugin\Template\Pagination\Template as PaginationTemplate,
+    FlexAahub\Package\Plugin\Template\Pagination\V1\Manager\Template as PaginationTemplate,
 };
 
 final class Template extends BaseListTemplate
@@ -14,29 +14,32 @@ final class Template extends BaseListTemplate
 
     public function init(array $data = []): static
     {
-        $this->set_default_config(
-            isset($data['default_config']) && is_array($data['default_config'])
-                ? array_replace_recursive(
-                    $this->get_table_default_config(),
-                    $data['default_config']
-                )
-                : $this->get_table_default_config()
+        $table_default_config = $this->get_table_default_config();
+
+        $supplied_default_config = isset($data['default_config'])
+            && is_array($data['default_config'])
+                ? $data['default_config']
+                : [];
+
+        $data['default_config'] = array_replace_recursive(
+            $table_default_config,
+            $supplied_default_config
         );
 
         $this->asset_base_url = $this->get_url('Asset/');
-        $this->asset_base_prefix = 'ababilithub-aahub-template-list-table';
+        $this->asset_base_prefix =
+            'ababilithub-aahub-template-list-table';
 
         return parent::init($data);
     }
 
-    public function init_service(): void
+    protected function init_service(): void
     {
         $this->pagination_template = new PaginationTemplate();
     }
 
-    public function init_hook(): void
+    protected function init_hook(): void
     {
-        
     }
 
     public function get_type(): string

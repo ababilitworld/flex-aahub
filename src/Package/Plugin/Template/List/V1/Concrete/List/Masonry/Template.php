@@ -4,7 +4,7 @@ namespace Ababilithub\FlexAahub\Package\Plugin\Template\V1\Concrete\List\Table;
 
 use Ababilithub\{
     FlexWordpress\Package\Template\V1\Base\Template as BaseTemplate,
-    FlexAahub\Package\Plugin\Template\V1\Concrete\Pagination\Template as PaginationTemplate,
+    FlexAahub\Package\Plugin\Template\Pagination\V1\Manager\Template as PaginationTemplate,
 };
 
 use Ababilithub\FlexWordpress\Package\Template\V1\Base\Template;

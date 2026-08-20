@@ -68,14 +68,14 @@ class Asset extends BaseAsset
 
         wp_enqueue_style(
             $this->asset_base_prefix.'app-framework-style', 
-            $this->asset_base_url.'Asset/Css/Framework/V1/Concrete/Ababilithub/Style.css',
+            $this->asset_base_url.'Asset/Presentation/Css/Framework/V1/Concrete/Ababilithub/Style.css',
             array(), 
             time()
         );
 
         wp_enqueue_script(
             $this->asset_base_prefix.'tab-component',
-            $this->asset_base_url.'Asset/Js/Component/V1/Concrete/Tab/V1/Tab.js',
+            $this->asset_base_url.'Asset/Presentation/Js/Component/V1/Concrete/Tab/V1/Tab.js',
             array(),
             time(),
             true
