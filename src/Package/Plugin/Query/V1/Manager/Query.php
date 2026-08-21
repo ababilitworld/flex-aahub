@@ -8,50 +8,42 @@ use Ababilithub\{
     FlexPhp\Package\Manager\V1\Base\Manager as BaseManager,
     FlexWordpress\Package\Query\V1\Contract\Query as QueryContract,
     FlexWordpress\Package\Query\V1\Factory\Query as QueryFactory,
-    FlexAahub\Package\Plugin\Query\V1\Concrete\PostType\Query as PostTypeQuery,
+
+    FlexAahub\Package\Plugin\Query\V1\Concrete\PostType\Query as PosttypeQuery,
     FlexAahub\Package\Plugin\Query\V1\Concrete\Taxonomy\Query as TaxonomyQuery,
+    FlexAahub\Package\Plugin\Query\V1\Concrete\PremiumCard\Query as PremiumCardQuery,
+    FlexAahub\Package\Plugin\Query\V1\Concrete\Masonry\Query as MasonryQuery,
+    FlexAahub\Package\Plugin\Query\V1\Concrete\Table\Query as TableQuery,
 };
 
 class Query extends BaseManager
 {
-    /**
-     * Constructor.
-     */
     public function __construct()
     {
         $this->init();
     }
 
-    /**
-     * Initialize query implementations.
-     *
-     * @return void
-     */
     protected function init(): void
     {
         $this->set_items([
-            PostTypeQuery::class,
+            PosttypeQuery::class,
             TaxonomyQuery::class,
 
-            // Add more query implementations here.
+            // Enable/disable implementations here.
         ]);
     }
 
-    /**
-     * Boot registered query implementations.
-     *
-     * @return void
-     */
     public function boot(): void
     {
         foreach ($this->get_items() as $item_class) 
         {
-            $query = QueryFactory::get( $item_class );
+            $template = QueryFactory::get( $item_class );
 
-            if (!$query instanceof QueryContract) 
+            if (!$template instanceof QueryContract) 
             {
                 continue;
             }
+
         }
     }
 }

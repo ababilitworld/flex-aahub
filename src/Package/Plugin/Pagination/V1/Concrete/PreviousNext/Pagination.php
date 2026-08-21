@@ -4,120 +4,87 @@ namespace Ababilithub\FlexAahub\Package\Plugin\Pagination\V1\Concrete\PreviousNe
 
 (defined('ABSPATH') && defined('WPINC')) || exit();
 
-use Ababilithub\{
-    FlexWordpress\Package\Pagination\V1\Base\Pagination as BasePagination
-};
+use Ababilithub\FlexWordpress\Package\Pagination\V1\Base\Pagination as BasePagination;
 
 class Pagination extends BasePagination
 {
-    /**
-     * Pagination type.
-     */
     protected string $type = 'previous-next';
 
-    /**
-     * Default configuration.
-     *
-     * @var array<string, mixed>
-     */
     protected array $default_config = [
-        'prev_text' => 'Previous',
+        'per_page' => 10,
+        'current_page' => 1,
+        'previous_text' => 'Previous',
         'next_text' => 'Next',
-
-        'container_class' =>
-            'flex-pagination-previous-next',
-
-        'link_class' =>
-            'flex-pagination-previous-next__link',
-
-        'previous_class' =>
-            'flex-pagination-previous-next__previous',
-
-        'next_class' =>
-            'flex-pagination-previous-next__next',
-
-        'aria_label' =>
-            'Pagination',
+        'size' => 'medium',
+        'color' => 'primary',
+        'attributes' => [],
     ];
 
-    /**
-     * Generate links.
-     */
+    public function prepare(): static
+    {
+        $this->set_config_value(
+            'current_page',
+            max(
+                1,
+                (int) $this->get_config_value(
+                    'current_page',
+                    get_query_var('paged', 1)
+                )
+            )
+        );
+
+        return $this;
+    }
+
+    public function paginate(): static
+    {
+        $query = $this->get_query();
+
+        if (!$query) {
+            return $this;
+        }
+
+        $this->set_config_value('total_items', (int) $query->found_posts);
+        $this->set_config_value('total_pages', (int) $query->max_num_pages);
+
+        return $this;
+    }
+
     public function pagination_links(): string
     {
-        if ($this->get_total_pages() <= 1) {
+        $query = $this->get_query();
+
+        if (!$query || $query->max_num_pages <= 1) {
             return '';
         }
 
-        $links = [];
-
-        /*
-         * Previous.
-         */
-        if ($this->has_previous()) {
-            $links[] = sprintf(
-                '<a class="%1$s %2$s" href="%3$s" rel="prev">%4$s</a>',
-                esc_attr(
-                    $this->get_config_value(
-                        'link_class'
-                    )
-                ),
-                esc_attr(
-                    $this->get_config_value(
-                        'previous_class'
-                    )
-                ),
-                $this->get_page_url(
-                    $this->get_current_page() - 1
-                ),
-                esc_html(
-                    $this->get_config_value(
-                        'prev_text'
-                    )
-                )
-            );
-        }
-
-        /*
-         * Next.
-         */
-        if ($this->has_next()) {
-            $links[] = sprintf(
-                '<a class="%1$s %2$s" href="%3$s" rel="next">%4$s</a>',
-                esc_attr(
-                    $this->get_config_value(
-                        'link_class'
-                    )
-                ),
-                esc_attr(
-                    $this->get_config_value(
-                        'next_class'
-                    )
-                ),
-                $this->get_page_url(
-                    $this->get_current_page() + 1
-                ),
-                esc_html(
-                    $this->get_config_value(
-                        'next_text'
-                    )
-                )
-            );
-        }
-
-        return sprintf(
-            '<nav class="%1$s" aria-label="%2$s">%3$s</nav>',
-            esc_attr(
-                $this->get_config_value(
-                    'container_class'
-                )
-            ),
-            esc_attr(
-                $this->get_config_value(
-                    'aria_label'
-                )
-            ),
-            implode('', $links)
+        $current = max(
+            1,
+            (int) $this->get_config_value('current_page', 1)
         );
+
+        $total = (int) $query->max_num_pages;
+
+        $html = '<nav class="flex-aahub-pagination flex-aahub-pagination--previous-next" aria-label="' .
+            esc_attr__('Pagination', 'flex-aahub') .
+            '">';
+
+        if ($current > 1) {
+            $html .= sprintf(
+                '<a class="flex-aahub-pagination__previous" href="%s">%s</a>',
+                esc_url(get_pagenum_link($current - 1)),
+                esc_html($this->get_config_value('previous_text', 'Previous'))
+            );
+        }
+
+        if ($current < $total) {
+            $html .= sprintf(
+                '<a class="flex-aahub-pagination__next" href="%s">%s</a>',
+                esc_url(get_pagenum_link($current + 1)),
+                esc_html($this->get_config_value('next_text', 'Next'))
+            );
+        }
+
+        return $html . '</nav>';
     }
 }

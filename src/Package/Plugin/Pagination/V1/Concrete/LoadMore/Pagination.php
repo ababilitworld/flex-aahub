@@ -4,138 +4,70 @@ namespace Ababilithub\FlexAahub\Package\Plugin\Pagination\V1\Concrete\LoadMore;
 
 (defined('ABSPATH') && defined('WPINC')) || exit();
 
-use Ababilithub\{
-    FlexWordpress\Package\Pagination\V1\Base\Pagination as BasePagination
-};
+use Ababilithub\FlexWordpress\Package\Pagination\V1\Base\Pagination as BasePagination;
 
 class Pagination extends BasePagination
 {
-    /**
-     * Pagination type.
-     */
     protected string $type = 'load-more';
 
-    /**
-     * Default configuration.
-     *
-     * @var array<string, mixed>
-     */
     protected array $default_config = [
+        'per_page' => 10,
+        'current_page' => 1,
         'button_text' => 'Load More',
-        'loading_text' => 'Loading...',
-        'finished_text' => 'No More Results',
-
-        'container_class' =>
-            'flex-pagination-load-more',
-
-        'button_class' =>
-            'flex-pagination-load-more__button',
-
-        'loading_class' =>
-            'is-loading',
-
-        'disabled_class' =>
-            'is-disabled',
-
-        'aria_label' =>
-            'Load more results',
-
-        /*
-         * Front-end JavaScript can use this identifier
-         * to determine which query should be loaded.
-         */
-        'query_id' => '',
+        'size' => 'medium',
+        'color' => 'primary',
+        'attributes' => [],
     ];
 
-    /**
-     * Generate Load More markup.
-     */
-    public function pagination_links(): string
+    public function prepare(): static
     {
-        if (!$this->has_next()) {
-            return '';
-        }
-
-        $current_page =
-            $this->get_current_page();
-
-        $next_page =
-            $current_page + 1;
-
-        $total_pages =
-            $this->get_total_pages();
-
-        $query_id =
-            (string) $this->get_config_value(
-                'query_id',
-                ''
-            );
-
-        return sprintf(
-            '<div class="%1$s" data-pagination-type="load-more" data-current-page="%2$d" data-next-page="%3$d" data-total-pages="%4$d" data-query-id="%5$s">
-                <button type="button" class="%6$s" aria-label="%7$s" data-page="%3$d">%8$s</button>
-            </div>',
-            esc_attr(
-                $this->get_config_value(
-                    'container_class'
-                )
-            ),
-            $current_page,
-            $next_page,
-            $total_pages,
-            esc_attr($query_id),
-            esc_attr(
-                $this->get_config_value(
-                    'button_class'
-                )
-            ),
-            esc_attr(
-                $this->get_config_value(
-                    'aria_label'
-                )
-            ),
-            esc_html(
-                $this->get_config_value(
-                    'button_text'
+        $this->set_config_value(
+            'current_page',
+            max(
+                1,
+                (int) $this->get_config_value(
+                    'current_page',
+                    get_query_var('paged', 1)
                 )
             )
         );
+
+        return $this;
     }
 
-    /**
-     * Get AJAX/load-more data.
-     *
-     * Useful for REST/AJAX implementations.
-     *
-     * @return array<string, mixed>
-     */
-    public function get_load_more_data(): array
+    public function paginate(): static
     {
-        return [
-            'type' => $this->get_type(),
+        $query = $this->get_query();
 
-            'current_page' =>
-                $this->get_current_page(),
+        if (!$query) {
+            return $this;
+        }
 
-            'next_page' =>
-                $this->has_next()
-                    ? $this->get_current_page() + 1
-                    : null,
+        $this->set_config_value('total_items', (int) $query->found_posts);
+        $this->set_config_value('total_pages', (int) $query->max_num_pages);
 
-            'total_pages' =>
-                $this->get_total_pages(),
+        return $this;
+    }
 
-            'total_items' =>
-                $this->get_total_items(),
+    public function pagination_links(): string
+    {
+        $query = $this->get_query();
 
-            'per_page' =>
-                $this->get_per_page(),
+        if (!$query || $query->max_num_pages <= 1) {
+            return '';
+        }
 
-            'query_id' =>
-                $this->get_config_value(
-                    'query_id',
-                    ''
-                ),
-        ];
+        $current = max(
+            1,
+            (int) $this->get_config_value('current_page', 1)
+        );
+
+        $next = $current + 1;
+
+        return sprintf(
+            '<button type="button" class="flex-aahub-pagination flex-aahub-pagination--load-more" data-flex-aahub-page="%d">%s</button>',
+            esc_attr($next),
+            esc_html($this->get_config_value('button_text', 'Load More'))
+        );
     }
 }

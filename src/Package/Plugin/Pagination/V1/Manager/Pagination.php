@@ -8,52 +8,42 @@ use Ababilithub\{
     FlexPhp\Package\Manager\V1\Base\Manager as BaseManager,
     FlexWordpress\Package\Pagination\V1\Contract\Pagination as PaginationContract,
     FlexWordpress\Package\Pagination\V1\Factory\Pagination as PaginationFactory,
+
     FlexAahub\Package\Plugin\Pagination\V1\Concrete\Paged\Pagination as PagedPagination,
     FlexAahub\Package\Plugin\Pagination\V1\Concrete\PreviousNext\Pagination as PreviousNextPagination,
     FlexAahub\Package\Plugin\Pagination\V1\Concrete\LoadMore\Pagination as LoadMorePagination,
-
+    
 };
 
 class Pagination extends BaseManager
 {
-    /**
-     * Constructor.
-     */
     public function __construct()
     {
         $this->init();
     }
 
-    /**
-     * Initialize query implementations.
-     *
-     * @return void
-     */
     protected function init(): void
     {
         $this->set_items([
             PagedPagination::class,
             PreviousNextPagination::class,
             LoadMorePagination::class,
-            // Add more query implementations here.
+
+            // Enable/disable implementations here.
         ]);
     }
 
-    /**
-     * Boot registered query implementations.
-     *
-     * @return void
-     */
     public function boot(): void
     {
         foreach ($this->get_items() as $item_class) 
         {
-            $query = PaginationFactory::get( $item_class );
+            $template = PaginationFactory::get( $item_class );
 
-            if (!$query instanceof PaginationContract) 
+            if (!$template instanceof PaginationContract) 
             {
                 continue;
             }
+
         }
     }
 }
