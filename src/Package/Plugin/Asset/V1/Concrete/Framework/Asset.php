@@ -1,5 +1,5 @@
 <?php
-namespace Ababilithub\FlexAahub\Package\Plugin\Asset\V1\Concrete\Theme;
+namespace Ababilithub\FlexAahub\Package\Plugin\Asset\V1\Concrete\Framework;
 
 (defined('ABSPATH') && defined('WPINC')) || exit();
 
@@ -15,6 +15,7 @@ use Ababilithub\{
 };
 
 use const Ababilithub\{
+    FlexAahub\PLUGIN_URL,
     FlexAahub\PLUGIN_PRE_UNDS,
     FlexAahub\PLUGIN_PRE_HYPH,
     FlexAahub\PLUGIN_VERSION,
@@ -29,6 +30,10 @@ class Asset extends BaseAsset
     
     public function init($data = []): static
     {
+        // Compute the absolute URL to the Asset folder (4 levels up from this file)
+        $this->asset_base_url = PLUGIN_URL.'/src/Package/Plugin/';
+        $this->asset_base_prefix = PLUGIN_PRE_HYPH.'-asset';
+
         $this->init_hook();
         $this->init_service();
         return $this;
@@ -36,15 +41,8 @@ class Asset extends BaseAsset
 
     public function init_hook(): void
     {
-         // Compute the absolute URL to the Asset folder (4 levels up from this file)
-    $this->asset_base_url = plugin_dir_url(dirname(__FILE__, 3));
-    $this->asset_base_prefix = 'ababilithub-flex-aahub-asset-';
-
-    // (Optional) Remove debug echo when done testing
-    // echo "<pre>"; print_r(array($this->asset_base_prefix, $this->asset_base_url, $this->asset_base_url.'Asset/Css/Theme/V1/Manager/Style.css')); echo "</pre>"; //exit;
-
-    add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
-    add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));       
+        add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
+        add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));       
     }
 
     public function init_service(): void
@@ -67,7 +65,7 @@ class Asset extends BaseAsset
         // );
 
         wp_enqueue_style(
-            $this->asset_base_prefix.'app-framework-style', 
+            $this->asset_base_prefix.'-framework-style', 
             $this->asset_base_url.'Asset/Presentation/Css/Framework/V1/Concrete/Ababilithub/Style.css',
             array(), 
             time()

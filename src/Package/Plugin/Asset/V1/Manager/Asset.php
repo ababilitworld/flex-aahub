@@ -7,7 +7,7 @@ use Ababilithub\{
     FlexPhp\Package\Manager\V1\Base\Manager as BaseManager,
     FlexWordpress\Package\Asset\V1\Factory\Asset as AssetFactory,
     FlexWordpress\Package\Asset\V1\Contract\Asset as AssetContract,
-    FlexAahub\Package\Plugin\Asset\V1\Concrete\Theme\Asset as ThemeAsset,
+    FlexAahub\Package\Plugin\Asset\V1\Concrete\Framework\Asset as FrameworkAsset,
     
 };
 
@@ -21,7 +21,7 @@ class Asset extends BaseManager
     protected function init(): void
     {
         $this->set_items([
-            ThemeAsset::class,
+            FrameworkAsset::class,
             // Add more classes here...
         ]);
     }
