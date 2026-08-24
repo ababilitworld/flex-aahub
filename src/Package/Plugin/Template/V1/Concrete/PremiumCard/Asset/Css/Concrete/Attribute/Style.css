@@ -1,0 +1,81 @@
+/* ==========================================================================
+ * Concrete/Attribute/Style.css
+ * ========================================================================== */
+
+
+/* Bordered
+ * ========================================================================== */
+
+.faih-card.attribute-bordered {
+    border-width: 1px;
+}
+
+
+/* Rounded
+ * ========================================================================== */
+
+.faih-card.attribute-rounded {
+    border-radius: var(--faih-card-radius);
+}
+
+
+/* Shadow
+ * ========================================================================== */
+
+.faih-card.attribute-shadow {
+    box-shadow:
+        0 .125rem .25rem rgb(0 0 0 / 5%),
+        0 .5rem 1.5rem rgb(0 0 0 / 6%);
+}
+
+
+/* Hover
+ * ========================================================================== */
+
+.faih-card.attribute-hover {
+    transition:
+        transform var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function),
+        box-shadow var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function);
+}
+
+.faih-card.attribute-hover:hover {
+    box-shadow:
+        0 .25rem .5rem rgb(0 0 0 / 7%),
+        0 1rem 2rem rgb(0 0 0 / 8%);
+    transform: translateY(-2px);
+}
+
+.faih-card.attribute-hover:hover .faih-card-image {
+    transform: scale(1.03);
+}
+
+
+/* Interactive
+ * ========================================================================== */
+
+.faih-card.attribute-interactive {
+    cursor: pointer;
+}
+
+.faih-card.attribute-interactive:focus-visible {
+    outline: 2px solid var(--faih-card-accent);
+    outline-offset: 2px;
+}
+
+
+/* Full Width
+ * ========================================================================== */
+
+.faih-card.attribute-full-width {
+    width: 100%;
+}
+
+
+/* Overflow Hidden
+ * ========================================================================== */
+
+.faih-card.attribute-overflow-hidden {
+    overflow: hidden;
+}

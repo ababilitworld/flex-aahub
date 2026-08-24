@@ -1,0 +1,682 @@
+/* ==========================================================================
+ * Asset/Presentation/Css/Component/Card/V1/Manager/Style.css
+ * ========================================================================== */
+
+@import url('../Base/Style.css');
+
+@import url('../Concrete/Attribute/Style.css');
+
+@import url('../Concrete/Type/Style.css');
+
+@import url('../Concrete/Size/Style.css');
+
+@import url('../Concrete/Color/Style.css');
+
+@import url('../Concrete/Orientation/Style.css');
+
+
+/* ==========================================================================
+ * Asset/Presentation/Css/Component/Card/V1/Base/Style.css
+ * ========================================================================== */
+
+.faih-card {
+    --faih-card-accent: var(--faih-color-primary-500, #2563eb);
+    --faih-card-accent-soft: #eff6ff;
+
+    --faih-card-background: #ffffff;
+    --faih-card-media-background: #f3f4f6;
+
+    --faih-card-border: #e5e7eb;
+
+    --faih-card-text: #1f2937;
+    --faih-card-muted: #6b7280;
+
+    --faih-card-hover-background: #f9fafb;
+
+    --faih-card-padding: 1rem;
+    --faih-card-gap: 1rem;
+
+    --faih-card-radius: .75rem;
+
+    --faih-card-image-height: 14rem;
+
+    --faih-card-transition-duration: 180ms;
+    --faih-card-transition-timing-function: ease;
+
+    background: var(--faih-card-background);
+    border: 0 solid var(--faih-card-border);
+    color: var(--faih-card-text);
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+/* ==========================================================================
+ * Media
+ * ========================================================================== */
+
+.faih-card-media {
+    background: var(--faih-card-media-background);
+    flex: 0 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.faih-card-image {
+    display: block;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    transition:
+        transform var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function);
+    width: 100%;
+}
+
+.faih-card-media-overlay {
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+
+/* ==========================================================================
+ * Badge
+ * ========================================================================== */
+
+.faih-card-badge {
+    background: var(--faih-card-accent);
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: .75rem;
+    font-weight: 700;
+    left: .75rem;
+    line-height: 1;
+    padding: .4rem .65rem;
+    position: absolute;
+    top: .75rem;
+    z-index: 1;
+}
+
+
+/* ==========================================================================
+ * Content
+ * ========================================================================== */
+
+.faih-card-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--faih-card-gap);
+    min-width: 0;
+    padding: var(--faih-card-padding);
+}
+
+
+/* ==========================================================================
+ * Header
+ * ========================================================================== */
+
+.faih-card-header {
+    align-items: flex-start;
+    display: flex;
+    gap: .75rem;
+    justify-content: space-between;
+    min-width: 0;
+}
+
+.faih-card-heading {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.faih-card-eyebrow {
+    color: var(--faih-card-accent);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    line-height: 1.4;
+    margin-block-end: .25rem;
+    text-transform: uppercase;
+}
+
+.faih-card-title {
+    color: var(--faih-card-text);
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0;
+}
+
+.faih-card-header-actions {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: .35rem;
+}
+
+
+/* ==========================================================================
+ * Body
+ * ========================================================================== */
+
+.faih-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: .75rem;
+    min-width: 0;
+}
+
+.faih-card-description {
+    color: var(--faih-card-muted);
+    font-size: .875rem;
+    line-height: 1.6;
+}
+
+.faih-card-description > :first-child {
+    margin-block-start: 0;
+}
+
+.faih-card-description > :last-child {
+    margin-block-end: 0;
+}
+
+
+/* ==========================================================================
+ * Meta
+ * ========================================================================== */
+
+.faih-card-meta {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem 1rem;
+}
+
+.faih-card-meta-item {
+    align-items: center;
+    color: var(--faih-card-muted);
+    display: inline-flex;
+    font-size: .8125rem;
+    gap: .4rem;
+    min-width: 0;
+}
+
+.faih-card-meta-icon {
+    align-items: center;
+    color: var(--faih-card-accent);
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+}
+
+.faih-card-meta-content {
+    min-width: 0;
+}
+
+
+/* ==========================================================================
+ * Footer
+ * ========================================================================== */
+
+.faih-card-footer {
+    align-items: flex-end;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-block-start: auto;
+    min-width: 0;
+}
+
+.faih-card-footer-primary {
+    min-width: 0;
+}
+
+.faih-card-footer-actions {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: .5rem;
+}
+
+
+/* ==========================================================================
+ * Price
+ * ========================================================================== */
+
+.faih-card-price {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+}
+
+.faih-card-price-label {
+    color: var(--faih-card-muted);
+    font-size: .75rem;
+}
+
+.faih-card-price-value {
+    color: var(--faih-card-text);
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+
+/* ==========================================================================
+ * Button
+ * ========================================================================== */
+
+.faih-card-button {
+    align-items: center;
+    background: var(--faih-card-accent);
+    border: 1px solid var(--faih-card-accent);
+    border-radius: .5rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: .875rem;
+    font-weight: 600;
+    gap: .4rem;
+    justify-content: center;
+    line-height: 1.4;
+    padding: .6rem .9rem;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function),
+        border-color var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function),
+        color var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function),
+        box-shadow var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function);
+}
+
+.faih-card-button:hover {
+    background: color-mix(
+        in srgb,
+        var(--faih-card-accent) 85%,
+        #000000
+    );
+    border-color: color-mix(
+        in srgb,
+        var(--faih-card-accent) 85%,
+        #000000
+    );
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.faih-card-button:focus-visible {
+    outline: 2px solid var(--faih-card-accent);
+    outline-offset: 2px;
+}
+
+
+/* ==========================================================================
+ * Generic Action
+ * ========================================================================== */
+
+.faih-card-action {
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: .5rem;
+    color: var(--faih-card-muted);
+    cursor: pointer;
+    display: inline-flex;
+    flex: 0 0 auto;
+    height: 2rem;
+    justify-content: center;
+    padding: 0;
+    transition:
+        background-color var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function),
+        color var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function);
+    width: 2rem;
+}
+
+.faih-card-action:hover {
+    background: var(--faih-card-hover-background);
+    color: var(--faih-card-text);
+}
+
+.faih-card-action:focus-visible {
+    outline: 2px solid var(--faih-card-accent);
+    outline-offset: 2px;
+}
+
+
+/* ==========================================================================
+ * Concrete/Attribute/Style.css
+ * ========================================================================== */
+
+
+/* Bordered
+ * ========================================================================== */
+
+.faih-card.attribute-bordered {
+    border-width: 1px;
+}
+
+
+/* Rounded
+ * ========================================================================== */
+
+.faih-card.attribute-rounded {
+    border-radius: var(--faih-card-radius);
+}
+
+
+/* Shadow
+ * ========================================================================== */
+
+.faih-card.attribute-shadow {
+    box-shadow:
+        0 .125rem .25rem rgb(0 0 0 / 5%),
+        0 .5rem 1.5rem rgb(0 0 0 / 6%);
+}
+
+
+/* Hover
+ * ========================================================================== */
+
+.faih-card.attribute-hover {
+    transition:
+        transform var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function),
+        box-shadow var(--faih-card-transition-duration)
+        var(--faih-card-transition-timing-function);
+}
+
+.faih-card.attribute-hover:hover {
+    box-shadow:
+        0 .25rem .5rem rgb(0 0 0 / 7%),
+        0 1rem 2rem rgb(0 0 0 / 8%);
+    transform: translateY(-2px);
+}
+
+.faih-card.attribute-hover:hover .faih-card-image {
+    transform: scale(1.03);
+}
+
+
+/* Interactive
+ * ========================================================================== */
+
+.faih-card.attribute-interactive {
+    cursor: pointer;
+}
+
+.faih-card.attribute-interactive:focus-visible {
+    outline: 2px solid var(--faih-card-accent);
+    outline-offset: 2px;
+}
+
+
+/* Full Width
+ * ========================================================================== */
+
+.faih-card.attribute-full-width {
+    width: 100%;
+}
+
+
+/* Overflow Hidden
+ * ========================================================================== */
+
+.faih-card.attribute-overflow-hidden {
+    overflow: hidden;
+}
+
+
+/* ==========================================================================
+ * Concrete/Type/Style.css
+ * ========================================================================== */
+
+
+/* Default
+ * ========================================================================== */
+
+.faih-card.type-default {
+    flex-direction: column;
+}
+
+
+/* Premium
+ * ========================================================================== */
+
+.faih-card.type-premium {
+    border-width: 1px;
+    border-radius: var(--faih-card-radius);
+    box-shadow:
+        0 .25rem .5rem rgb(0 0 0 / 5%),
+        0 1rem 2rem rgb(0 0 0 / 7%);
+}
+
+.faih-card.type-premium .faih-card-media {
+    position: relative;
+}
+
+.faih-card.type-premium .faih-card-title {
+    font-size: 1.25rem;
+}
+
+.faih-card.type-premium .faih-card-price-value {
+    color: var(--faih-card-accent);
+}
+
+
+/* Flat
+ * ========================================================================== */
+
+.faih-card.type-flat {
+    border-width: 0;
+    box-shadow: none;
+}
+
+
+/* Outline
+ * ========================================================================== */
+
+.faih-card.type-outline {
+    border-width: 1px;
+    box-shadow: none;
+}
+
+
+/* Elevated
+ * ========================================================================== */
+
+.faih-card.type-elevated {
+    border-width: 0;
+    box-shadow:
+        0 .25rem .5rem rgb(0 0 0 / 6%),
+        0 1rem 2rem rgb(0 0 0 / 8%);
+}
+
+
+/* ==========================================================================
+ * Concrete/Size/Style.css
+ * ========================================================================== */
+
+.faih-card.size-small {
+    --faih-card-padding: .65rem;
+    --faih-card-gap: .65rem;
+    --faih-card-image-height: 10rem;
+
+    font-size: .8125rem;
+}
+
+.faih-card.size-medium {
+    --faih-card-padding: 1rem;
+    --faih-card-gap: 1rem;
+    --faih-card-image-height: 14rem;
+
+    font-size: .875rem;
+}
+
+.faih-card.size-large {
+    --faih-card-padding: 1.25rem;
+    --faih-card-gap: 1.25rem;
+    --faih-card-image-height: 17rem;
+
+    font-size: 1rem;
+}
+
+.faih-card.size-xl {
+    --faih-card-padding: 1.5rem;
+    --faih-card-gap: 1.5rem;
+    --faih-card-image-height: 20rem;
+
+    font-size: 1.125rem;
+}
+
+.faih-card.size-xxl {
+    --faih-card-padding: 1.75rem;
+    --faih-card-gap: 1.75rem;
+    --faih-card-image-height: 23rem;
+
+    font-size: 1.25rem;
+}
+
+.faih-card.size-xxxl {
+    --faih-card-padding: 2rem;
+    --faih-card-gap: 2rem;
+    --faih-card-image-height: 26rem;
+
+    font-size: 1.5rem;
+}
+
+
+/* ==========================================================================
+ * Concrete/Color/Style.css
+ * ========================================================================== */
+
+.faih-card.color-primary {
+    --faih-card-accent: var(--faih-color-primary-500, #2563eb);
+    --faih-card-accent-soft: #eff6ff;
+}
+
+.faih-card.color-secondary {
+    --faih-card-accent: var(--faih-color-secondary-500, #7c3aed);
+    --faih-card-accent-soft: #f5f3ff;
+}
+
+.faih-card.color-success {
+    --faih-card-accent: var(--faih-color-success-500, #16a34a);
+    --faih-card-accent-soft: #f0fdf4;
+}
+
+.faih-card.color-info {
+    --faih-card-accent: var(--faih-color-info-500, #0284c7);
+    --faih-card-accent-soft: #f0f9ff;
+}
+
+.faih-card.color-warning {
+    --faih-card-accent: var(--faih-color-warning-500, #d97706);
+    --faih-card-accent-soft: #fffbeb;
+}
+
+.faih-card.color-danger,
+.faih-card.color-error {
+    --faih-card-accent: var(--faih-color-danger-500, #dc2626);
+    --faih-card-accent-soft: #fef2f2;
+}
+
+.faih-card.color-neutral {
+    --faih-card-accent: var(--faih-color-neutral-500, #4b5563);
+    --faih-card-accent-soft: #f9fafb;
+}
+
+
+/* ==========================================================================
+ * Concrete/Orientation/Style.css
+ * ========================================================================== */
+
+
+/* Vertical
+ * ========================================================================== */
+
+.faih-card.orientation-vertical {
+    flex-direction: column;
+}
+
+.faih-card.orientation-vertical .faih-card-media {
+    height: var(--faih-card-image-height);
+    width: 100%;
+}
+
+
+/* Horizontal
+ * ========================================================================== */
+
+.faih-card.orientation-horizontal {
+    flex-direction: row;
+}
+
+.faih-card.orientation-horizontal .faih-card-media {
+    flex: 0 0 35%;
+    min-height: 100%;
+}
+
+.faih-card.orientation-horizontal .faih-card-content {
+    flex: 1 1 65%;
+}
+
+
+/* Horizontal Compact Media
+ * ========================================================================== */
+
+.faih-card.orientation-horizontal.attribute-compact-media .faih-card-media {
+    flex-basis: 25%;
+}
+
+
+/* ==========================================================================
+ * Responsive
+ * ========================================================================== */
+
+@media (max-width: 767px) {
+
+    .faih-card.orientation-horizontal {
+        flex-direction: column;
+    }
+
+    .faih-card.orientation-horizontal .faih-card-media {
+        flex-basis: auto;
+        height: var(--faih-card-image-height);
+        min-height: 0;
+        width: 100%;
+    }
+
+    .faih-card.orientation-horizontal .faih-card-content {
+        flex-basis: auto;
+    }
+
+}
+
+
+/* ==========================================================================
+ * Reduced Motion
+ * ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .faih-card,
+    .faih-card-image,
+    .faih-card-button,
+    .faih-card-action {
+        scroll-behavior: auto;
+        transition: none;
+    }
+
+}

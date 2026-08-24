@@ -5,61 +5,72 @@ namespace Ababilithub\FlexAahub\Package\Plugin\Template\V1\Concrete\Grid;
 (defined('ABSPATH') && defined('WPINC')) || exit();
 
 use Ababilithub\{
-    FlexAahub\Package\Plugin\Template\V1\Concrete\List\Template as ListTemplate,
+    FlexWordpress\Package\Template\V1\Base\Template as BaseTemplate
 };
 
-class Template extends ListTemplate
+class Template extends BaseTemplate
 {
-    /**
-     * Template type.
-     */
     protected string $type = 'grid';
 
-    /**
-     * Default configuration.
-     *
-     * @var array<string, mixed>
-     */
     protected array $default_config = [
-        'container_class' => 'flex-template-grid',
-        'item_class' => 'flex-template-grid__item',
-        'empty_class' => 'flex-template-grid__empty',
+        'columns' => 3,
+        'class' => '',
+        'size' => 'medium',
+        'color' => 'primary',
     ];
 
     /**
-     * Render grid item.
+     * Render grid.
+     *
+     * @param array $data
+     * @return string
      */
-    protected function render_item(
-        mixed $item,
-        int|string $index
+    protected function render_html(
+        array $data
     ): string {
-        return sprintf(
-            '<div class="%1$s">%2$s</div>',
-            $this->classes(
-                $this->get_config_value(
-                    'item_class'
-                )
-            ),
-            $this->render_item_content(
-                $item,
-                $index
-            )
-        );
-    }
+        $items = is_array(
+            $data['items'] ?? null
+        )
+            ? $data['items']
+            : [];
 
-    /**
-     * Render item content.
-     */
-    protected function render_item_content(
-        mixed $item,
-        int|string $index
-    ): string {
-        if (is_scalar($item)) {
-            return $this->text($item);
+        if (!$items) {
+            return '';
         }
 
-        return $this->text(
-            wp_json_encode($item)
-        );
+        ob_start();
+        ?>
+
+        <div
+            class="flex-aahub-template-grid <?php echo esc_attr(
+                $this->get_config_value('class', '')
+            ); ?>"
+            data-columns="<?php echo esc_attr(
+                (string) $this->get_config_value(
+                    'columns',
+                    3
+                )
+            ); ?>"
+        >
+
+            <?php foreach ($items as $item) : ?>
+
+                <article class="flex-aahub-template-grid__item">
+
+                    <h3 class="flex-aahub-template-grid__title">
+                        <?php echo esc_html(
+                            $item['post']['title'] ?? ''
+                        ); ?>
+                    </h3>
+
+                </article>
+
+            <?php endforeach; ?>
+
+        </div>
+
+        <?php
+
+        return (string) ob_get_clean();
     }
 }

@@ -1,0 +1,75 @@
+.faih-list {
+  --faih-list-accent: var(--faih-color-primary-400, #2563eb);
+  --faih-list-accent-dark: var(--faih-color-primary-700, #1d4ed8);
+  --faih-list-background: #fff;
+  --faih-list-text: #1f2937;
+  --faih-list-muted: #6b7280;
+  --faih-list-border: #e5e7eb;
+  --faih-list-gap: 1rem;
+  --faih-list-padding: 1rem;
+  --faih-list-min-width: 16rem;
+  color: var(--faih-list-text);
+}
+
+.faih-list *,
+.faih-list *::before,
+.faih-list *::after {
+  box-sizing: border-box;
+}
+
+.faih-list-item {
+  background: var(--faih-list-background);
+  border: 1px solid var(--faih-list-border);
+  border-radius: .75rem;
+  color: var(--faih-list-text);
+  overflow: hidden;
+}
+
+.faih-list-item-content {
+  padding: var(--faih-list-padding);
+}
+
+.faih-list-item-title {
+  color: inherit;
+  font-size: 1.1em;
+  margin: 0 0 .5em;
+}
+
+.faih-list-item-meta {
+  color: var(--faih-list-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4em 1em;
+}
+
+.faih-list-item-accent,
+.faih-list-item-link {
+  color: var(--faih-list-accent);
+  font-weight: 600;
+}
+
+.faih-list-item-link:hover {
+  color: var(--faih-list-accent-dark);
+}
+
+.faih-list-fields {
+  display: grid;
+  gap: .35rem;
+  margin: .75rem 0 0;
+}
+
+.faih-list-fields > div {
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: minmax(7rem, .6fr) 1fr;
+}
+
+.faih-list-fields dt {
+  color: var(--faih-list-muted);
+  font-weight: 600;
+}
+
+.faih-list-fields dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}

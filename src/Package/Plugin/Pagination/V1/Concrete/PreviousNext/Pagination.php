@@ -4,87 +4,89 @@ namespace Ababilithub\FlexAahub\Package\Plugin\Pagination\V1\Concrete\PreviousNe
 
 (defined('ABSPATH') && defined('WPINC')) || exit();
 
-use Ababilithub\FlexWordpress\Package\Pagination\V1\Base\Pagination as BasePagination;
+use Ababilithub\{
+    FlexWordpress\Package\Pagination\V1\Base\Pagination as BasePagination
+};
 
 class Pagination extends BasePagination
 {
     protected string $type = 'previous-next';
 
-    protected array $default_config = [
-        'per_page' => 10,
-        'current_page' => 1,
-        'previous_text' => 'Previous',
-        'next_text' => 'Next',
-        'size' => 'medium',
-        'color' => 'primary',
-        'attributes' => [],
-    ];
-
-    public function prepare(): static
-    {
-        $this->set_config_value(
-            'current_page',
-            max(
-                1,
-                (int) $this->get_config_value(
-                    'current_page',
-                    get_query_var('paged', 1)
-                )
-            )
-        );
-
-        return $this;
-    }
-
-    public function paginate(): static
-    {
-        $query = $this->get_query();
-
-        if (!$query) {
-            return $this;
-        }
-
-        $this->set_config_value('total_items', (int) $query->found_posts);
-        $this->set_config_value('total_pages', (int) $query->max_num_pages);
-
-        return $this;
-    }
-
+    /**
+     * Render previous/next pagination.
+     *
+     * @return string
+     */
     public function pagination_links(): string
     {
-        $query = $this->get_query();
-
-        if (!$query || $query->max_num_pages <= 1) {
+        if (!$this->get_config_value(
+            'enabled',
+            true
+        )) {
             return '';
         }
 
-        $current = max(
-            1,
-            (int) $this->get_config_value('current_page', 1)
+        $total_pages = $this->get_total_pages();
+
+        if ($total_pages <= 1) {
+            return '';
+        }
+
+        $current_page = min(
+            $this->get_current_page(),
+            $total_pages
         );
 
-        $total = (int) $query->max_num_pages;
+        $html = sprintf(
+            '<nav class="%s" aria-label="%s">',
+            esc_attr(
+                trim(
+                    'flex-aahub-pagination flex-aahub-pagination--previous-next ' .
+                    $this->get_config_value('class', '')
+                )
+            ),
+            esc_attr__(
+                'Pagination',
+                'flex-aahub'
+            )
+        );
 
-        $html = '<nav class="flex-aahub-pagination flex-aahub-pagination--previous-next" aria-label="' .
-            esc_attr__('Pagination', 'flex-aahub') .
-            '">';
-
-        if ($current > 1) {
+        if ($current_page > 1) {
             $html .= sprintf(
                 '<a class="flex-aahub-pagination__previous" href="%s">%s</a>',
-                esc_url(get_pagenum_link($current - 1)),
-                esc_html($this->get_config_value('previous_text', 'Previous'))
+                esc_url(
+                    $this->get_page_url(
+                        $current_page - 1
+                    )
+                ),
+                esc_html(
+                    $this->get_config_value(
+                        'prev_text',
+                        'Previous'
+                    )
+                )
             );
         }
 
-        if ($current < $total) {
+        if ($current_page < $total_pages) {
             $html .= sprintf(
                 '<a class="flex-aahub-pagination__next" href="%s">%s</a>',
-                esc_url(get_pagenum_link($current + 1)),
-                esc_html($this->get_config_value('next_text', 'Next'))
+                esc_url(
+                    $this->get_page_url(
+                        $current_page + 1
+                    )
+                ),
+                esc_html(
+                    $this->get_config_value(
+                        'next_text',
+                        'Next'
+                    )
+                )
             );
         }
 
-        return $html . '</nav>';
+        $html .= '</nav>';
+
+        return $html;
     }
 }

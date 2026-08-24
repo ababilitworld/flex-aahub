@@ -4,93 +4,122 @@ namespace Ababilithub\FlexAahub\Package\Plugin\Pagination\V1\Concrete\Paged;
 
 (defined('ABSPATH') && defined('WPINC')) || exit();
 
-use Ababilithub\FlexWordpress\Package\Pagination\V1\Base\Pagination as BasePagination;
+use Ababilithub\FlexWordpress\Package\Pagination\V1\Base\Pagination
+    as BasePagination;
 
 class Pagination extends BasePagination
 {
+    /**
+     * Pagination type.
+     *
+     * @var string
+     */
     protected string $type = 'paged';
 
-    protected array $default_config = [
-        'per_page' => 10,
-        'current_page' => 1,
-        'size' => 'medium',
-        'color' => 'primary',
-        'attributes' => [],
-        'base' => '',
-        'format' => '?paged=%#%',
-    ];
-
-    public function prepare(): static
-    {
-        $this->set_config_value(
-            'current_page',
-            max(
-                1,
-                (int) $this->get_config_value(
-                    'current_page',
-                    get_query_var('paged', 1)
-                )
-            )
-        );
-
-        return $this;
-    }
-
-    public function paginate(): static
-    {
-        $query = $this->get_query();
-
-        if (!$query) {
-            return $this;
-        }
-
-        $this->set_config_value(
-            'total_items',
-            (int) $query->found_posts
-        );
-
-        $this->set_config_value(
-            'total_pages',
-            (int) $query->max_num_pages
-        );
-
-        return $this;
-    }
-
+    /**
+     * Render numbered pagination.
+     *
+     * @return string
+     */
     public function pagination_links(): string
     {
-        $query = $this->get_query();
-
-        if (!$query || $query->max_num_pages <= 1) {
+        if (
+            !$this->get_config_value(
+                'enabled',
+                true
+            )
+        ) {
             return '';
         }
 
+        $total_pages = $this->get_total_pages();
+
+        if ($total_pages <= 1) {
+            return '';
+        }
+
+        $current_page = min(
+            $this->get_current_page(),
+            $total_pages
+        );
+
+        $page_var = sanitize_key(
+            (string) $this->get_config_value(
+                'page_var',
+                'paged'
+            )
+        );
+
+        if ($page_var === '') {
+            $page_var = 'paged';
+        }
+
+        $base = add_query_arg(
+            $page_var,
+            '%#%',
+            $this->get_base_url()
+        );
+
         $links = paginate_links([
-            'base' => $this->get_config_value(
-                'base',
-                str_replace(
-                    '%_%',
-                    1 === $this->get_config_value('current_page', 1)
-                        ? ''
-                        : '%#%',
-                    esc_url_raw(
-                        str_replace(
-                            '999999999',
-                            '%#%',
-                            get_pagenum_link(999999999)
-                        )
+            'base' => $base,
+
+            'current' => $current_page,
+
+            'total' => $total_pages,
+
+            'mid_size' => max(
+                0,
+                (int) $this->get_config_value(
+                    'mid_size',
+                    2
+                )
+            ),
+
+            'end_size' => max(
+                0,
+                (int) $this->get_config_value(
+                    'end_size',
+                    1
+                )
+            ),
+
+            'prev_text' => $this->get_config_value(
+                'prev_text',
+                'Previous'
+            ),
+
+            'next_text' => $this->get_config_value(
+                'next_text',
+                'Next'
+            ),
+
+            'type' => 'list',
+        ]);
+
+        if (!$links) {
+            return '';
+        }
+
+        return sprintf(
+            '<nav class="%s" aria-label="%s">%s</nav>',
+
+            esc_attr(
+                trim(
+                    'flex-aahub-pagination ' .
+                    'flex-aahub-pagination--paged ' .
+                    $this->get_config_value(
+                        'class',
+                        ''
                     )
                 )
             ),
-            'format' => $this->get_config_value('format', '?paged=%#%'),
-            'current' => max(
-                1,
-                (int) $this->get_config_value('current_page', 1)
-            ),
-            'total' => (int) $query->max_num_pages,
-            'type' => 'plain',
-        ]);
 
-        return is_string($links) ? $links : '';
+            esc_attr__(
+                'Pagination',
+                'flex-aahub'
+            ),
+
+            $links
+        );
     }
 }

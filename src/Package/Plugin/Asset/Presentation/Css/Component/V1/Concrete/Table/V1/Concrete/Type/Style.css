@@ -1,3 +1,5 @@
+/* Asset/Presentation/Css/Component/Table/V1/Concrete/Type/Style.css */
+
 .faih-table.type-normal .faih-table-row:not(.faih-table-header) {
   background: var(--faih-table-background);
 }

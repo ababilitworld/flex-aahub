@@ -1,0 +1,114 @@
+/* Asset/Presentation/Css/Component/Table/V1/Manager/Style.css */
+
+@import url('../Base/Style.css');
+@import url('../Concrete/Attribute/Style.css');
+@import url('../Concrete/Type/Style.css');
+@import url('../Concrete/Size/Style.css');
+@import url('../Concrete/Color/Style.css');
+
+/* Asset/Presentation/Css/Component/Table/V1/Base/Style.css */
+
+.faih-table-wrapper {
+  max-width: 100%;
+}
+
+.faih-table {
+  --faih-table-accent: var(--faih-color-primary-500, #2563eb);
+  --faih-table-accent-soft: #eff6ff;
+  --faih-table-background: #fff;
+  --faih-table-border: #e5e7eb;
+  --faih-table-text: #1f2937;
+  --faih-table-muted: #6b7280;
+  --faih-table-padding-block: .75rem;
+  --faih-table-padding-inline: 1rem;
+  background: var(--faih-table-background);
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--faih-table-text);
+  display: table;
+  min-width: 100%;
+  width: 100%;
+}
+
+.faih-table-header {
+  background: var(--faih-table-accent-soft);
+  color: var(--faih-table-text);
+  display: table-header-group;
+  font-weight: 700;
+}
+
+.faih-table-row {
+  display: table-row;
+}
+
+.faih-table-cell {
+  border-bottom: 1px solid var(--faih-table-border);
+  display: table-cell;
+  padding: var(--faih-table-padding-block) var(--faih-table-padding-inline);
+  text-align: start;
+  vertical-align: middle;
+}
+
+/* Asset/Presentation/Css/Component/Table/V1/Concrete/Attribute/Style.css */
+
+.faih-table-wrapper.attribute-scroll-x {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-gutter: stable;
+}
+
+.faih-table.attribute-bordered {
+  border: 1px solid var(--faih-table-border);
+  border-radius: .75rem;
+  overflow: hidden;
+}
+
+.faih-table.attribute-bordered .faih-table-cell + .faih-table-cell {
+  border-inline-start: 1px solid var(--faih-table-border);
+}
+
+.faih-table.attribute-hover .faih-table-row:not(.faih-table-header):hover {
+  background: color-mix(in srgb, var(--faih-table-accent) 7%, var(--faih-table-background));
+}
+
+.faih-table.attribute-sticky-header .faih-table-header .faih-table-cell {
+  background: var(--faih-table-accent-soft);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.faih-table.attribute-nowrap .faih-table-cell {
+  white-space: nowrap;
+}
+
+/* Asset/Presentation/Css/Component/Table/V1/Concrete/Color/Style.css */
+
+.faih-table.color-primary { --faih-table-accent: var(--faih-color-primary-500, #2563eb); --faih-table-accent-soft: #eff6ff; }
+.faih-table.color-secondary { --faih-table-accent: var(--faih-color-secondary-500, #7c3aed); --faih-table-accent-soft: #f5f3ff; }
+.faih-table.color-success { --faih-table-accent: var(--faih-color-success-500, #16a34a); --faih-table-accent-soft: #f0fdf4; }
+.faih-table.color-info { --faih-table-accent: var(--faih-color-info-500, #0284c7); --faih-table-accent-soft: #f0f9ff; }
+.faih-table.color-warning { --faih-table-accent: var(--faih-color-warning-500, #d97706); --faih-table-accent-soft: #fffbeb; }
+.faih-table.color-danger,
+.faih-table.color-error { --faih-table-accent: var(--faih-color-danger-500, #dc2626); --faih-table-accent-soft: #fef2f2; }
+.faih-table.color-neutral { --faih-table-accent: var(--faih-color-neutral-500, #4b5563); --faih-table-accent-soft: #f9fafb; }
+
+/* Asset/Presentation/Css/Component/Table/V1/Concrete/Size/Style.css */
+
+.faih-table.size-small  { --faih-table-padding-block: .35rem; --faih-table-padding-inline: .5rem; font-size: .75rem; }
+.faih-table.size-medium { --faih-table-padding-block: .55rem; --faih-table-padding-inline: .7rem; font-size: .875rem; }
+.faih-table.size-large  { --faih-table-padding-block: .75rem; --faih-table-padding-inline: 1rem; font-size: 1rem; }
+.faih-table.size-xl     { --faih-table-padding-block: 1rem; --faih-table-padding-inline: 1.25rem; font-size: 1.125rem; }
+.faih-table.size-xxl    { --faih-table-padding-block: 1.25rem; --faih-table-padding-inline: 1.5rem; font-size: 1.25rem; }
+.faih-table.size-xxxl   { --faih-table-padding-block: 1.5rem; --faih-table-padding-inline: 2rem; font-size: 1.5rem; }
+
+/* Asset/Presentation/Css/Component/Table/V1/Concrete/Type/Style.css */
+
+.faih-table.type-normal .faih-table-row:not(.faih-table-header) {
+  background: var(--faih-table-background);
+}
+
+.faih-table.type-striped .faih-table-row:nth-child(even),
+.faih-table.type-stripped .faih-table-row:nth-child(even) {
+  background: color-mix(in srgb, var(--faih-table-accent) 5%, var(--faih-table-background));
+}

@@ -4,45 +4,68 @@ namespace Ababilithub\FlexAahub\Package\Plugin\Template\V1\Concrete\Masonry;
 
 (defined('ABSPATH') && defined('WPINC')) || exit();
 
-use Ababilithub\FlexAahub\Package\Plugin\Template\V1\Concrete\List\Template as ListTemplate;
+use Ababilithub\{
+    FlexWordpress\Package\Template\V1\Base\Template as BaseTemplate
+};
 
-class Template extends ListTemplate
+class Template extends BaseTemplate
 {
-    /**
-     * Template type.
-     */
     protected string $type = 'masonry';
 
-    /**
-     * Default configuration.
-     *
-     * @var array<string, mixed>
-     */
     protected array $default_config = [
-        'container_class' => 'flex-template-masonry',
-        'item_class' => 'flex-template-masonry__item',
-        'empty_class' => 'flex-template-masonry__empty',
+        'columns' => 3,
+        'class' => '',
+        'size' => 'medium',
+        'color' => 'primary',
     ];
 
     /**
-     * Render masonry item.
+     * Render masonry.
+     *
+     * @param array $data
+     * @return string
      */
-    protected function render_item(
-        mixed $item,
-        int|string $index
+    protected function render_html(
+        array $data
     ): string {
-        return sprintf(
-            '<article class="%1$s">%2$s</article>',
-            $this->classes(
-                $this->get_config_value(
-                    'item_class'
-                )
-            ),
-            $this->text(
-                is_scalar($item)
-                    ? $item
-                    : wp_json_encode($item)
+        $items = is_array(
+            $data['items'] ?? null
+        )
+            ? $data['items']
+            : [];
+
+        if (!$items) {
+            return '';
+        }
+
+        ob_start();
+        ?>
+
+        <div class="flex-aahub-template-masonry <?php echo esc_attr(
+            $this->get_config_value(
+                'class',
+                ''
             )
-        );
+        ); ?>">
+
+            <?php foreach ($items as $item) : ?>
+
+                <article class="flex-aahub-template-masonry__item">
+
+                    <h3>
+                        <?php echo esc_html(
+                            $item['post']['title'] ?? ''
+                        ); ?>
+                    </h3>
+
+                </article>
+
+            <?php endforeach; ?>
+
+        </div>
+
+        <?php
+
+        return (string) ob_get_clean();
     }
 }

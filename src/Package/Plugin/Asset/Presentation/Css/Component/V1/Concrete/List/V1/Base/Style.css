@@ -1,75 +1,144 @@
+/* ==========================================================================
+ * Asset/Presentation/Css/Component/List/V1/Base/Style.css
+ * ========================================================================== */
+
 .faih-list {
-  --faih-list-accent: var(--faih-color-primary-400, #2563eb);
-  --faih-list-accent-dark: var(--faih-color-primary-700, #1d4ed8);
-  --faih-list-background: #fff;
-  --faih-list-text: #1f2937;
-  --faih-list-muted: #6b7280;
-  --faih-list-border: #e5e7eb;
-  --faih-list-gap: 1rem;
-  --faih-list-padding: 1rem;
-  --faih-list-min-width: 16rem;
-  color: var(--faih-list-text);
+    --faih-list-accent: var(--faih-color-primary-500, #2563eb);
+    --faih-list-accent-soft: #eff6ff;
+
+    --faih-list-background: #ffffff;
+    --faih-list-item-background: #ffffff;
+
+    --faih-list-border: #e5e7eb;
+
+    --faih-list-text: #1f2937;
+    --faih-list-muted: #6b7280;
+
+    --faih-list-hover-background: #f9fafb;
+    --faih-list-active-background: var(--faih-list-accent-soft);
+
+    --faih-list-padding-block: .75rem;
+    --faih-list-padding-inline: 1rem;
+
+    --faih-list-gap: .5rem;
+    --faih-list-item-gap: .75rem;
+
+    --faih-list-radius: .5rem;
+
+    --faih-list-transition-duration: 180ms;
+    --faih-list-transition-timing-function: ease;
+
+    background: var(--faih-list-background);
+    color: var(--faih-list-text);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
+    width: 100%;
 }
 
-.faih-list *,
-.faih-list *::before,
-.faih-list *::after {
-  box-sizing: border-box;
-}
+
+/* List Item
+ * -------------------------------------------------------------------------- */
 
 .faih-list-item {
-  background: var(--faih-list-background);
-  border: 1px solid var(--faih-list-border);
-  border-radius: .75rem;
-  color: var(--faih-list-text);
-  overflow: hidden;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
 }
+
+
+/* List Item Content
+ * -------------------------------------------------------------------------- */
 
 .faih-list-item-content {
-  padding: var(--faih-list-padding);
+    align-items: center;
+    display: flex;
+    gap: var(--faih-list-item-gap);
+    min-width: 0;
+    padding: var(--faih-list-padding-block) var(--faih-list-padding-inline);
+    width: 100%;
 }
+
+
+/* List Item Main
+ * -------------------------------------------------------------------------- */
+
+.faih-list-item-main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+
+/* List Item Title
+ * -------------------------------------------------------------------------- */
 
 .faih-list-item-title {
-  color: inherit;
-  font-size: 1.1em;
-  margin: 0 0 .5em;
+    color: var(--faih-list-text);
+    font-size: inherit;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
 }
+
+
+/* List Item Description
+ * -------------------------------------------------------------------------- */
+
+.faih-list-item-description {
+    color: var(--faih-list-muted);
+    font-size: .875em;
+    line-height: 1.5;
+    margin-block-start: .2rem;
+}
+
+
+/* List Item Meta
+ * -------------------------------------------------------------------------- */
 
 .faih-list-item-meta {
-  color: var(--faih-list-muted);
-  display: flex;
-  flex-wrap: wrap;
-  gap: .4em 1em;
+    align-items: center;
+    color: var(--faih-list-muted);
+    display: flex;
+    flex: 0 0 auto;
+    font-size: .875em;
+    gap: .5rem;
 }
 
-.faih-list-item-accent,
-.faih-list-item-link {
-  color: var(--faih-list-accent);
-  font-weight: 600;
+
+/* List Item Icon
+ * -------------------------------------------------------------------------- */
+
+.faih-list-item-icon {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
 }
 
-.faih-list-item-link:hover {
-  color: var(--faih-list-accent-dark);
+
+/* List Item Action
+ * -------------------------------------------------------------------------- */
+
+.faih-list-item-action {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
 }
 
-.faih-list-fields {
-  display: grid;
-  gap: .35rem;
-  margin: .75rem 0 0;
+
+/* Interactive Item
+ * -------------------------------------------------------------------------- */
+
+.faih-list-item.is-interactive {
+    cursor: pointer;
 }
 
-.faih-list-fields > div {
-  display: grid;
-  gap: .5rem;
-  grid-template-columns: minmax(7rem, .6fr) 1fr;
-}
-
-.faih-list-fields dt {
-  color: var(--faih-list-muted);
-  font-weight: 600;
-}
-
-.faih-list-fields dd {
-  margin: 0;
-  overflow-wrap: anywhere;
+.faih-list-item.is-interactive:focus-visible {
+    outline: 2px solid var(--faih-list-accent);
+    outline-offset: -2px;
 }

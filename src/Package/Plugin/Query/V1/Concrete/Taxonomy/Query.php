@@ -8,49 +8,137 @@ use Ababilithub\FlexWordpress\Package\Query\V1\Base\Query as BaseQuery;
 
 class Query extends BaseQuery
 {
+    /**
+     * Query type.
+     *
+     * @var string
+     */
+    protected string $type = 'taxonomy';
+
+    /**
+     * Default configuration.
+     *
+     * @var array
+     */
     protected array $default_config = [
+        /*
+         * Taxonomy.
+         */
         'taxonomy' => '',
-        'hide_empty' => true,
+
+        /*
+         * Number of terms.
+         */
         'number' => 10,
-        'offset' => 0,
+
+        /*
+         * Pagination.
+         */
+        'paged' => 1,
+
+        /*
+         * Ordering.
+         */
         'orderby' => 'name',
-        'order' => 'ASC',
+        'order'   => 'ASC',
+
+        /*
+         * Search.
+         */
         'search' => '',
-        'object_ids' => [],
-        'post_type' => [],
+
+        /*
+         * Parent.
+         */
+        'parent' => null,
+
+        /*
+         * Include / exclude.
+         */
+        'include' => [],
+        'exclude' => [],
+
+        /*
+         * Hide empty terms.
+         */
+        'hide_empty' => true,
+
+        /*
+         * Meta query.
+         */
         'meta_query' => [],
+
+        /*
+         * Object/post-type filtering.
+         *
+         * This is useful when your taxonomy query needs to
+         * return terms associated with specific post types.
+         */
+        'object_ids' => [],
     ];
 
-    protected function prepare_query_args(array $args): array
+    /**
+     * Prepare WordPress taxonomy query arguments.
+     *
+     * @return array
+     */
+    public function prepare_args(): array
     {
-        $config = array_replace_recursive(
-            $this->default_config,
-            $this->config
-        );
+        $config = $this->get_config();
 
-        $taxonomy = sanitize_key((string) $config['taxonomy']);
+        $args = [
+            'taxonomy'   => $config['taxonomy'],
+            'number'     => (int) $config['number'],
+            'paged'      => (int) $config['paged'],
+            'orderby'    => $config['orderby'],
+            'order'      => $config['order'],
+            'hide_empty' => (bool) $config['hide_empty'],
+        ];
 
-        if ($taxonomy === '') {
-            throw new \InvalidArgumentException(
-                'Taxonomy query requires a taxonomy.'
+        /*
+         * Search.
+         */
+        if (!empty($config['search'])) {
+            $args['search'] = $config['search'];
+        }
+
+        /*
+         * Parent.
+         */
+        if ($config['parent'] !== null && $config['parent'] !== '') {
+            $args['parent'] = absint($config['parent']);
+        }
+
+        /*
+         * Include terms.
+         */
+        if (!empty($config['include'])) {
+            $args['include'] = array_map(
+                'absint',
+                (array) $config['include']
             );
         }
 
-        $args['taxonomy'] = $taxonomy;
-        $args['hide_empty'] = (bool) $config['hide_empty'];
-        $args['number'] = $this->get_per_page();
-        $args['offset'] = max(0, (int) $config['offset']);
-        $args['orderby'] = sanitize_key((string) $config['orderby']);
-        $args['order'] = strtoupper((string) $config['order']) === 'DESC'
-            ? 'DESC'
-            : 'ASC';
-
-        if ($config['search'] !== '') {
-            $args['search'] = sanitize_text_field(
-                (string) $config['search']
+        /*
+         * Exclude terms.
+         */
+        if (!empty($config['exclude'])) {
+            $args['exclude'] = array_map(
+                'absint',
+                (array) $config['exclude']
             );
         }
 
+        /*
+         * Term meta query.
+         */
+        if (!empty($config['meta_query'])) {
+            $args['meta_query'] = $config['meta_query'];
+        }
+
+        /*
+         * Object IDs.
+         */
         if (!empty($config['object_ids'])) {
             $args['object_ids'] = array_map(
                 'absint',
@@ -58,12 +146,18 @@ class Query extends BaseQuery
             );
         }
 
-        /*
-         * WP_Term_Query does not use WP_Query. This concrete class therefore
-         * intentionally remains a compatibility adapter. If your current
-         * Query base is WP_Query-only, use this class through a dedicated
-         * term-query base before enabling it.
-         */
         return $args;
+    }
+
+    /**
+     * Create the WordPress taxonomy query.
+     *
+     * @param array $args
+     *
+     * @return \WP_Term_Query
+     */
+    protected function create_query(array $args): \WP_Term_Query
+    {
+        return new \WP_Term_Query($args);
     }
 }

@@ -1,0 +1,41 @@
+/* ==========================================================================
+ * Concrete/Orientation/Style.css
+ * ========================================================================== */
+
+
+/* Vertical
+ * ========================================================================== */
+
+.faih-card.orientation-vertical {
+    flex-direction: column;
+}
+
+.faih-card.orientation-vertical .faih-card-media {
+    height: var(--faih-card-image-height);
+    width: 100%;
+}
+
+
+/* Horizontal
+ * ========================================================================== */
+
+.faih-card.orientation-horizontal {
+    flex-direction: row;
+}
+
+.faih-card.orientation-horizontal .faih-card-media {
+    flex: 0 0 35%;
+    min-height: 100%;
+}
+
+.faih-card.orientation-horizontal .faih-card-content {
+    flex: 1 1 65%;
+}
+
+
+/* Horizontal Compact Media
+ * ========================================================================== */
+
+.faih-card.orientation-horizontal.attribute-compact-media .faih-card-media {
+    flex-basis: 25%;
+}

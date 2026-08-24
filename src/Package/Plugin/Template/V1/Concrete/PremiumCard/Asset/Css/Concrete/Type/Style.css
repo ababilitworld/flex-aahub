@@ -1,0 +1,64 @@
+/* ==========================================================================
+ * Concrete/Type/Style.css
+ * ========================================================================== */
+
+
+/* Default
+ * ========================================================================== */
+
+.faih-card.type-default {
+    flex-direction: column;
+}
+
+
+/* Premium
+ * ========================================================================== */
+
+.faih-card.type-premium {
+    border-width: 1px;
+    border-radius: var(--faih-card-radius);
+    box-shadow:
+        0 .25rem .5rem rgb(0 0 0 / 5%),
+        0 1rem 2rem rgb(0 0 0 / 7%);
+}
+
+.faih-card.type-premium .faih-card-media {
+    position: relative;
+}
+
+.faih-card.type-premium .faih-card-title {
+    font-size: 1.25rem;
+}
+
+.faih-card.type-premium .faih-card-price-value {
+    color: var(--faih-card-accent);
+}
+
+
+/* Flat
+ * ========================================================================== */
+
+.faih-card.type-flat {
+    border-width: 0;
+    box-shadow: none;
+}
+
+
+/* Outline
+ * ========================================================================== */
+
+.faih-card.type-outline {
+    border-width: 1px;
+    box-shadow: none;
+}
+
+
+/* Elevated
+ * ========================================================================== */
+
+.faih-card.type-elevated {
+    border-width: 0;
+    box-shadow:
+        0 .25rem .5rem rgb(0 0 0 / 6%),
+        0 1rem 2rem rgb(0 0 0 / 8%);
+}

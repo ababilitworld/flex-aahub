@@ -1,60 +1,70 @@
-.faih-list.type-grid {
-  display: grid;
-  gap: var(--faih-list-gap);
-  grid-template-columns: repeat(var(--faih-list-columns, 3), minmax(0, 1fr));
+/* ==========================================================================
+ * Concrete/Type/Style.css
+ * ========================================================================== */
+
+
+/* Normal
+ * -------------------------------------------------------------------------- */
+
+.faih-list.type-normal {
+    flex-direction: column;
 }
 
-.faih-list.type-grid .faih-list-item,
-.faih-list.type-masonry .faih-list-item {
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
-  transition: box-shadow .2s ease, transform .2s ease;
+
+/* Unstyled
+ * -------------------------------------------------------------------------- */
+
+.faih-list.type-unstyled {
+    gap: 0;
 }
 
-.faih-list.type-grid .faih-list-item:hover,
-.faih-list.type-masonry .faih-list-item:hover {
-  box-shadow: 0 10px 24px rgb(0 0 0 / 12%);
-  transform: translateY(-2px);
+.faih-list.type-unstyled .faih-list-item-content {
+    padding-inline: 0;
 }
 
-.faih-list.type-table.faih-table {
-  display: table;
-  width: 100%;
+
+/* Divided
+ * -------------------------------------------------------------------------- */
+
+.faih-list.type-divided .faih-list-item + .faih-list-item {
+    border-block-start: 1px solid var(--faih-list-border);
 }
 
-.faih-list.type-table .faih-list-header.faih-table-header {
-  display: table-header-group;
+
+/* Bordered Items
+ * -------------------------------------------------------------------------- */
+
+.faih-list.type-bordered .faih-list-item {
+    border: 1px solid var(--faih-list-border);
 }
 
-.faih-list.type-table .faih-list-item.faih-table-row {
-  border: 0;
-  border-radius: 0;
-  display: table-row;
+.faih-list.type-bordered .faih-list-item + .faih-list-item {
+    border-block-start: 0;
 }
 
-.faih-list.type-table .faih-list-cell.faih-table-cell {
-  display: table-cell;
-  vertical-align: middle;
+
+/* Cards
+ * -------------------------------------------------------------------------- */
+
+.faih-list.type-cards {
+    gap: var(--faih-list-gap);
 }
 
-.faih-list.type-masonry {
-  column-count: 3;
-  column-gap: var(--faih-list-gap);
+.faih-list.type-cards .faih-list-item {
+    background: var(--faih-list-item-background);
+    border: 1px solid var(--faih-list-border);
+    border-radius: var(--faih-list-radius);
+    overflow: hidden;
 }
 
-.faih-list.type-masonry .faih-list-item {
-  break-inside: avoid;
-  display: inline-block;
-  margin: 0 0 var(--faih-list-gap);
-  width: 100%;
+
+/* Compact
+ * -------------------------------------------------------------------------- */
+
+.faih-list.type-compact {
+    gap: 0;
 }
 
-@media (max-width: 900px) {
-  .faih-list.type-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .faih-list.type-masonry { column-count: 2; }
-}
-
-@media (max-width: 600px) {
-  .faih-list.type-grid { grid-template-columns: 1fr; }
-  .faih-list.type-masonry { column-count: 1; }
-  .faih-list.type-table { display: block; overflow-x: auto; }
+.faih-list.type-compact .faih-list-item-content {
+    gap: .5rem;
 }

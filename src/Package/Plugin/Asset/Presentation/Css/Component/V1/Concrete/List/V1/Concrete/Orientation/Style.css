@@ -1,0 +1,82 @@
+/* ==========================================================================
+ * Concrete/Orientation/Style.css
+ * ========================================================================== */
+
+
+/* Vertical
+ * -------------------------------------------------------------------------- */
+
+.faih-list.orientation-vertical {
+    flex-direction: column;
+}
+
+.faih-list.orientation-vertical .faih-list-item {
+    width: 100%;
+}
+
+
+/* Horizontal
+ * -------------------------------------------------------------------------- */
+
+.faih-list.orientation-horizontal {
+    flex-direction: row;
+}
+
+.faih-list.orientation-horizontal .faih-list-item {
+    flex: 1 1 0;
+}
+
+.faih-list.orientation-horizontal .faih-list-item-content {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* Horizontal Item Content
+ * -------------------------------------------------------------------------- */
+
+.faih-list.orientation-horizontal .faih-list-item-main {
+    width: 100%;
+}
+
+.faih-list.orientation-horizontal .faih-list-item-meta {
+    align-self: flex-start;
+}
+
+
+/* Horizontal + Full Width
+ * -------------------------------------------------------------------------- */
+
+.faih-list.orientation-horizontal.attribute-full-width .faih-list-item {
+    flex: 1 1 0;
+}
+
+
+/* Horizontal + Divided
+ * -------------------------------------------------------------------------- */
+
+.faih-list.orientation-horizontal.type-divided .faih-list-item + .faih-list-item {
+    border-block-start: 0;
+    border-inline-start: 1px solid var(--faih-list-border);
+}
+
+
+/* Horizontal + Bordered
+ * -------------------------------------------------------------------------- */
+
+.faih-list.orientation-horizontal.type-bordered .faih-list-item + .faih-list-item {
+    border-block-start: 1px solid var(--faih-list-border);
+    border-inline-start: 0;
+}
+
+
+/* Horizontal + Cards
+ * -------------------------------------------------------------------------- */
+
+.faih-list.orientation-horizontal.type-cards {
+    align-items: stretch;
+}
+
+.faih-list.orientation-horizontal.type-cards .faih-list-item {
+    flex: 1 1 0;
+}

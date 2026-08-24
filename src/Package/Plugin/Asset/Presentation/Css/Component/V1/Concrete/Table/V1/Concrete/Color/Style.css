@@ -1,3 +1,5 @@
+/* Asset/Presentation/Css/Component/Table/V1/Concrete/Color/Style.css */
+
 .faih-table.color-primary { --faih-table-accent: var(--faih-color-primary-500, #2563eb); --faih-table-accent-soft: #eff6ff; }
 .faih-table.color-secondary { --faih-table-accent: var(--faih-color-secondary-500, #7c3aed); --faih-table-accent-soft: #f5f3ff; }
 .faih-table.color-success { --faih-table-accent: var(--faih-color-success-500, #16a34a); --faih-table-accent-soft: #f0fdf4; }

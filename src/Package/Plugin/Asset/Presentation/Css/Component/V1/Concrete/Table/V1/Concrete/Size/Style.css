@@ -1,3 +1,5 @@
+/* Asset/Presentation/Css/Component/Table/V1/Concrete/Size/Style.css */
+
 .faih-table.size-small  { --faih-table-padding-block: .35rem; --faih-table-padding-inline: .5rem; font-size: .75rem; }
 .faih-table.size-medium { --faih-table-padding-block: .55rem; --faih-table-padding-inline: .7rem; font-size: .875rem; }
 .faih-table.size-large  { --faih-table-padding-block: .75rem; --faih-table-padding-inline: 1rem; font-size: 1rem; }

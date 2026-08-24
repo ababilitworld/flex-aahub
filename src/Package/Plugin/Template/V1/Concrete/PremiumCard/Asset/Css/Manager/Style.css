@@ -1,0 +1,15 @@
+/* ==========================================================================
+ * Asset/Presentation/Css/Component/Card/V1/Manager/Style.css
+ * ========================================================================== */
+
+@import url('../Base/Style.css');
+
+@import url('../Concrete/Attribute/Style.css');
+
+@import url('../Concrete/Type/Style.css');
+
+@import url('../Concrete/Size/Style.css');
+
+@import url('../Concrete/Color/Style.css');
+
+@import url('../Concrete/Orientation/Style.css');

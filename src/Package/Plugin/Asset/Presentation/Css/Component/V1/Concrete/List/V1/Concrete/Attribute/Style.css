@@ -1,0 +1,139 @@
+/* ==========================================================================
+ * Concrete/Attribute/Style.css
+ * ========================================================================== */
+
+
+/* Full Width
+ * -------------------------------------------------------------------------- */
+
+.faih-list.attribute-full-width {
+    width: 100%;
+}
+
+.faih-list.attribute-full-width .faih-list-item {
+    width: 100%;
+}
+
+
+/* Hover
+ * -------------------------------------------------------------------------- */
+
+.faih-list.attribute-hover .faih-list-item {
+    transition:
+        background-color var(--faih-list-transition-duration)
+        var(--faih-list-transition-timing-function),
+        color var(--faih-list-transition-duration)
+        var(--faih-list-transition-timing-function);
+}
+
+.faih-list.attribute-hover .faih-list-item:hover {
+    background: var(--faih-list-hover-background);
+}
+
+
+/* Interactive Hover
+ * -------------------------------------------------------------------------- */
+
+.faih-list.attribute-interactive .faih-list-item {
+    cursor: pointer;
+    transition:
+        background-color var(--faih-list-transition-duration)
+        var(--faih-list-transition-timing-function),
+        color var(--faih-list-transition-duration)
+        var(--faih-list-transition-timing-function),
+        box-shadow var(--faih-list-transition-duration)
+        var(--faih-list-transition-timing-function);
+}
+
+.faih-list.attribute-interactive .faih-list-item:hover {
+    background: var(--faih-list-hover-background);
+}
+
+.faih-list.attribute-interactive .faih-list-item:focus-visible {
+    outline: 2px solid var(--faih-list-accent);
+    outline-offset: -2px;
+}
+
+
+/* Bordered
+ * -------------------------------------------------------------------------- */
+
+.faih-list.attribute-bordered {
+    border: 1px solid var(--faih-list-border);
+    border-radius: var(--faih-list-radius);
+    overflow: hidden;
+}
+
+
+/* Rounded
+ * -------------------------------------------------------------------------- */
+
+.faih-list.attribute-rounded {
+    border-radius: var(--faih-list-radius);
+    overflow: hidden;
+}
+
+
+/* Shadow
+ * -------------------------------------------------------------------------- */
+
+.faih-list.attribute-shadow {
+    box-shadow:
+        0 .125rem .25rem rgb(0 0 0 / 5%),
+        0 .5rem 1.5rem rgb(0 0 0 / 6%);
+}
+
+
+/* Scroll X
+ * -------------------------------------------------------------------------- */
+
+.faih-list.attribute-scroll-x {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-gutter: stable;
+}
+
+
+/* Scroll Y
+ * -------------------------------------------------------------------------- */
+
+.faih-list.attribute-scroll-y {
+    max-height: 30rem;
+    overflow-y: auto;
+    overscroll-behavior-block: contain;
+    scrollbar-gutter: stable;
+}
+
+
+/* No Wrap
+ * -------------------------------------------------------------------------- */
+
+.faih-list.attribute-nowrap .faih-list-item-content,
+.faih-list.attribute-nowrap .faih-list-item-title,
+.faih-list.attribute-nowrap .faih-list-item-description {
+    white-space: nowrap;
+}
+
+
+/* Active Item
+ * -------------------------------------------------------------------------- */
+
+.faih-list .faih-list-item.is-active {
+    background: var(--faih-list-active-background);
+    color: var(--faih-list-accent);
+}
+
+.faih-list .faih-list-item.is-active .faih-list-item-title {
+    color: var(--faih-list-accent);
+}
+
+
+/* Disabled Item
+ * -------------------------------------------------------------------------- */
+
+.faih-list .faih-list-item.is-disabled {
+    cursor: not-allowed;
+    opacity: .55;
+    pointer-events: none;
+}

@@ -1,6 +1,57 @@
-.faih-list.size-small  { --faih-list-gap: .5rem;  --faih-list-padding: .6rem;  --faih-list-min-width: 11rem; font-size: .75rem; }
-.faih-list.size-medium { --faih-list-gap: .75rem; --faih-list-padding: .8rem;  --faih-list-min-width: 14rem; font-size: .875rem; }
-.faih-list.size-large  { --faih-list-gap: 1rem;   --faih-list-padding: 1rem;   --faih-list-min-width: 17rem; font-size: 1rem; }
-.faih-list.size-xl     { --faih-list-gap: 1.25rem;--faih-list-padding: 1.25rem;--faih-list-min-width: 20rem; font-size: 1.125rem; }
-.faih-list.size-xxl    { --faih-list-gap: 1.5rem; --faih-list-padding: 1.5rem; --faih-list-min-width: 23rem; font-size: 1.25rem; }
-.faih-list.size-xxxl   { --faih-list-gap: 2rem;   --faih-list-padding: 2rem;   --faih-list-min-width: 26rem; font-size: 1.5rem; }
+/* ==========================================================================
+ * Concrete/Size/Style.css
+ * ========================================================================== */
+
+.faih-list.size-small {
+    --faih-list-padding-block: .35rem;
+    --faih-list-padding-inline: .5rem;
+    --faih-list-gap: .25rem;
+    --faih-list-item-gap: .5rem;
+
+    font-size: .75rem;
+}
+
+.faih-list.size-medium {
+    --faih-list-padding-block: .55rem;
+    --faih-list-padding-inline: .7rem;
+    --faih-list-gap: .4rem;
+    --faih-list-item-gap: .65rem;
+
+    font-size: .875rem;
+}
+
+.faih-list.size-large {
+    --faih-list-padding-block: .75rem;
+    --faih-list-padding-inline: 1rem;
+    --faih-list-gap: .5rem;
+    --faih-list-item-gap: .75rem;
+
+    font-size: 1rem;
+}
+
+.faih-list.size-xl {
+    --faih-list-padding-block: 1rem;
+    --faih-list-padding-inline: 1.25rem;
+    --faih-list-gap: .6rem;
+    --faih-list-item-gap: .875rem;
+
+    font-size: 1.125rem;
+}
+
+.faih-list.size-xxl {
+    --faih-list-padding-block: 1.25rem;
+    --faih-list-padding-inline: 1.5rem;
+    --faih-list-gap: .75rem;
+    --faih-list-item-gap: 1rem;
+
+    font-size: 1.25rem;
+}
+
+.faih-list.size-xxxl {
+    --faih-list-padding-block: 1.5rem;
+    --faih-list-padding-inline: 2rem;
+    --faih-list-gap: 1rem;
+    --faih-list-item-gap: 1.25rem;
+
+    font-size: 1.5rem;
+}

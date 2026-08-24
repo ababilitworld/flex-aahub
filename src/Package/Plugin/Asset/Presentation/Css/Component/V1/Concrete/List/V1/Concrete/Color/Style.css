@@ -1,8 +1,39 @@
-.faih-list.color-primary { --faih-list-accent: var(--faih-color-primary-400, #2563eb); --faih-list-accent-dark: var(--faih-color-primary-700, #1d4ed8); }
-.faih-list.color-secondary { --faih-list-accent: var(--faih-color-secondary-400, #7c3aed); --faih-list-accent-dark: var(--faih-color-secondary-700, #5b21b6); }
-.faih-list.color-success { --faih-list-accent: var(--faih-color-success-400, #16a34a); --faih-list-accent-dark: var(--faih-color-success-700, #15803d); }
-.faih-list.color-info { --faih-list-accent: var(--faih-color-info-400, #0284c7); --faih-list-accent-dark: var(--faih-color-info-700, #0369a1); }
-.faih-list.color-warning { --faih-list-accent: var(--faih-color-warning-400, #d97706); --faih-list-accent-dark: var(--faih-color-warning-700, #b45309); }
+/* ==========================================================================
+ * Concrete/Color/Style.css
+ * ========================================================================== */
+
+.faih-list.color-primary {
+    --faih-list-accent: var(--faih-color-primary-500, #2563eb);
+    --faih-list-accent-soft: #eff6ff;
+}
+
+.faih-list.color-secondary {
+    --faih-list-accent: var(--faih-color-secondary-500, #7c3aed);
+    --faih-list-accent-soft: #f5f3ff;
+}
+
+.faih-list.color-success {
+    --faih-list-accent: var(--faih-color-success-500, #16a34a);
+    --faih-list-accent-soft: #f0fdf4;
+}
+
+.faih-list.color-info {
+    --faih-list-accent: var(--faih-color-info-500, #0284c7);
+    --faih-list-accent-soft: #f0f9ff;
+}
+
+.faih-list.color-warning {
+    --faih-list-accent: var(--faih-color-warning-500, #d97706);
+    --faih-list-accent-soft: #fffbeb;
+}
+
 .faih-list.color-danger,
-.faih-list.color-error { --faih-list-accent: var(--faih-color-danger-400, #dc2626); --faih-list-accent-dark: var(--faih-color-danger-700, #b91c1c); }
-.faih-list.color-neutral { --faih-list-accent: var(--faih-color-neutral-500, #4b5563); --faih-list-accent-dark: var(--faih-color-neutral-800, #1f2937); }
+.faih-list.color-error {
+    --faih-list-accent: var(--faih-color-danger-500, #dc2626);
+    --faih-list-accent-soft: #fef2f2;
+}
+
+.faih-list.color-neutral {
+    --faih-list-accent: var(--faih-color-neutral-500, #4b5563);
+    --faih-list-accent-soft: #f9fafb;
+}

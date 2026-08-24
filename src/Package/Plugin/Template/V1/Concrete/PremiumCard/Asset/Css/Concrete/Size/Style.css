@@ -1,0 +1,51 @@
+/* ==========================================================================
+ * Concrete/Size/Style.css
+ * ========================================================================== */
+
+.faih-card.size-small {
+    --faih-card-padding: .65rem;
+    --faih-card-gap: .65rem;
+    --faih-card-image-height: 10rem;
+
+    font-size: .8125rem;
+}
+
+.faih-card.size-medium {
+    --faih-card-padding: 1rem;
+    --faih-card-gap: 1rem;
+    --faih-card-image-height: 14rem;
+
+    font-size: .875rem;
+}
+
+.faih-card.size-large {
+    --faih-card-padding: 1.25rem;
+    --faih-card-gap: 1.25rem;
+    --faih-card-image-height: 17rem;
+
+    font-size: 1rem;
+}
+
+.faih-card.size-xl {
+    --faih-card-padding: 1.5rem;
+    --faih-card-gap: 1.5rem;
+    --faih-card-image-height: 20rem;
+
+    font-size: 1.125rem;
+}
+
+.faih-card.size-xxl {
+    --faih-card-padding: 1.75rem;
+    --faih-card-gap: 1.75rem;
+    --faih-card-image-height: 23rem;
+
+    font-size: 1.25rem;
+}
+
+.faih-card.size-xxxl {
+    --faih-card-padding: 2rem;
+    --faih-card-gap: 2rem;
+    --faih-card-image-height: 26rem;
+
+    font-size: 1.5rem;
+}
